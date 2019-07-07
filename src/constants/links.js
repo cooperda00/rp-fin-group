@@ -5,11 +5,11 @@ export const links = [
   },
   {
     path: "/services",
-    text: "Our Services",
+    text: "Services",
   },
   {
     path: "/about",
-    text: "About Us",
+    text: "About",
   },
   {
     path: "/compliance",
@@ -17,6 +17,6 @@ export const links = [
   },
   {
     path: "/contact",
-    text: "Contact Us",
+    text: "Contact",
   },
 ]

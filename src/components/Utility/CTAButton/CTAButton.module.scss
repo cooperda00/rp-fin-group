@@ -2,4 +2,6 @@
 
 .CTAButton {
   @include cta-button();
+
+  text-align: center;
 }

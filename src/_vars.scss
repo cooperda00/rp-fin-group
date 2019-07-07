@@ -104,7 +104,7 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
 
 //CTA Button
 @mixin cta-button() {
-  @include font("M");
+  @include font("S");
 
   background: $primary;
   border: none;
@@ -117,6 +117,10 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
 
   &:hover {
     background: $primaryD;
+  }
+
+  @include min-width(768px) {
+    @include font("M");
   }
 }
 

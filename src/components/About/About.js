@@ -6,10 +6,10 @@ import Image from "gatsby-image"
 import styles from "./About.module.scss"
 //Component
 import Container from "../Layout/Container/Container"
+import Title from "../Utility/Title/Title"
 
 const About = () => {
   const data = useStaticQuery(query)
-  console.log(data)
 
   return (
     <Container pattern="1">
@@ -24,7 +24,7 @@ const About = () => {
         </div>
 
         <div className={styles.Right}>
-          <h3>About Us</h3>
+          <Title title="about us" />
           <p>
             RP Financial Group is a trusted financial consultancy and private
             brokerage offering investment and financial planning solutions to

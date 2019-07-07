@@ -1,9 +1,9 @@
 @import "../../../../vars";
 
 .Social {
-  @include flex(row, center, center);
   @include font("XL");
 
+  display: none;
   width: 20%;
 
   a {
@@ -19,6 +19,10 @@
 
   a:hover {
     transform: translateY(-0.3rem);
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
   }
 }
 

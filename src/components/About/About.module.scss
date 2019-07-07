@@ -38,18 +38,16 @@
 .Right {
   @include flex(column, flex-start, center);
 
-  h3 {
-    @include font("XL");
-
-    margin-bottom: $spaceM;
-  }
-
   p {
     @include font("M");
 
     width: 100%;
     background: white;
     padding: $spaceS;
+
+    &:first-of-type {
+      margin-top: $spaceM;
+    }
   }
 
   p:not(:last-of-type) {

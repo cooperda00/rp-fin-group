@@ -1,10 +1,15 @@
 @import "../../../../vars";
 
 .Navigation {
-  @include flex(row, space-around, center);
+  @include flex(row, flex-end, center);
   @include font("M");
 
-  width: 50%;
+  width: 60%;
+}
+
+.Links {
+  display: none;
+  width: 100%;
 
   a {
     position: relative;
@@ -13,5 +18,36 @@
 
   a:hover {
     @include underline();
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, space-around, center);
+  }
+}
+
+.HamburgerMenu {
+  border: none;
+  background: transparent;
+  @include font("XL");
+  color: white;
+
+  @include min-width(1000px) {
+    display: none;
+  }
+}
+
+.MiniMenu {
+  @include flex(row, space-between, center);
+
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  padding: $spaceS;
+  top: 10rem;
+  right: 0;
+  background: rgba($gray5, 0.5);
+
+  a {
+    color: white;
   }
 }

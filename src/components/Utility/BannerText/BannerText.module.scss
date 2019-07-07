@@ -3,7 +3,7 @@
 .BannerText {
   @include flex(column, center, center);
 
-  padding: $spaceM;
+  padding: $spaceS;
 
   h1,
   h2 {
@@ -14,10 +14,20 @@
   }
 
   h1 {
-    @include font("G");
+    @include font("XL");
   }
 
   h2 {
-    @include font("XL");
+    @include font("L");
+  }
+
+  @include min-width(768px) {
+    h1 {
+      @include font("G");
+    }
+
+    h2 {
+      @include font("XL");
+    }
   }
 }

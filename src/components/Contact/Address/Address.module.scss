@@ -1,0 +1,53 @@
+@import "../../../vars";
+
+.Address {
+  @include flex(column, flex-start, center);
+
+  margin-bottom: $spaceL;
+
+  &:first-of-type {
+    margin-top: $spaceL;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, space-between, center);
+  }
+}
+
+.Left,
+.Right {
+  width: 100%;
+
+  @include min-width(1000px) {
+    width: 50%;
+  }
+}
+
+.Left {
+  .ImageContainer {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: $spaceM;
+  }
+}
+
+.Right {
+  @include flex(column, center, center);
+
+  h3 {
+    @include font("L");
+    margin-bottom: $spaceM;
+    background: white;
+    padding: $spaceS;
+  }
+
+  ul {
+    list-style: none;
+    background: white;
+    padding: $spaceS;
+
+    li {
+      @include font("M");
+    }
+  }
+}

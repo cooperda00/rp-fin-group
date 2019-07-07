@@ -3,7 +3,7 @@
 .CTA {
   @include flex(column, flex-start, center);
 
-  padding: $spaceM;
+  padding: $spaceL $spaceM;
 
   .Left,
   .Right {
