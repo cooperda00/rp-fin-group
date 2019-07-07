@@ -1,0 +1,24 @@
+@import "../../../vars";
+
+.Hero {
+  @include flex(column, center, center);
+
+  background: linear-gradient(
+    rgba($gray4, 0.9),
+    rgba($gray3, 0.2),
+    rgba($gray4, 0.9)
+  );
+
+  background-position: center;
+  background-size: cover;
+  opacity: 1 !important;
+  width: 100%;
+}
+
+.Home {
+  min-height: 100vh;
+}
+
+.Page {
+  min-height: 80vh;
+}

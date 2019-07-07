@@ -1,0 +1,23 @@
+@import "../../../vars";
+
+.BannerText {
+  @include flex(column, center, center);
+
+  padding: $spaceM;
+
+  h1,
+  h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: $spaceM;
+    text-shadow: 2px 1px 1px $gray5;
+  }
+
+  h1 {
+    @include font("G");
+  }
+
+  h2 {
+    @include font("XL");
+  }
+}

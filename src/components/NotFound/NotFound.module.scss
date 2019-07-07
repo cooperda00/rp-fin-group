@@ -1,0 +1,8 @@
+@import "../../vars";
+
+.NotFound {
+  @include flex(column, center, center);
+
+  background: $secondaryDD;
+  min-height: 100vh;
+}

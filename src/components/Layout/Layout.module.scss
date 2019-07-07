@@ -1,0 +1,13 @@
+@import "../../vars";
+
+.Layout {
+  @include flex(column, space-between, center);
+
+  min-width: 100%;
+  min-height: 100%;
+
+  main {
+    width: 100%;
+    min-height: 100vh;
+  }
+}

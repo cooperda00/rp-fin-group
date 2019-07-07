@@ -1,0 +1,55 @@
+@import "../../../vars";
+
+.ContactContainer {
+  @include flex(column, flex-start, center);
+
+  width: 90%;
+  background: $gray1;
+  margin: $spaceL 0;
+  padding: $spaceM 0;
+  box-shadow: $boxShadow;
+
+  @include min-width(1000px) {
+    width: 50%;
+  }
+}
+
+.ContactForm {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  max-width: 50rem;
+}
+
+.InputGroup {
+  @include flex(column, flex-start, center);
+
+  width: 80%;
+  margin-bottom: $spaceM;
+
+  label {
+    @include font("M");
+
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    @include font("S");
+
+    padding: 0.8rem 1rem;
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 400px;
+    width: 100%;
+  }
+}
+
+.SubmitBtn {
+  @include cta-button();
+  @include font("S");
+}

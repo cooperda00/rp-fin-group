@@ -1,0 +1,17 @@
+@import "../../../../vars";
+
+.Navigation {
+  @include flex(row, space-around, center);
+  @include font("M");
+
+  width: 50%;
+
+  a {
+    position: relative;
+    color: white;
+  }
+
+  a:hover {
+    @include underline();
+  }
+}

@@ -1,0 +1,69 @@
+@import "../../../vars";
+
+.Footer {
+  background: $gray2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: $spaceL;
+  justify-items: center;
+
+  .Navigation {
+    @include flex(column, flex-start, flex-start);
+    @include font("M");
+  }
+
+  .Social {
+    @include flex(row, space-around, flex-start);
+    @include font("XXL");
+
+    margin-top: $spaceL;
+  }
+
+  .Legal {
+    @include flex(column, flex-start, flex-start);
+    @include font("S");
+
+    text-align: center;
+  }
+
+  @include min-width(1000px) {
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-rows: 1fr;
+
+    .Social {
+      @include flex(column, center, flex-start);
+      margin-top: 0;
+    }
+
+    .Legal {
+      @include flex(column, flex-end, flex-start);
+      text-align: left;
+    }
+  }
+}
+
+.Social {
+  a {
+    @include flex(column, center, center);
+    position: relative;
+    transition: 0.5s;
+
+    div {
+      background: white;
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      z-index: 0;
+    }
+
+    svg {
+      z-index: 1;
+    }
+  }
+
+  a:hover {
+    transform: translateX(0.5rem);
+  }
+}

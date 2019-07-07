@@ -1,0 +1,31 @@
+@import "../../../../vars";
+
+.Social {
+  @include flex(row, center, center);
+  @include font("XL");
+
+  width: 20%;
+
+  a {
+    @include flex(column, center, center);
+
+    transition: 0.3s;
+    position: relative;
+  }
+
+  a:not(:last-child) {
+    margin-right: $spaceS;
+  }
+
+  a:hover {
+    transform: translateY(-0.3rem);
+  }
+}
+
+.White {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background: white;
+  z-index: -1;
+}

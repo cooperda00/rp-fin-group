@@ -1,0 +1,44 @@
+@import "../../../vars";
+
+.Container {
+  @include flex(column, center, center);
+
+  width: 100%;
+  min-height: 70vh;
+}
+
+.ContentContainer {
+  @include flex(column, center, center);
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: $contentWidth;
+}
+
+.Pattern2 {
+  background: linear-gradient(
+    to right,
+    white 0,
+    white 60%,
+    $secondary 60%,
+    $secondary 80%,
+    white 80%,
+    white 100%
+  );
+}
+
+.Pattern1 {
+  background: linear-gradient(
+    to right,
+    white 0,
+    white 10%,
+    $secondary 10%,
+    $secondary 40%,
+    white 40%,
+    white 100%
+  );
+}
+
+.Pattern0 {
+  background: lighten($primaryLL, 35%);
+}

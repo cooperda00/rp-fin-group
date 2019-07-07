@@ -1,0 +1,38 @@
+@import "../../../vars";
+
+.CTA {
+  @include flex(column, flex-start, center);
+
+  padding: $spaceM;
+
+  .Left,
+  .Right {
+    @include flex(column, flex-start, center);
+
+    width: 100%;
+  }
+
+  .Left {
+    p {
+      @include font("M");
+
+      letter-spacing: 0.5rem;
+      margin-bottom: $spaceM;
+      text-align: justify;
+      text-transform: uppercase;
+    }
+  }
+
+  @include min-width(900px) {
+    @include flex(row, space-between, center);
+
+    .Left,
+    .Right {
+      width: 50%;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

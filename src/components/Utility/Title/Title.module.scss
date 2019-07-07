@@ -1,0 +1,7 @@
+@import "../../../vars";
+
+.Title {
+  @include font("XL");
+
+  text-transform: capitalize;
+}

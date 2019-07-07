@@ -1,0 +1,133 @@
+// @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,600|Oswald:400,700&display=swap");
+//COLORS
+$primary: #36723e; //Main Green
+$primaryL: #508e58;
+$primaryLL: #7aad81;
+$primaryD: #1f5e27;
+$primaryDD: #0c4413;
+
+$secondary: #934946; //Wine
+$secondaryL: #b76b67;
+$secondaryLL: #dfa19e;
+$secondaryD: #7a2c28;
+$secondaryDD: #57130f;
+
+$gray1: hsl(24, 20%, 95%); //Interface Grays
+$gray2: hsl(24, 21%, 93%);
+$gray3: hsl(24, 9%, 82%);
+
+$gray4: hsl(24, 12%, 30%); //Text Grays
+$gray5: hsl(24, 24%, 11%);
+
+//TEXT
+//Fonts
+$fontStackTitle: "Oswald", sans-serif;
+$fontStackBody: "EB Garamond", serif;
+
+//Sizes
+$fontG: 8rem;
+$fontXXL: 5rem;
+$fontXL: 4rem;
+$fontL: 3rem;
+$fontM: 2.5rem;
+$fontS: 1.8rem;
+$fontXS: 1.4rem;
+
+//Line Height
+$lineG: 1;
+$lineXXL: 1;
+$lineXL: 1.1;
+$lineL: 1.2;
+$lineM: 1.4;
+$lineS: 1.5;
+$lineXS: 1.5;
+
+//SPACING
+$spaceS: 1rem;
+$spaceM: 3rem;
+$spaceL: 6rem;
+$spaceXL: 10rem;
+
+$contentWidth: 140rem;
+
+//BoxShadow:
+$boxShadow: 1px 1px 2px darken($gray3, 10%);
+
+//MIXINS
+//Flex
+@mixin flex($dir: null, $just: null, $ali: null) {
+  display: flex;
+  @if $dir != null {
+    flex-direction: $dir;
+  }
+  @if $just != null {
+    justify-content: $just;
+  }
+  @if $ali != null {
+    align-items: $ali;
+  }
+}
+
+//Media Queries
+@mixin min-width($threshold) {
+  @media screen and (min-width: $threshold) {
+    @content;
+  }
+}
+
+//Font size and height
+@mixin font($size) {
+  @if $size == "XS" {
+    font-size: $fontXS;
+    line-height: $lineXS;
+  } @else if $size == "S" {
+    font-size: $fontS;
+    line-height: $lineS;
+  } @else if $size == "M" {
+    font-size: $fontM;
+    line-height: $lineM;
+  } @else if $size == "L" {
+    font-size: $fontL;
+    line-height: $lineL;
+  } @else if $size == "XL" {
+    font-size: $fontXL;
+    line-height: $lineXL;
+  } @else if $size == "XXL" {
+    font-size: $fontXXL;
+    line-height: $lineXXL;
+  } @else if $size == "G" {
+    font-size: $fontG;
+    line-height: $lineG;
+  }
+}
+
+//CTA Button
+@mixin cta-button() {
+  @include font("M");
+
+  background: $primary;
+  border: none;
+  box-shadow: 0px 2px 0px 0px $primaryD;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+
+  &:hover {
+    background: $primaryD;
+  }
+}
+
+@mixin underline() {
+  &:after {
+    position: absolute;
+    background: $primary;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    // margin-top: $spaceS;
+    width: 100%;
+  }
+}

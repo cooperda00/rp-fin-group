@@ -1,0 +1,53 @@
+@import "../../../../vars";
+
+.Card {
+  @include flex(column, flex-start, center);
+
+  background: white;
+  box-shadow: $boxShadow;
+  min-height: 70rem;
+  padding: $spaceM;
+  width: 90%;
+  max-width: 40rem;
+  z-index: 200;
+  margin: $spaceL 0;
+
+  h3 {
+    @include font("XL");
+    width: 100%;
+    letter-spacing: 0.3rem;
+    text-align: center;
+  }
+
+  @include min-width(1400px) {
+    margin-top: -#{$spaceM};
+    width: 30%;
+
+    h3:first-of-type {
+      text-align: left;
+      margin-left: $spaceM;
+    }
+
+    h3:last-of-type {
+      text-align: right;
+      margin-right: $spaceM;
+    }
+  }
+
+  div {
+    @include flex(column, flex-start, center);
+
+    height: 54.5rem;
+
+    p {
+      @include font("M");
+
+      text-align: justify;
+    }
+
+    p:first-of-type {
+      margin-top: $spaceM;
+      margin-bottom: $spaceM;
+    }
+  }
+}

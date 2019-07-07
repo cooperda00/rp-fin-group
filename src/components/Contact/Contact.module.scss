@@ -1,0 +1,11 @@
+@import "../../vars";
+
+.Contact {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+  }
+}
