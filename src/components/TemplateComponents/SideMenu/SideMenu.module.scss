@@ -1,0 +1,33 @@
+@import "../../../vars";
+
+.SideMenu {
+  ul {
+    @include flex(row, center, center);
+    margin-bottom: $spaceM;
+    flex-wrap: wrap;
+
+    li {
+      @include font("M");
+
+      list-style: none;
+
+      &:first-of-type {
+        margin-right: $spaceM;
+      }
+    }
+  }
+
+  @include min-width(768px) {
+    ul {
+      @include flex(column, flex-start, flex-start);
+      margin: 0;
+
+      li {
+        margin: 0;
+      }
+    }
+
+    width: 50%;
+    margin-bottom: auto;
+  }
+}

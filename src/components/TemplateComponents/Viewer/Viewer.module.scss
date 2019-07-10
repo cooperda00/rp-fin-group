@@ -1,0 +1,13 @@
+@import "../../../vars";
+
+.Viewer {
+  @include flex(column, flex-start, center);
+
+  height: 100%;
+  padding: $spaceM;
+  min-height: 60vh;
+
+  @include min-width(768px) {
+    @include flex(row, space-around, center);
+  }
+}

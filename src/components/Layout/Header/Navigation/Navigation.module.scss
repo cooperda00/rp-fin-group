@@ -37,7 +37,7 @@
 }
 
 .MiniMenu {
-  @include flex(row, space-between, center);
+  @include flex(row, space-around, center);
 
   flex-wrap: wrap;
   width: 100%;

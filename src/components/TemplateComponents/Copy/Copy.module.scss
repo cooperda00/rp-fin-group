@@ -1,0 +1,32 @@
+@import "../../../vars";
+
+.Copy {
+  max-width: 50rem;
+  margin-bottom: auto;
+
+  h2 {
+    @include font("L");
+    margin-bottom: $spaceM;
+  }
+}
+
+.Markdown {
+  h3 {
+    @include font("M");
+    margin-bottom: $spaceS;
+  }
+  p {
+    @include font("S");
+    margin-bottom: $spaceS;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      @include font("S");
+      margin-left: $spaceM;
+      margin-bottom: $spaceS;
+    }
+  }
+}

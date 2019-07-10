@@ -24,6 +24,7 @@ const IndexPage = ({ data }) => {
           <CTAButton path="/services" text="View Our Services" />
         </BannerText>
       </Hero>
+
       <Cards />
       <About />
       <CTA />

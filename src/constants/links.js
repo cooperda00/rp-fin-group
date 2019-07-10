@@ -4,7 +4,7 @@ export const links = [
     text: "Home",
   },
   {
-    path: "/services",
+    path: "/services/strategic-investment",
     text: "Services",
   },
   {
@@ -12,7 +12,7 @@ export const links = [
     text: "About",
   },
   {
-    path: "/compliance",
+    path: "/compliance/data-collection",
     text: "Compliance",
   },
   {
