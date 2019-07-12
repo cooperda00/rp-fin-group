@@ -1,11 +1,11 @@
 @import "../../../vars";
 
 .Viewer {
-  @include flex(column, flex-start, center);
+  @include flex(column, flex-start, flex-start);
 
   height: 100%;
   padding: $spaceM;
-  min-height: 60vh;
+  min-height: 70vh;
 
   @include min-width(768px) {
     @include flex(row, space-around, center);

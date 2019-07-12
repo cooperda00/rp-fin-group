@@ -1,5 +1,7 @@
 // @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,600|Oswald:400,700&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,600|Oswald:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:300,400,700&display=swap");
+
 //COLORS
 $primary: #36723e; //Main Green
 $primaryL: #508e58;
@@ -22,8 +24,11 @@ $gray5: hsl(24, 24%, 11%);
 
 //TEXT
 //Fonts
-$fontStackTitle: "Oswald", sans-serif;
-$fontStackBody: "EB Garamond", serif;
+// $fontStackTitle: "Oswald", sans-serif;
+// $fontStackBody: "EB Garamond", serif;
+
+$fontStackTitle: "Playfair Display", serif;
+$fontStackBody: "Source Sans Pro", sans-serif;
 
 //Sizes
 $fontG: 8rem;
@@ -114,6 +119,7 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
   padding: 1rem 2rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+  transition: 0.5s;
 
   &:hover {
     background: $primaryD;
@@ -126,12 +132,10 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
 
 @mixin underline() {
   &:after {
-    position: absolute;
-    background: $primary;
+    border-bottom: 0.2rem solid white;
     content: "";
     display: block;
-    height: 0.2rem;
-    // margin-top: $spaceS;
+    position: absolute;
     width: 100%;
   }
 }

@@ -11,10 +11,7 @@ const CTA = () => {
     <Container pattern="0">
       <div className={styles.CTA}>
         <div className={styles.Left}>
-          <p>
-            Speak with one of our expert advisors today. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit.
-          </p>
+          <p>Speak with one of our expert advisors today.</p>
         </div>
 
         <div className={styles.Right}>

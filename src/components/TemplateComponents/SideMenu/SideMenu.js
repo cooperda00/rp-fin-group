@@ -3,6 +3,8 @@ import React from "react"
 import { Link } from "gatsby"
 //Sass
 import styles from "./SideMenu.module.scss"
+//Icons
+import { FaCaretRight } from "react-icons/fa"
 
 const SideMenu = ({ menu }) => {
   return (
@@ -11,7 +13,14 @@ const SideMenu = ({ menu }) => {
         {menu.map((item, index) => {
           return (
             <li>
-              <Link to={item.path}>{item.name}</Link>
+              <FaCaretRight />
+              <Link
+                to={item.path}
+                activeClassName="active-route-side"
+                partiallyActive={true}
+              >
+                {item.name}
+              </Link>
             </li>
           )
         })}

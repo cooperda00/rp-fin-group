@@ -7,12 +7,12 @@ import Container from "../../Layout/Container/Container"
 import Copy from "../Copy/Copy"
 import SideMenu from "../SideMenu/SideMenu"
 
-const Viewer = ({ menu, frontmatter, html }) => {
+const Viewer = ({ menu, frontmatter, html, noScroll }) => {
   return (
     <Container>
-      <div className={styles.Viewer} id="view">
+      <div className={styles.Viewer}>
         <SideMenu menu={menu} />
-        <Copy frontmatter={frontmatter} html={html} />
+        <Copy frontmatter={frontmatter} html={html} noScroll={noScroll} />
       </div>
     </Container>
   )

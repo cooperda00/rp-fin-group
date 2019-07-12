@@ -4,6 +4,7 @@
   @include flex(column, flex-start, center);
 
   padding: $spaceL $spaceM;
+  min-height: 40vh;
 
   .Left,
   .Right {

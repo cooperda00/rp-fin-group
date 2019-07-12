@@ -67,6 +67,12 @@
   }
 
   a:hover {
-    transform: translateX(0.5rem);
+    transform: translateY(-0.5rem);
+  }
+
+  @include min-width(1000px) {
+    a:hover {
+      transform: translateX(0.5rem);
+    }
   }
 }

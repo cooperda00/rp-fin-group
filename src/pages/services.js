@@ -5,15 +5,26 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
+import Viewer from "../components/TemplateComponents/Viewer/Viewer"
+//Constants
+import { servicesMenu } from "../constants/servicesMenu"
 
 const ServicesPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
 
   return (
     <Layout>
       <Hero image={image}>
         <BannerText title="Our Services" />
       </Hero>
+      <Viewer
+        menu={servicesMenu}
+        html={html}
+        frontmatter={frontmatter}
+        noScroll
+      />
     </Layout>
   )
 }
@@ -25,6 +36,12 @@ export const query = graphql`
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
+      }
+    }
+    markdownRemark(frontmatter: { title: { eq: "Our Services" } }) {
+      html
+      frontmatter {
+        title
       }
     }
   }

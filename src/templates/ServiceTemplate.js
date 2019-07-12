@@ -12,7 +12,6 @@ import { servicesMenu } from "../constants/servicesMenu"
 const ServiceTemplate = ({ data }) => {
   const { markdownRemark, bg } = data
   const image = bg.childImageSharp.fluid
-
   const { frontmatter, html } = markdownRemark
 
   return (

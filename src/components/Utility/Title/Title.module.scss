@@ -3,7 +3,8 @@
 .Title {
   @include font("XL");
 
-  text-transform: capitalize;
+  text-transform: uppercase;
   background: white;
   padding: $spaceS;
+  letter-spacing: 0.6rem;
 }

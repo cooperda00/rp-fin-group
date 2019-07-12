@@ -15,8 +15,12 @@ const Navigation = () => {
   return (
     <nav className={styles.Navigation}>
       <div className={styles.Links}>
-        {links.map(({ path, text }) => (
-          <Link to={path} activeClassName="active-route">
+        {links.map(({ path, text, partiallyActive }) => (
+          <Link
+            to={path}
+            activeClassName="active-route"
+            partiallyActive={partiallyActive}
+          >
             {text}
           </Link>
         ))}
