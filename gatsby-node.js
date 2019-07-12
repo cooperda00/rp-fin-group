@@ -30,7 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
           component: complianceTemplate,
           context: {},
         })
-      } else if (node.frontmatter.path.includes("/services/")) {
+      }
+
+      if (node.frontmatter.path.includes("/services/")) {
         createPage({
           path: node.frontmatter.path,
           component: serviceTemplate,
