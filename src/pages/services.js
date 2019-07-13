@@ -6,6 +6,7 @@ import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import Viewer from "../components/TemplateComponents/Viewer/Viewer"
+import SEO from "../components/SEO/SEO"
 //Constants
 import { servicesMenu } from "../constants/servicesMenu"
 
@@ -16,6 +17,7 @@ const ServicesPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO titleExtra="Services" keywordsExtra="" descriptionExtra="Services" />
       <Hero image={image}>
         <BannerText title="Our Services" />
       </Hero>

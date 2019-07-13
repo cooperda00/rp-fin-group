@@ -5,6 +5,7 @@
 
   ul {
     @include flex(column, flex-start, flex-start);
+
     margin-bottom: $spaceM;
     flex-wrap: wrap;
 
@@ -30,6 +31,7 @@
     ul {
       @include flex(column, flex-start, flex-start);
       margin: 0;
+      margin-top: $spaceM;
 
       li {
         margin: 0;

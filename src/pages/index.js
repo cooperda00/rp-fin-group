@@ -10,12 +10,15 @@ import Cards from "../components/Index/Cards/Cards"
 import About from "../components/About/About"
 import CTA from "../components/Utility/CTA/CTA"
 import Contact from "../components/Contact/Contact"
+import SEO from "../components/SEO/SEO"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
 
   return (
     <Layout>
+      <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="Home" />
+
       <Hero image={image} type="home">
         <BannerText
           title="RP Financial Group"
@@ -26,8 +29,11 @@ const IndexPage = ({ data }) => {
       </Hero>
 
       <Cards />
+
       <About />
+
       <CTA />
+
       <Contact />
     </Layout>
   )

@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import { useRef } from "react"
 
 export const useScroll = () => {
   const ref = useRef(null)

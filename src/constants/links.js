@@ -15,7 +15,7 @@ export const links = [
     partiallyActive: false,
   },
   {
-    path: "/compliance/data-collection",
+    path: "/compliance/",
     text: "Compliance",
     partiallyActive: true,
   },

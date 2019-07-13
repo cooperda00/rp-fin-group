@@ -24,18 +24,6 @@
   @include min-width(1400px) {
     margin-top: -#{$spaceL};
     width: 30%;
-
-    .Title {
-      h3:first-of-type {
-        text-align: left;
-        margin-left: $spaceM;
-      }
-
-      h3:last-of-type {
-        text-align: right;
-        margin-right: $spaceM;
-      }
-    }
   }
 
   .Copy {

@@ -6,6 +6,7 @@ import Layout from "../components/Layout/Layout"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import Hero from "../components/Utility/Hero/Hero"
 import Viewer from "../components/TemplateComponents/Viewer/Viewer"
+import SEO from "../components/SEO/SEO"
 //Constants
 import { servicesMenu } from "../constants/servicesMenu"
 
@@ -16,6 +17,11 @@ const ServiceTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        titleExtra={frontmatter.title}
+        keywordsExtra=""
+        descriptionExtra={frontmatter.title}
+      />
       <Hero image={image}>
         <BannerText title="Services" />
       </Hero>

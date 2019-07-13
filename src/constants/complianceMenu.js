@@ -1,10 +1,10 @@
 export const complianceMenu = [
   {
     name: "Data Collection",
-    path: "/compliance/data-collection#view",
+    path: "/compliance/data-collection",
   },
   {
     name: "Disclaimer",
-    path: "/compliance/disclaimer#view",
+    path: "/compliance/disclaimer",
   },
 ]
