@@ -132,7 +132,7 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
 
 @mixin underline() {
   &:after {
-    border-bottom: 0.2rem solid white;
+    border-bottom: 0.2rem solid $primaryLL;
     content: "";
     display: block;
     position: absolute;

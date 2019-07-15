@@ -48,9 +48,6 @@ a {
 
 .active-route {
   @include underline();
-
-  // font-weight: 600;
-  // color: $gray5;
 }
 
 .active-route-side {

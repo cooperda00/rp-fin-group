@@ -18,7 +18,7 @@
     &::before {
       height: 0.2rem;
       width: 100%;
-      background: white;
+      background: $primaryLL;
       content: "";
       display: block;
       position: absolute;
@@ -60,10 +60,9 @@
   padding: $spaceS;
   top: 10rem;
   right: 0;
-  background: rgba($gray5, 0.5);
+  background: lighten($primaryLL, 35%);
 
   a {
-    color: white;
     padding: 0 $spaceS;
   }
 }
