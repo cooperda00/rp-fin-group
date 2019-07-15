@@ -32,7 +32,7 @@
 }
 
 .Right {
-  @include flex(column, center, flex-start);
+  @include flex(column, center, center);
 
   h3 {
     @include font("L");

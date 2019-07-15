@@ -40,10 +40,11 @@
 }
 
 .HamburgerMenu {
+  cursor: pointer;
   border: none;
   background: transparent;
   @include font("XL");
-  color: white;
+  color: $gray5;
 
   @include min-width(1000px) {
     display: none;
@@ -51,7 +52,7 @@
 }
 
 .MiniMenu {
-  @include flex(row, space-around, center);
+  @include flex(row, center, center);
 
   flex-wrap: wrap;
   width: 100%;
@@ -63,5 +64,6 @@
 
   a {
     color: white;
+    padding: 0 $spaceS;
   }
 }

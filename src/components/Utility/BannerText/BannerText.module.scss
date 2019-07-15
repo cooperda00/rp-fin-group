@@ -10,11 +10,12 @@
     color: white;
     text-align: center;
     margin-bottom: $spaceM;
-    text-shadow: 2px 1px 1px $gray5;
+    // text-shadow: 2px 1px 1px $gray5;
+    text-shadow: 0px 0px 4rem black;
   }
 
   h1 {
-    @include font("XL");
+    @include font("XXL");
   }
 
   h2 {

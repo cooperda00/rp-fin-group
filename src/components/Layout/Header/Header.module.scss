@@ -3,10 +3,15 @@
 .Header {
   @include flex(row, space-around, center);
 
-  background: transparent;
-  position: absolute;
+  background: $gray1;
+
   height: 10rem;
   padding: $spaceS;
   width: 100%;
   z-index: 100;
+
+  @include min-width(1000px) {
+    background: transparent;
+    position: absolute;
+  }
 }

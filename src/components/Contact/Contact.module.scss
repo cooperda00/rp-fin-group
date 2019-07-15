@@ -11,7 +11,11 @@
 }
 
 .Left {
-  width: 50%;
-  margin-right: $spaceM;
+  width: 100%;
   margin-top: $spaceL;
+
+  @include min-width(1000px) {
+    width: 50%;
+    margin-right: $spaceM;
+  }
 }
