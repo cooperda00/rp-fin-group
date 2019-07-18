@@ -7,6 +7,7 @@ const Copy = ({ title, html }) => {
   return (
     <div className={styles.Copy}>
       <h2>{title}</h2>
+
       <div
         dangerouslySetInnerHTML={{ __html: html }}
         className={styles.Markdown}

@@ -64,16 +64,16 @@ const SideMenu = ({
 
   return (
     <nav className={styles.SideMenu}>
-      <ul>
+      <div>
         {menu.map((item, index) => {
           return (
-            <li key={index} onClick={handleClick}>
+            <button key={index} onClick={handleClick}>
               <FaCaretRight />
               {item.name}
-            </li>
+            </button>
           )
         })}
-      </ul>
+      </div>
     </nav>
   )
 }

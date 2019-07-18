@@ -39,7 +39,7 @@ const Navigation = () => {
       <Slide right when={menu}>
         <div className={styles.MiniMenu}>
           {links.map(({ path, text }) => (
-            <Link to={path} key={text}>
+            <Link to={path} key={text} tabIndex="-1">
               {text}
             </Link>
           ))}

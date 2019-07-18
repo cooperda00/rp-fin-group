@@ -16,6 +16,7 @@ const Social = () => {
             rel="noopener noreferrer"
             key={link.name}
             style={{ color: link.color }}
+            aria-label={`Link to our ${link.name}`}
           >
             <div className={styles.White} />
             {link.icon}

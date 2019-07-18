@@ -3,18 +3,19 @@
 .SideMenu {
   align-self: flex-start;
 
-  ul {
+  div {
     @include flex(column, flex-start, flex-start);
 
     margin-bottom: $spaceM;
     flex-wrap: wrap;
 
-    li {
+    button {
       @include flex(row, center, center);
       @include font("M");
 
-      list-style: none;
-      margin-bottom: 1rem;
+      background: none;
+      border: none;
+      margin-bottom: $spaceS;
       cursor: pointer;
 
       &:first-of-type {

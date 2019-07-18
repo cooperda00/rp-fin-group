@@ -29,6 +29,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               key={link.name}
               style={{ color: link.color }}
+              aria-label={`Link to our ${link.name}`}
             >
               <div></div>
               {link.icon}
