@@ -1,0 +1,51 @@
+@import "../../../vars";
+
+.Copy {
+  margin-bottom: auto;
+
+  h2 {
+    @include font("L");
+
+    margin-bottom: $spaceM;
+    letter-spacing: 0.2rem;
+  }
+
+  @include min-width(768px) {
+    width: 60rem;
+
+    h2 {
+      @include font("XL");
+    }
+  }
+}
+
+.Markdown {
+  h3 {
+    @include font("M");
+    margin-bottom: $spaceS;
+  }
+  p {
+    @include font("S");
+    margin-bottom: $spaceS;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      @include font("S");
+      margin-left: $spaceM;
+      margin-bottom: $spaceS;
+    }
+  }
+
+  @include min-width(768px) {
+    h3 {
+      @include font("L");
+    }
+    p,
+    ul li {
+      @include font("M");
+    }
+  }
+}

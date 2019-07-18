@@ -17,6 +17,7 @@ const Navigation = () => {
       <div className={styles.Links}>
         {links.map(({ path, text, partiallyActive }) => (
           <Link
+            key={text}
             to={path}
             activeClassName="active-route"
             partiallyActive={partiallyActive}
@@ -38,7 +39,9 @@ const Navigation = () => {
       <Slide right when={menu}>
         <div className={styles.MiniMenu}>
           {links.map(({ path, text }) => (
-            <Link to={path}>{text}</Link>
+            <Link to={path} key={text}>
+              {text}
+            </Link>
           ))}
         </div>
       </Slide>

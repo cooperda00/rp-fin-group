@@ -21,7 +21,7 @@ module.exports = {
         short_name: `RP Fin Group`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `##36723e`,
+        theme_color: `#36723e`,
         display: `standalone`,
         icon: "src/images/logo.webp",
       },

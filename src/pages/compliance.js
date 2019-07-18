@@ -1,19 +1,32 @@
 //Modules
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
-import Viewer from "../components/TemplateComponents/Viewer/Viewer"
+import Viewer from "../components/ViewerV2/Viewer"
 import SEO from "../components/SEO/SEO"
 //Constants
 import { complianceMenu } from "../constants/complianceMenu"
 
 const CompliancePage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+
+  const dataCollection = {
+    title: data.dataCollection.frontmatter.title,
+    html: data.dataCollection.html,
+  }
+
+  const disclaimer = {
+    title: data.disclaimer.frontmatter.title,
+    html: data.disclaimer.html,
+  }
+
+  const [currentCopy, setCurrentCopy] = useState({
+    title: data.dataCollection.frontmatter.title,
+    html: data.dataCollection.html,
+  })
 
   return (
     <Layout>
@@ -27,9 +40,11 @@ const CompliancePage = ({ data }) => {
       </Hero>
       <Viewer
         menu={complianceMenu}
-        html={html}
-        frontmatter={frontmatter}
-        noScroll
+        html={currentCopy.html}
+        title={currentCopy.title}
+        dataCollection={dataCollection}
+        disclaimer={disclaimer}
+        setCurrentCopy={setCurrentCopy}
       />
     </Layout>
   )
@@ -44,7 +59,15 @@ export const query = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { title: { eq: "Compliance" } }) {
+    dataCollection: markdownRemark(
+      frontmatter: { title: { eq: "Data Collection" } }
+    ) {
+      html
+      frontmatter {
+        title
+      }
+    }
+    disclaimer: markdownRemark(frontmatter: { title: { eq: "Disclaimer" } }) {
       html
       frontmatter {
         title

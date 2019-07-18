@@ -1,44 +1,44 @@
-const path = require(`path`)
+// const path = require(`path`)
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+// exports.createPages = ({ actions, graphql }) => {
+//   const { createPage } = actions
 
-  const complianceTemplate = path.resolve(`src/templates/ComplianceTemplate.js`)
-  const serviceTemplate = path.resolve(`src/templates/ServiceTemplate.js`)
+//   const complianceTemplate = path.resolve(`src/templates/ComplianceTemplate.js`)
+//   const serviceTemplate = path.resolve(`src/templates/ServiceTemplate.js`)
 
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
-          }
-        }
-      }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+//   return graphql(`
+//     {
+//       allMarkdownRemark {
+//         edges {
+//           node {
+//             frontmatter {
+//               path
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `).then(result => {
+//     if (result.errors) {
+//       return Promise.reject(result.errors)
+//     }
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (node.frontmatter.path.includes("/compliance/")) {
-        createPage({
-          path: node.frontmatter.path,
-          component: complianceTemplate,
-          context: {},
-        })
-      }
+//     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//       if (node.frontmatter.path.includes("/compliance/")) {
+//         createPage({
+//           path: node.frontmatter.path,
+//           component: complianceTemplate,
+//           context: {},
+//         })
+//       }
 
-      if (node.frontmatter.path.includes("/services/")) {
-        createPage({
-          path: node.frontmatter.path,
-          component: serviceTemplate,
-          context: {},
-        })
-      }
-    })
-  })
-}
+//       if (node.frontmatter.path.includes("/services/")) {
+//         createPage({
+//           path: node.frontmatter.path,
+//           component: serviceTemplate,
+//           context: {},
+//         })
+//       }
+//     })
+//   })
+// }
