@@ -30,7 +30,7 @@ export const query = graphql`
     bg: file(relativePath: { eq: "auckland_skyline.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

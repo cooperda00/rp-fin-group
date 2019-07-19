@@ -8,7 +8,12 @@ const Hero = ({ image, type, children }) => {
   const sizeClass = type === "home" ? `${styles.Home}` : `${styles.Page}`
 
   return (
-    <BackgroundImage fluid={image} className={`${styles.Hero} ${sizeClass}`}>
+    <BackgroundImage
+      critical
+      fadeIn={false}
+      fluid={image}
+      className={`${styles.Hero} ${sizeClass}`}
+    >
       {children}
     </BackgroundImage>
   )

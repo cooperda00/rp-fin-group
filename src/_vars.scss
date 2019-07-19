@@ -1,6 +1,6 @@
 // @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
 // @import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,600|Oswald:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Oswald:400,700&display=swap");
 
 //COLORS
 $primary: #36723e; //Main Green
@@ -27,7 +27,8 @@ $gray5: hsl(24, 24%, 11%);
 // $fontStackTitle: "Oswald", sans-serif;
 // $fontStackBody: "EB Garamond", serif;
 
-$fontStackTitle: "Playfair Display", serif;
+$fontStackTitle: "Nunito", sans-serif;
+// $fontStackTitle: "Playfair Display", serif;
 $fontStackBody: "Source Sans Pro", sans-serif;
 
 //Sizes
@@ -36,6 +37,7 @@ $fontXXL: 5rem;
 $fontXL: 4rem;
 $fontL: 3rem;
 $fontM: 2.5rem;
+$fontSM: 2.2rem;
 $fontS: 1.8rem;
 $fontXS: 1.4rem;
 
@@ -88,6 +90,9 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
     line-height: $lineXS;
   } @else if $size == "S" {
     font-size: $fontS;
+    line-height: $lineS;
+  } @else if $size == "SM" {
+    font-size: $fontSM;
     line-height: $lineS;
   } @else if $size == "M" {
     font-size: $fontM;

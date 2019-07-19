@@ -11,6 +11,7 @@ import About from "../components/About/About"
 import CTA from "../components/Utility/CTA/CTA"
 import Contact from "../components/Contact/Contact"
 import SEO from "../components/SEO/SEO"
+import InvestmentServices from "../components/InvestmentServices/InvestmentServices"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -34,6 +35,8 @@ const IndexPage = ({ data }) => {
 
       <CTA />
 
+      <InvestmentServices />
+
       <Contact />
     </Layout>
   )
@@ -41,10 +44,10 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "bangkok_skyline_3.jpg" }) {
+    bg: file(relativePath: { eq: "melbourne_skyline_2.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

@@ -12,6 +12,7 @@
   width: 100%;
 
   a {
+    @include font("SM");
     position: relative;
     color: white;
 
@@ -22,7 +23,7 @@
       content: "";
       display: block;
       position: absolute;
-      margin-top: 3.45rem;
+      margin-top: 3.1rem;
       opacity: 0;
       transition: 0.6s;
     }

@@ -58,14 +58,14 @@ const Contact = () => {
 
 const query = graphql`
   {
-    bangkok: file(relativePath: { eq: "bangkok_vertical.jpg" }) {
+    bangkok: file(relativePath: { eq: "bhiraj_tower_bkk.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    hongkong: file(relativePath: { eq: "hong_kong_vertical.jpg" }) {
+    hongkong: file(relativePath: { eq: "cosco_tower_hk.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

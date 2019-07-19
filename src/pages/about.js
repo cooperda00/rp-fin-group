@@ -26,7 +26,7 @@ export const query = graphql`
     bg: file(relativePath: { eq: "singapore_skyline_2.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

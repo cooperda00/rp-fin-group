@@ -11,7 +11,7 @@ export const links = [
   },
   {
     path: "/about",
-    text: "About",
+    text: "About Us",
     partiallyActive: false,
   },
   {
@@ -22,6 +22,11 @@ export const links = [
   {
     path: "/contact",
     text: "Contact",
+    partiallyActive: false,
+  },
+  {
+    path: "/news",
+    text: "News",
     partiallyActive: false,
   },
 ]

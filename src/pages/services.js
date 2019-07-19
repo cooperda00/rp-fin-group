@@ -7,6 +7,7 @@ import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import Viewer from "../components/ViewerV2/Viewer"
 import SEO from "../components/SEO/SEO"
+import CTA from "../components/Utility/CTA/CTA"
 //Constants
 import { servicesMenu } from "../constants/servicesMenu"
 
@@ -60,6 +61,7 @@ const ServicesPage = ({ data }) => {
         strategicInvestment={strategicInvestment}
         taxAdvisory={taxAdvisory}
       />
+      <CTA />
     </Layout>
   )
 }
@@ -69,7 +71,7 @@ export const query = graphql`
     bg: file(relativePath: { eq: "hong_kong_skyline_night.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
