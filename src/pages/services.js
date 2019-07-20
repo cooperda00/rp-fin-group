@@ -15,13 +15,13 @@ const ServicesPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
 
   const [currentCopy, setCurrentCopy] = useState({
-    title: data.strategicInvestment.frontmatter.title,
-    html: data.strategicInvestment.html,
+    title: data.portfolioManagement.frontmatter.title,
+    html: data.portfolioManagement.html,
   })
 
-  const familyProtection = {
-    title: data.familyProtection.frontmatter.title,
-    html: data.familyProtection.html,
+  const educationPlanning = {
+    title: data.educationPlanning.frontmatter.title,
+    html: data.educationPlanning.html,
   }
 
   const portfolioManagement = {
@@ -34,32 +34,38 @@ const ServicesPage = ({ data }) => {
     html: data.retirementPlanning.html,
   }
 
-  const strategicInvestment = {
-    title: data.strategicInvestment.frontmatter.title,
-    html: data.strategicInvestment.html,
+  const propertyInvestments = {
+    title: data.propertyInvestments.frontmatter.title,
+    html: data.propertyInvestments.html,
   }
 
-  const taxAdvisory = {
-    title: data.taxAdvisory.frontmatter.title,
-    html: data.taxAdvisory.html,
+  const statePension = {
+    title: data.statePension.frontmatter.title,
+    html: data.statePension.html,
+  }
+
+  const pensionTransfers = {
+    title: data.pensionTransfers.frontmatter.title,
+    html: data.pensionTransfers.html,
   }
 
   return (
     <Layout>
       <SEO titleExtra="Services" keywordsExtra="" descriptionExtra="Services" />
       <Hero image={image}>
-        <BannerText title="Our Services" />
+        <BannerText title="Investment Services" />
       </Hero>
       <Viewer
         menu={servicesMenu}
         html={currentCopy.html}
         title={currentCopy.title}
         setCurrentCopy={setCurrentCopy}
-        familyProtection={familyProtection}
+        educationPlanning={educationPlanning}
         portfolioManagement={portfolioManagement}
         retirementPlanning={retirementPlanning}
-        strategicInvestment={strategicInvestment}
-        taxAdvisory={taxAdvisory}
+        propertyInvestments={propertyInvestments}
+        statePension={statePension}
+        pensionTransfers={pensionTransfers}
       />
       <CTA />
     </Layout>
@@ -75,8 +81,8 @@ export const query = graphql`
         }
       }
     }
-    familyProtection: markdownRemark(
-      frontmatter: { title: { eq: "Family Protection & Insurance" } }
+    educationPlanning: markdownRemark(
+      frontmatter: { title: { eq: "Education Planning" } }
     ) {
       html
       frontmatter {
@@ -84,7 +90,7 @@ export const query = graphql`
       }
     }
     portfolioManagement: markdownRemark(
-      frontmatter: { title: { eq: "Portfolio Management" } }
+      frontmatter: { title: { eq: "Asset & Portfolio Management" } }
     ) {
       html
       frontmatter {
@@ -99,16 +105,24 @@ export const query = graphql`
         title
       }
     }
-    strategicInvestment: markdownRemark(
-      frontmatter: { title: { eq: "Strategic Investment" } }
+    propertyInvestments: markdownRemark(
+      frontmatter: { title: { eq: "Property Investments" } }
     ) {
       html
       frontmatter {
         title
       }
     }
-    taxAdvisory: markdownRemark(
-      frontmatter: { title: { eq: "Tax Advisory & Estate Planning" } }
+    statePension: markdownRemark(
+      frontmatter: { title: { eq: "UK State Pensions" } }
+    ) {
+      html
+      frontmatter {
+        title
+      }
+    }
+    pensionTransfers: markdownRemark(
+      frontmatter: { title: { eq: "Pension Transfers" } }
     ) {
       html
       frontmatter {

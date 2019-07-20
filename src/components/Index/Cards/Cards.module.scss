@@ -7,13 +7,16 @@
 }
 
 .CardsContainer {
-  @include flex(column, flex-start, center);
+  // @include flex(column, flex-start, center);
+  @include flex(row, center, center);
 
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-  max-width: $contentWidth;
+  // max-width: $contentWidth;
+  max-width: $contentWidthL;
 
-  @include min-width(1400px) {
-    @include flex(row, space-between, center);
-  }
+  // @include min-width(1400px) {
+  //   @include flex(row, space-between, center);
+  // }
 }

@@ -14,11 +14,12 @@ const Viewer = ({
   dataCollection,
   disclaimer,
   setCurrentCopy,
-  familyProtection,
+  educationPlanning,
   portfolioManagement,
   retirementPlanning,
-  strategicInvestment,
-  taxAdvisory,
+  propertyInvestments,
+  statePension,
+  pensionTransfers,
 }) => {
   return (
     <Container>
@@ -28,11 +29,12 @@ const Viewer = ({
           setCurrentCopy={setCurrentCopy}
           dataCollection={dataCollection}
           disclaimer={disclaimer}
-          familyProtection={familyProtection}
+          educationPlanning={educationPlanning}
           portfolioManagement={portfolioManagement}
           retirementPlanning={retirementPlanning}
-          strategicInvestment={strategicInvestment}
-          taxAdvisory={taxAdvisory}
+          propertyInvestments={propertyInvestments}
+          statePension={statePension}
+          pensionTransfers={pensionTransfers}
         />
 
         <Copy title={title} html={html} />

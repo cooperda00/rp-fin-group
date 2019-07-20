@@ -10,13 +10,14 @@
     flex-wrap: wrap;
 
     button {
-      @include flex(row, center, center);
+      @include flex(row, flex-start, baseline);
       @include font("M");
 
       background: none;
       border: none;
       margin-bottom: $spaceS;
       cursor: pointer;
+      text-align: left;
 
       &:first-of-type {
         margin-right: $spaceM;
@@ -24,6 +25,7 @@
 
       svg {
         margin-right: $spaceS;
+        padding-top: 0.3rem;
         color: $primary;
       }
     }

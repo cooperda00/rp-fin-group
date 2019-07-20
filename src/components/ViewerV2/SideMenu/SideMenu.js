@@ -10,11 +10,12 @@ const SideMenu = ({
   dataCollection,
   disclaimer,
   setCurrentCopy,
-  familyProtection,
+  educationPlanning,
   portfolioManagement,
   retirementPlanning,
-  strategicInvestment,
-  taxAdvisory,
+  propertyInvestments,
+  statePension,
+  pensionTransfers,
 }) => {
   const handleClick = e => {
     e.preventDefault()
@@ -30,13 +31,13 @@ const SideMenu = ({
         html: disclaimer.html,
       })
     }
-    if (e.target.innerText === "Family Protection & Insurance") {
+    if (e.target.innerText === "Education Planning") {
       setCurrentCopy({
-        title: familyProtection.title,
-        html: familyProtection.html,
+        title: educationPlanning.title,
+        html: educationPlanning.html,
       })
     }
-    if (e.target.innerText === "Portfolio Management") {
+    if (e.target.innerText === "Asset & Portfolio Management") {
       setCurrentCopy({
         title: portfolioManagement.title,
         html: portfolioManagement.html,
@@ -48,16 +49,22 @@ const SideMenu = ({
         html: retirementPlanning.html,
       })
     }
-    if (e.target.innerText === "Strategic Investment") {
+    if (e.target.innerText === "Property Investments") {
       setCurrentCopy({
-        title: strategicInvestment.title,
-        html: strategicInvestment.html,
+        title: propertyInvestments.title,
+        html: propertyInvestments.html,
       })
     }
-    if (e.target.innerText === "Tax Advisory & Estate Planning") {
+    if (e.target.innerText === "UK State Pensions") {
       setCurrentCopy({
-        title: taxAdvisory.title,
-        html: taxAdvisory.html,
+        title: statePension.title,
+        html: statePension.html,
+      })
+    }
+    if (e.target.innerText === "Pension Transfers") {
+      setCurrentCopy({
+        title: pensionTransfers.title,
+        html: pensionTransfers.html,
       })
     }
   }

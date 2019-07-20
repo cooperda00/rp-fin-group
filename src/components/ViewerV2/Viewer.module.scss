@@ -8,6 +8,7 @@
   min-height: 60vh;
 
   @include min-width(768px) {
-    @include flex(row, space-around, center);
+    @include flex(row, center, center);
+    width: 100%;
   }
 }

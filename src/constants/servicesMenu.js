@@ -1,23 +1,26 @@
 export const servicesMenu = [
   {
-    name: "Strategic Investment",
-    path: "/services/strategic-investment",
+    name: "Asset & Portfolio Management",
+    path: "/services/portfolio-management",
+  },
+  {
+    name: "Property Investments",
+    path: "/services/property-investments",
   },
   {
     name: "Retirement Planning",
     path: "/services/retirement-planning",
   },
   {
-    name: "Portfolio Management",
-    path: "/services/portfolio-management",
-  },
-
-  {
-    name: "Tax Advisory & Estate Planning",
-    path: "/services/tax-advisory-estate-planning",
+    name: "Education Planning",
+    path: "/services/education-planning",
   },
   {
-    name: "Family Protection & Insurance",
-    path: "/services/family-protection-insurance",
+    name: "UK State Pensions",
+    path: "/services/uk-state-pension",
+  },
+  {
+    name: "Pension Transfers",
+    path: "/services/pension-transfers",
   },
 ]

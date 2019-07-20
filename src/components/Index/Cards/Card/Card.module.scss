@@ -10,7 +10,7 @@
   width: 90%;
   max-width: 40rem;
   z-index: 200;
-  margin: $spaceM 0;
+  margin: $spaceM;
 
   .Title {
     h3 {
@@ -22,18 +22,27 @@
   }
 
   @include min-width(1400px) {
-    margin-top: -#{$spaceL};
-    width: 30%;
+    // margin-top: -#{$spaceL};
+    max-width: 45rem;
+  }
+
+  @include min-width(1800px) {
+    // margin-top: -#{$spaceL};
+    max-width: 50rem;
   }
 
   .Copy {
     @include flex(column, flex-start, center);
 
     p {
-      @include font("M");
+      @include font("SM");
 
       text-align: center;
       margin-bottom: $spaceM;
+
+      @include min-width(1400px) {
+        text-align: left;
+      }
     }
 
     p:first-of-type {

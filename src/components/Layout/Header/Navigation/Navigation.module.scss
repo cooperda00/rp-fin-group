@@ -61,9 +61,14 @@
   padding: $spaceS;
   top: 10rem;
   right: 0;
-  background: lighten($primaryLL, 35%);
+  // background: lighten($primaryLL, 35%);
+  background: $gray1;
 
   a {
     padding: 0 $spaceS;
+  }
+
+  @include min-width(1000px) {
+    display: none;
   }
 }

@@ -2,6 +2,7 @@
 
 .Copy {
   margin-bottom: auto;
+  // width: 70%;
 
   h2 {
     @include font("L");
@@ -11,7 +12,7 @@
   }
 
   @include min-width(768px) {
-    width: 60rem;
+    width: 80rem;
 
     h2 {
       @include font("XL");
@@ -22,7 +23,7 @@
 .Markdown {
   h3 {
     @include font("M");
-    margin-bottom: $spaceS;
+    margin-bottom: $spaceM;
   }
   p {
     @include font("S");
@@ -37,6 +38,10 @@
       margin-left: $spaceM;
       margin-bottom: $spaceS;
     }
+  }
+
+  hr {
+    margin: $spaceL 0;
   }
 
   @include min-width(768px) {

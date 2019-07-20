@@ -1,19 +1,32 @@
 //Modules
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 //Sass
 import styles from "./Cards.module.scss"
 //Components
 import Card from "./Card/Card"
+import Hero from "../../Utility/Hero/Hero"
 
 const Cards = () => {
+  const imageData = useStaticQuery(query)
+
+  const image = imageData.bg.childImageSharp.fluid
+
   return (
-    <section className={styles.Cards}>
+    // <section className={styles.Cards}>
+    // <div className={styles.CardsContainer}>
+    //   {data.map((card, index) => {
+    //     return <Card key={index} card={card} />
+    //   })}
+    // </div>
+    // </section>
+    <Hero image={image} type="home">
       <div className={styles.CardsContainer}>
         {data.map((card, index) => {
           return <Card key={index} card={card} />
         })}
       </div>
-    </section>
+    </Hero>
   )
 }
 
@@ -46,5 +59,17 @@ const data = [
     ],
   },
 ]
+
+const query = graphql`
+  {
+    bg: file(relativePath: { eq: "sydney_skyline_2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`
 
 export default Cards
