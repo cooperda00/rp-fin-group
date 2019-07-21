@@ -1,5 +1,5 @@
 //Modules
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
@@ -11,12 +11,13 @@ import CTA from "../components/Utility/CTA/CTA"
 //Constants
 import { servicesMenu } from "../constants/servicesMenu"
 
-const ServicesPage = ({ data }) => {
+const ServicesPage = ({ data, location }) => {
+  const locationState = location.state.title ? location.state.title : "other"
   const image = data.bg.childImageSharp.fluid
 
   const [currentCopy, setCurrentCopy] = useState({
-    title: data.portfolioManagement.frontmatter.title,
-    html: data.portfolioManagement.html,
+    title: "",
+    html: "",
   })
 
   const educationPlanning = {
@@ -48,6 +49,49 @@ const ServicesPage = ({ data }) => {
     title: data.pensionTransfers.frontmatter.title,
     html: data.pensionTransfers.html,
   }
+
+  //Sets state based on what was passed from <Link> - instead of individual pages
+
+  useEffect(() => {
+    switch (locationState) {
+      case "Pension Transfers":
+        setCurrentCopy({
+          title: data.pensionTransfers.frontmatter.title,
+          html: data.pensionTransfers.html,
+        })
+        break
+      case "Property Investments":
+        setCurrentCopy({
+          title: data.propertyInvestments.frontmatter.title,
+          html: data.propertyInvestments.html,
+        })
+        break
+      case "Retirement Planning":
+        setCurrentCopy({
+          title: data.retirementPlanning.frontmatter.title,
+          html: data.retirementPlanning.html,
+        })
+        break
+      case "Education Planning":
+        setCurrentCopy({
+          title: data.educationPlanning.frontmatter.title,
+          html: data.educationPlanning.html,
+        })
+        break
+      case "UK State Pensions":
+        setCurrentCopy({
+          title: data.statePension.frontmatter.title,
+          html: data.statePension.html,
+        })
+        break
+      default:
+        setCurrentCopy({
+          title: data.portfolioManagement.frontmatter.title,
+          html: data.portfolioManagement.html,
+        })
+        break
+    }
+  }, [])
 
   return (
     <Layout>

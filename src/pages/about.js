@@ -7,6 +7,7 @@ import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import About from "../components/About/About"
 import SEO from "../components/SEO/SEO"
+import CTA from "../components/Utility/CTA/CTA"
 
 const AboutPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -17,6 +18,7 @@ const AboutPage = ({ data }) => {
         <BannerText title="About Us" />
       </Hero>
       <About />
+      <CTA />
     </Layout>
   )
 }

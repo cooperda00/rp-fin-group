@@ -1,0 +1,83 @@
+@import "../../../vars";
+
+.Card {
+  height: 35rem;
+  margin: $spaceS;
+  perspective: 150rem;
+  position: relative;
+  width: 30rem;
+
+  .Front,
+  .Back {
+    backface-visibility: hidden;
+    height: 35rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.8s ease;
+    width: 100%;
+  }
+
+  .Front {
+    @include flex(column, center, center);
+
+    background: rgba($gray6, 0.9);
+    padding: $spaceM;
+
+    h3 {
+      @include font("SM");
+
+      color: white;
+      letter-spacing: 0.1rem;
+      text-align: center;
+      margin-bottom: $spaceS;
+    }
+  }
+
+  .Back {
+    @include flex(column, flex-start, flex-start);
+
+    background: rgba($gray3, 1);
+    transform: rotateY(180deg);
+    padding: $spaceSM;
+    position: relative;
+
+    h3 {
+      @include font("S");
+
+      margin: $spaceM 0;
+    }
+
+    .Rule {
+      width: 50%;
+      height: 0.1rem;
+      background: lighten($gray4, 40%);
+      margin-bottom: $spaceM;
+    }
+
+    p {
+      @include font("S");
+      text-align: center;
+      align-self: center;
+    }
+
+    .Icon {
+      @include font("M");
+
+      position: absolute;
+      bottom: $spaceSM;
+      right: $spaceSM;
+      color: $primary;
+    }
+  }
+
+  &:hover {
+    .Front {
+      transform: rotateY(180deg);
+    }
+
+    .Back {
+      transform: rotateY(0);
+    }
+  }
+}

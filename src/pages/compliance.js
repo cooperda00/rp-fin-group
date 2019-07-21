@@ -7,6 +7,7 @@ import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import Viewer from "../components/ViewerV2/Viewer"
 import SEO from "../components/SEO/SEO"
+import CTA from "../components/Utility/CTA/CTA"
 //Constants
 import { complianceMenu } from "../constants/complianceMenu"
 
@@ -46,6 +47,7 @@ const CompliancePage = ({ data }) => {
         disclaimer={disclaimer}
         setCurrentCopy={setCurrentCopy}
       />
+      <CTA />
     </Layout>
   )
 }

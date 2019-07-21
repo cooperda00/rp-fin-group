@@ -35,13 +35,26 @@
 
     li {
       @include font("S");
+
       margin-left: $spaceM;
       margin-bottom: $spaceS;
+    }
+
+    li:before {
+      display: inline-block;
+      content: "";
+      height: 0.8em;
+      width: 0.8em;
+      background: $primary;
+      margin-right: $spaceS;
+      clip-path: polygon(50% 50%, 0 0, 0 100%);
     }
   }
 
   hr {
     margin: $spaceL 0;
+    background-color: $primaryLL;
+    height: 0.5rem;
   }
 
   @include min-width(768px) {

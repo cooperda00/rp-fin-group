@@ -29,9 +29,9 @@ const IndexPage = ({ data }) => {
         </BannerText>
       </Hero>
 
-      <Cards />
-
       <About />
+
+      <Cards />
 
       <CTA />
 

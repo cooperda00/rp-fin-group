@@ -32,14 +32,14 @@ No information contained on the Website shall constitute or is intended to const
 
 ​We reserve the right, at any time in our sole discretion without notice or explanation:
 
-* \- to terminate or suspend your access to all or part of our website;
+*  to terminate or suspend your access to all or part of our website;
 
-* \- to discontinue or modify any or all of our website services; 
+*  to discontinue or modify any or all of our website services; 
 
-* \- to stop publishing all or part of our website;
+*  to stop publishing all or part of our website;
 
 We, including our officers, directors, employees, agents, distributors, or affiliates are/will not be responsible or liable to in relation to the contents of, otherwise in connection with, our website:
 
-* \- for any loss and damage (including, but not limited to, actual, indirect, consequential, or punitive);
+*  for any loss and damage (including, but not limited to, actual, indirect, consequential, or punitive);
 
-* \- For any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data.
+*  For any business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business relationships, loss of reputation or goodwill, or loss or corruption of information or data.
