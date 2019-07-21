@@ -17,7 +17,7 @@ const InvestmentServices = () => {
   return (
     <Hero image={image} type="home">
       <div className={styles.InvestmentServices}>
-        <Title title="investment services" />
+        <Title title="investment services" whiteText={true} />
         <div className={styles.FlipCardContainer}>
           {servicesMenu.map((service, index) => {
             return (
