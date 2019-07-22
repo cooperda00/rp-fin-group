@@ -21,8 +21,6 @@ Financial markets offer investors the great potential for capital growth. Howeve
 
 * Full discretionary management options.
 
-* Online access to the Holborn Exchange portal providing full transparency and up to date valuations for your investment.
-
 * Shariah-compliant investments.
 
 * Low cost passive options.

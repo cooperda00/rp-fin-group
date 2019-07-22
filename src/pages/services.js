@@ -12,7 +12,12 @@ import CTA from "../components/Utility/CTA/CTA"
 import { servicesMenu } from "../constants/servicesMenu"
 
 const ServicesPage = ({ data, location }) => {
-  const locationState = location.state.title ? location.state.title : "other"
+  let locationState = ""
+
+  if (location.state.title) {
+    locationState = location.state.title
+  }
+  // const locationState = location.state.title ? location.state.title : "other"
   const image = data.bg.childImageSharp.fluid
 
   const [currentCopy, setCurrentCopy] = useState({

@@ -1,0 +1,43 @@
+@import "../../../vars";
+
+.NewsCard {
+  width: 32rem;
+  height: 50rem;
+  margin: $spaceM;
+  position: relative;
+
+  .ImageContainer {
+    width: 100%;
+    height: 40%;
+
+    .Image {
+      height: 100%;
+    }
+  }
+
+  h3 {
+    @include font("SM");
+    line-height: 1;
+    margin-top: 0.5rem;
+  }
+
+  .Date {
+    @include font("XS");
+  }
+
+  .Excerpt {
+    @include font("S");
+
+    margin-top: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .Icon {
+    @include font("SM");
+
+    color: $primary;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

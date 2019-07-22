@@ -2,6 +2,7 @@
 
 .InvestmentServices {
   @include flex(column, flex-start, center);
+
   max-width: $contentWidth;
   padding: $spaceXL 0;
 }
