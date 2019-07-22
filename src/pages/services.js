@@ -12,11 +12,11 @@ import CTA from "../components/Utility/CTA/CTA"
 import { servicesMenu } from "../constants/servicesMenu"
 
 const ServicesPage = ({ data, location }) => {
-  let locationState = ""
+  // let locationState = ""
 
-  if (location.state.title) {
-    locationState = location.state.title
-  }
+  // if (location.state.title) {
+  //   locationState = location.state.title
+  // }
   // const locationState = location.state.title ? location.state.title : "other"
   const image = data.bg.childImageSharp.fluid
 
@@ -58,7 +58,7 @@ const ServicesPage = ({ data, location }) => {
   //Sets state based on what was passed from <Link> - instead of individual pages
 
   useEffect(() => {
-    switch (locationState) {
+    switch (location.state.title) {
       case "Pension Transfers":
         setCurrentCopy({
           title: data.pensionTransfers.frontmatter.title,
