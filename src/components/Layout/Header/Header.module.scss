@@ -1,13 +1,11 @@
 @import "../../../vars";
 
 .Header {
-  @include flex(row, space-between, center);
+  @include flex(row, space-between, flex-start);
 
   background: $gray1;
-
-  height: 15rem;
+  height: 10rem;
   padding: $spaceS;
-
   width: 100%;
   z-index: 100;
 
@@ -18,11 +16,15 @@
 
   @include min-width(1500px) {
     height: 20rem;
+    padding-top: $spaceL;
+    padding-left: $spaceL;
+    padding-right: $spaceL;
+    padding-bottom: 0;
   }
 }
 
 .Menu {
   @include flex(column, flex-start, flex-end);
+
   width: 40%;
-  margin-right: 10rem;
 }

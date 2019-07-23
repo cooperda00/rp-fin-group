@@ -2,11 +2,8 @@
 
 .Navigation {
   @include flex(row, flex-end, center);
-  @include font("M");
 
   width: 100%;
-  // padding-top: $spaceXL;
-  // margin-left: $spaceL;
 }
 
 .Links {
@@ -14,20 +11,23 @@
   width: 100%;
 
   a {
-    @include font("SSM");
+    @include font("S");
+
     position: relative;
     color: white;
+  }
 
+  a:not(.ContactBtn) {
     &::before {
-      height: 0.2rem;
-      width: 100%;
       background: $primaryLL;
       content: "";
       display: block;
-      position: absolute;
-      margin-top: 3.1rem;
+      height: 0.2rem;
+      margin-top: 2.6rem;
       opacity: 0;
+      position: absolute;
       transition: 0.6s;
+      width: 100%;
     }
 
     &:hover {
@@ -38,19 +38,19 @@
   }
 
   @include min-width(1000px) {
-    @include flex(row, space-around, center);
+    @include flex(row, space-between, center);
   }
 }
 
 .HamburgerMenu {
-  @include font("XXL");
+  @include font("XL");
 
-  cursor: pointer;
-  border: none;
   background: transparent;
+  border: none;
   color: $gray5;
-  margin-bottom: 9rem;
-  margin-right: 2rem;
+  cursor: pointer;
+  margin-right: -7rem;
+  margin-top: 2rem;
 
   @include min-width(1000px) {
     display: none;
@@ -60,14 +60,13 @@
 .MiniMenu {
   @include flex(row, center, center);
 
-  flex-wrap: wrap;
-  width: 100%;
-  position: absolute;
-  padding: $spaceS;
-  top: 15rem;
-  right: 0;
-  // background: lighten($primaryLL, 35%);
   background: $gray1;
+  flex-wrap: wrap;
+  padding: $spaceS;
+  position: absolute;
+  right: 0;
+  top: 10rem;
+  width: 100%;
 
   a {
     padding: 0 $spaceS;
@@ -75,5 +74,16 @@
 
   @include min-width(1000px) {
     display: none;
+  }
+}
+
+.ContactBtn {
+  border: 0.15rem solid white;
+  border-radius: 5px;
+  padding: $spaceXS $spaceS;
+  transition: 0.8s;
+
+  &:hover {
+    background: rgba($gray5, 0.5);
   }
 }

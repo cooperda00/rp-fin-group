@@ -6,24 +6,24 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: $spaceL;
+  padding: $spaceM;
   justify-items: center;
 
   .Navigation {
     @include flex(column, flex-start, flex-start);
-    @include font("M");
+    @include font("SSM");
   }
 
   .Social {
     @include flex(row, space-around, flex-start);
-    @include font("XXL");
+    @include font("L");
 
     margin-top: $spaceL;
   }
 
   .Legal {
     @include flex(column, flex-start, flex-start);
-    @include font("S");
+    @include font("XS");
 
     text-align: center;
   }

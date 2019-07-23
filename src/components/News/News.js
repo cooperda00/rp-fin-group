@@ -11,7 +11,7 @@ const News = ({ news }) => {
   return (
     <Container>
       <section className={styles.News}>
-        <Title title={"RP News Wire"} />
+        <Title title={"RP News Wire"} greenText={true} />
         <div className={styles.NewsCardContainer}>
           {news.map(({ node }) => {
             return <NewsCard key={node.id} newsItem={node} />

@@ -50,7 +50,6 @@ a {
   @include underline();
 }
 
-.active-route-side {
-  padding-bottom: 0.5rem;
-  border-bottom: 0.2rem solid $primary;
+.active-contact {
+  border: 0.15rem solid $primaryLL !important;
 }

@@ -28,6 +28,7 @@
   .ImageContainer {
     width: 100%;
     margin-bottom: $spaceM;
+    box-shadow: 1px 1px 1px $gray4;
 
     @include min-width(1000px) {
       width: 80%;

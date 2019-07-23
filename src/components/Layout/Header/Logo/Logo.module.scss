@@ -7,9 +7,4 @@
   img {
     height: 100%;
   }
-
-  @include min-width(1000px) {
-    margin-left: $spaceL;
-    margin-top: 11rem;
-  }
 }

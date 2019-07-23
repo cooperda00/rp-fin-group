@@ -32,9 +32,9 @@ const InvestmentServices = () => {
 
 const query = graphql`
   {
-    bg: file(relativePath: { eq: "bangkok_night_skyline.jpg" }) {
+    bg: file(relativePath: { eq: "sydney_skyline_2.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1800) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }

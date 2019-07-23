@@ -11,7 +11,6 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <Logo />
-
       <div className={styles.Menu}>
         <Social />
         <Navigation />

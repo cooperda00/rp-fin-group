@@ -45,7 +45,7 @@ const Contact = () => {
     <Container>
       <div className={styles.Contact}>
         <div className={styles.Left}>
-          <Title title="Get in touch with us" />
+          <Title title="Get in touch with us" greenText />
           <Address details={hongkong} />
           <Address details={bangkok} />
         </div>

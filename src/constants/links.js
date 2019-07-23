@@ -19,14 +19,15 @@ export const links = [
     text: "Compliance",
     partiallyActive: true,
   },
-  {
-    path: "/contact",
-    text: "Contact Us",
-    partiallyActive: false,
-  },
+
   {
     path: "/news",
     text: "News",
+    partiallyActive: false,
+  },
+  {
+    path: "/contact",
+    text: "Contact Us",
     partiallyActive: false,
   },
 ]

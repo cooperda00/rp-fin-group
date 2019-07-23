@@ -2,13 +2,13 @@
 
 .Copy {
   margin-bottom: auto;
-  // width: 70%;
 
   h2 {
     @include font("L");
 
     margin-bottom: $spaceM;
     letter-spacing: 0.2rem;
+    color: $primaryD;
   }
 
   @include min-width(768px) {
@@ -23,11 +23,16 @@
 .Markdown {
   h3 {
     @include font("M");
+
+    color: $primaryD;
     margin-bottom: $spaceM;
   }
   p {
     @include font("S");
     margin-bottom: $spaceS;
+  }
+  strong {
+    color: $primaryD;
   }
 
   ul {

@@ -3,50 +3,23 @@
 .Card {
   @include flex(column, flex-start, flex-start);
 
-  // background: white;
-  // box-shadow: $boxShadow;
   background: $gray1;
-  min-height: 70rem;
+  margin: $spaceS;
+  max-width: 40rem;
+  min-height: 55rem;
   padding: $spaceM;
   width: 90%;
-  max-width: 40rem;
   z-index: 500;
-  margin: $spaceS;
 
   .Title {
     h3 {
       @include font("L");
 
       color: $primaryD;
-      width: 100%;
       letter-spacing: 0.3rem;
-      text-align: left;
       line-height: 1 !important;
-    }
-  }
-
-  @include min-width(1400px) {
-    // margin-top: -#{$spaceL};
-    // margin-top: -60rem;
-    max-width: 45rem;
-    min-height: 65rem;
-  }
-
-  @include min-width(1800px) {
-    // margin-top: -#{$spaceL};
-    max-width: 45rem;
-    min-height: 65rem;
-
-    .Title {
-      h3 {
-        @include font("L");
-      }
-    }
-
-    .Copy {
-      p {
-        @include font("SSM");
-      }
+      text-align: left;
+      width: 100%;
     }
   }
 
@@ -54,14 +27,11 @@
     @include flex(column, flex-start, center);
 
     p {
-      @include font("SSM");
+      @include font("S");
+    }
 
-      text-align: center;
+    p:not(:last-of-type) {
       margin-bottom: $spaceM;
-
-      @include min-width(1400px) {
-        text-align: left;
-      }
     }
 
     p:first-of-type {

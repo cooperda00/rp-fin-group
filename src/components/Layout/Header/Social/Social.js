@@ -15,7 +15,6 @@ const Social = () => {
             target="_blank"
             rel="noopener noreferrer"
             key={link.name}
-            // style={{ color: link.color }}
             style={{ color: "white" }}
             aria-label={`Link to our ${link.name}`}
           >

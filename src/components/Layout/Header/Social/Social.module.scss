@@ -1,19 +1,16 @@
 @import "../../../../vars";
 
 .Social {
-  @include font("L");
+  @include font("M");
 
   display: none;
-  // width: 20%;
-  // padding-top: $spaceXL;
-  margin-right: 2.8rem;
-  margin-bottom: $spaceS;
+  margin-bottom: $spaceM;
 
   a {
     @include flex(column, center, center);
 
-    transition: 0.3s;
     position: relative;
+    transition: 0.3s;
   }
 
   a:not(:last-child) {

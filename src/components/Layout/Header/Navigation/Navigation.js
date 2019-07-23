@@ -15,16 +15,23 @@ const Navigation = () => {
   return (
     <nav className={styles.Navigation}>
       <div className={styles.Links}>
-        {links.map(({ path, text, partiallyActive }) => (
-          <Link
-            key={text}
-            to={path}
-            activeClassName="active-route"
-            partiallyActive={partiallyActive}
-          >
-            {text}
-          </Link>
-        ))}
+        {links.map(({ path, text, partiallyActive }) => {
+          const linkStyle = text === "Contact Us" && styles.ContactBtn
+
+          return (
+            <Link
+              key={text}
+              to={path}
+              activeClassName={
+                text === "Contact Us" ? "active-contact" : "active-route"
+              }
+              partiallyActive={partiallyActive}
+              className={linkStyle}
+            >
+              {text}
+            </Link>
+          )
+        })}
       </div>
 
       <button
