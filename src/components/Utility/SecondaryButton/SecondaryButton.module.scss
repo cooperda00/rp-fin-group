@@ -14,6 +14,7 @@
   text-align: center;
   text-transform: capitalize;
   transition: 0.5s;
+  border: 0.1rem solid white;
 
   &:hover {
     background: rgba($primary, 0.5);
