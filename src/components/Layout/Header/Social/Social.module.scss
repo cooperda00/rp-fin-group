@@ -1,11 +1,13 @@
 @import "../../../../vars";
 
 .Social {
-  @include font("XL");
+  @include font("L");
 
   display: none;
-  width: 20%;
-  padding-top: $spaceXL;
+  // width: 20%;
+  // padding-top: $spaceXL;
+  margin-right: 2.8rem;
+  margin-bottom: $spaceS;
 
   a {
     @include flex(column, center, center);
@@ -15,7 +17,7 @@
   }
 
   a:not(:last-child) {
-    margin-right: $spaceS;
+    margin-right: $spaceM;
   }
 
   a:hover {
@@ -27,10 +29,10 @@
   }
 }
 
-.White {
-  position: absolute;
-  height: 80%;
-  width: 80%;
-  background: white;
-  z-index: -1;
-}
+// .White {
+//   position: absolute;
+//   height: 80%;
+//   width: 80%;
+//   background: white;
+//   z-index: -1;
+// }

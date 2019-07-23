@@ -1,7 +1,7 @@
 @import "../../../../vars";
 
 .Card {
-  @include flex(column, flex-start, center);
+  @include flex(column, flex-start, flex-start);
 
   // background: white;
   // box-shadow: $boxShadow;
@@ -20,7 +20,8 @@
       color: $primaryD;
       width: 100%;
       letter-spacing: 0.3rem;
-      text-align: center;
+      text-align: left;
+      line-height: 1 !important;
     }
   }
 

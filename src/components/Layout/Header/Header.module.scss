@@ -20,3 +20,9 @@
     height: 20rem;
   }
 }
+
+.Menu {
+  @include flex(column, flex-start, flex-end);
+  width: 40%;
+  margin-right: 10rem;
+}

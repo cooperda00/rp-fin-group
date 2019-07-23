@@ -4,9 +4,9 @@
   @include flex(row, flex-end, center);
   @include font("M");
 
-  width: 60%;
-  padding-top: $spaceXL;
-  margin-left: $spaceL;
+  width: 100%;
+  // padding-top: $spaceXL;
+  // margin-left: $spaceL;
 }
 
 .Links {

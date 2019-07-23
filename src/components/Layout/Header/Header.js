@@ -11,8 +11,11 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <Logo />
-      <Navigation />
-      <Social />
+
+      <div className={styles.Menu}>
+        <Social />
+        <Navigation />
+      </div>
     </header>
   )
 }
