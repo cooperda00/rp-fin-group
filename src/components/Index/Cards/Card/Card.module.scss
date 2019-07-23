@@ -3,8 +3,9 @@
 .Card {
   @include flex(column, flex-start, center);
 
-  background: white;
-  box-shadow: $boxShadow;
+  // background: white;
+  // box-shadow: $boxShadow;
+  background: $gray1;
   min-height: 70rem;
   padding: $spaceM;
   width: 90%;
@@ -15,6 +16,8 @@
   .Title {
     h3 {
       @include font("L");
+
+      color: $primaryD;
       width: 100%;
       letter-spacing: 0.3rem;
       text-align: center;
