@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
         </BannerText>
       </Hero>
 
-      <About />
+      {/* <About /> */}
 
       <Cards />
 

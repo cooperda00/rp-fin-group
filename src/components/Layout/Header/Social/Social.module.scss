@@ -5,6 +5,7 @@
 
   display: none;
   width: 20%;
+  padding-top: $spaceXL;
 
   a {
     @include flex(column, center, center);

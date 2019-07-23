@@ -12,6 +12,7 @@
     margin-bottom: $spaceM;
     // text-shadow: 2px 1px 1px $gray5;
     text-shadow: 0px 0px 4rem black;
+    letter-spacing: 0.4rem;
   }
 
   h1 {
@@ -25,10 +26,12 @@
   @include min-width(768px) {
     h1 {
       @include font("G");
+      font-weight: 400;
     }
 
     h2 {
       @include font("XL");
+      font-weight: 400;
     }
   }
 }
