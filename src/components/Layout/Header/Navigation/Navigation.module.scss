@@ -43,11 +43,14 @@
 }
 
 .HamburgerMenu {
+  @include font("XXL");
+
   cursor: pointer;
   border: none;
   background: transparent;
-  @include font("XL");
   color: $gray5;
+  margin-bottom: 9rem;
+  margin-right: 2rem;
 
   @include min-width(1000px) {
     display: none;
@@ -61,7 +64,7 @@
   width: 100%;
   position: absolute;
   padding: $spaceS;
-  top: 10rem;
+  top: 15rem;
   right: 0;
   // background: lighten($primaryLL, 35%);
   background: $gray1;

@@ -12,6 +12,7 @@ import CTA from "../components/Utility/CTA/CTA"
 import Contact from "../components/Contact/Contact"
 import SEO from "../components/SEO/SEO"
 import InvestmentServices from "../components/InvestmentServices/InvestmentServices"
+import Spacer from "../components/Utility/Spacer/Spacer"
 
 const IndexPage = ({ data }) => {
   const image = data.bg.childImageSharp.fluid
@@ -28,7 +29,7 @@ const IndexPage = ({ data }) => {
           <CTAButton path="/services" text="View Our Services" />
         </BannerText>
       </Hero>
-
+      {/* <Spacer /> */}
       {/* <About /> */}
 
       <Cards />

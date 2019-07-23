@@ -5,7 +5,7 @@
 
   background: $gray1;
 
-  height: 20rem;
+  height: 15rem;
   padding: $spaceS;
 
   width: 100%;
@@ -14,5 +14,9 @@
   @include min-width(1000px) {
     background: transparent;
     position: absolute;
+  }
+
+  @include min-width(1500px) {
+    height: 20rem;
   }
 }

@@ -17,21 +17,21 @@
 
   h1 {
     @include font("XXL");
+    font-weight: 400;
   }
 
   h2 {
     @include font("L");
+    font-weight: 400;
   }
 
-  @include min-width(768px) {
+  @include min-width(1300px) {
     h1 {
       @include font("G");
-      font-weight: 400;
     }
 
     h2 {
       @include font("XL");
-      font-weight: 400;
     }
   }
 }

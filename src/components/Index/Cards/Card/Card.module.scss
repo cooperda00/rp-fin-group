@@ -9,7 +9,7 @@
   padding: $spaceM;
   width: 90%;
   max-width: 40rem;
-  z-index: 200;
+  z-index: 500;
   margin: $spaceM;
 
   .Title {
@@ -23,6 +23,7 @@
 
   @include min-width(1400px) {
     // margin-top: -#{$spaceL};
+    // margin-top: -60rem;
     max-width: 45rem;
   }
 
