@@ -14,7 +14,7 @@
 
   .Title {
     h3 {
-      @include font("XL");
+      @include font("L");
       width: 100%;
       letter-spacing: 0.3rem;
       text-align: center;
@@ -30,15 +30,27 @@
 
   @include min-width(1800px) {
     // margin-top: -#{$spaceL};
-    max-width: 50rem;
+    max-width: 45rem;
     min-height: 65rem;
+
+    .Title {
+      h3 {
+        @include font("L");
+      }
+    }
+
+    .Copy {
+      p {
+        @include font("SSM");
+      }
+    }
   }
 
   .Copy {
     @include flex(column, flex-start, center);
 
     p {
-      @include font("SM");
+      @include font("SSM");
 
       text-align: center;
       margin-bottom: $spaceM;

@@ -42,7 +42,7 @@ const Contact = () => {
   }
 
   return (
-    <Container pattern="2">
+    <Container>
       <div className={styles.Contact}>
         <div className={styles.Left}>
           <Title title="Get in touch with us" />

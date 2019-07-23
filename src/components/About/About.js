@@ -12,7 +12,7 @@ const About = () => {
   const data = useStaticQuery(query)
 
   return (
-    <Container pattern="1">
+    <Container>
       <div className={styles.About}>
         <div className={styles.Left}>
           <div className={styles.ImageContainer}>
