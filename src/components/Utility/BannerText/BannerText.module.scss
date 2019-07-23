@@ -21,11 +21,11 @@
   }
 
   h2 {
-    @include font("L");
+    @include font("M");
     font-weight: 400;
   }
 
-  @include min-width(1300px) {
+  @include min-width(1600px) {
     h1 {
       @include font("G");
     }

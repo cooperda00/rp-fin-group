@@ -46,6 +46,7 @@ $fontXL: 4rem;
 $fontL: 3rem;
 $fontM: 2.5rem;
 $fontSM: 2.2rem;
+$fontSSM: 2rem;
 $fontS: 1.8rem;
 $fontXS: 1.4rem;
 
@@ -101,6 +102,9 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
   } @else if $size == "S" {
     font-size: $fontS;
     line-height: $lineS;
+  } @else if $size == "SSM" {
+    font-size: $fontSSM;
+    line-height: $lineS;
   } @else if $size == "SM" {
     font-size: $fontSM;
     line-height: $lineS;
@@ -132,7 +136,7 @@ $boxShadow: 1px 1px 2px darken($gray3, 10%);
   color: white;
   cursor: pointer;
   padding: 1rem 2rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.3rem;
   transition: 0.5s;
 
