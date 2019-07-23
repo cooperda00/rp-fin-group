@@ -13,20 +13,20 @@ const Cards = () => {
   const image = imageData.bg.childImageSharp.fluid
 
   return (
-    // <section className={styles.Cards}>
-    // <div className={styles.CardsContainer}>
-    //   {data.map((card, index) => {
-    //     return <Card key={index} card={card} />
-    //   })}
-    // </div>
-    // </section>
-    <Hero image={image} type="home">
+    <section className={styles.Cards}>
       <div className={styles.CardsContainer}>
         {data.map((card, index) => {
           return <Card key={index} card={card} />
         })}
       </div>
-    </Hero>
+    </section>
+    // <Hero image={image} type="home">
+    //   <div className={styles.CardsContainer}>
+    //     {data.map((card, index) => {
+    //       return <Card key={index} card={card} />
+    //     })}
+    //   </div>
+    // </Hero>
   )
 }
 

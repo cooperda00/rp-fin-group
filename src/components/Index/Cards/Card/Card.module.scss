@@ -5,7 +5,7 @@
 
   background: white;
   box-shadow: $boxShadow;
-  min-height: 75rem;
+  min-height: 70rem;
   padding: $spaceM;
   width: 90%;
   max-width: 40rem;
@@ -25,11 +25,13 @@
     // margin-top: -#{$spaceL};
     // margin-top: -60rem;
     max-width: 45rem;
+    min-height: 65rem;
   }
 
   @include min-width(1800px) {
     // margin-top: -#{$spaceL};
     max-width: 50rem;
+    min-height: 65rem;
   }
 
   .Copy {

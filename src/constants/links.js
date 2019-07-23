@@ -21,7 +21,7 @@ export const links = [
   },
   {
     path: "/contact",
-    text: "Contact",
+    text: "Contact Us",
     partiallyActive: false,
   },
   {

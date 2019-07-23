@@ -1,10 +1,10 @@
 @import "../../../vars";
 
 .CTA {
-  @include flex(column, flex-start, center);
+  @include flex(column, center, center);
 
   padding: $spaceL $spaceM;
-  min-height: 40vh;
+  min-height: 30vh;
 
   .Left,
   .Right {
@@ -27,13 +27,15 @@
   @include min-width(900px) {
     @include flex(row, space-between, center);
 
+    min-height: 40vh;
+
     .Left,
     .Right {
       width: 50%;
 
       p {
         margin-bottom: 0;
-        text-align: justify;
+        text-align: center;
       }
     }
   }

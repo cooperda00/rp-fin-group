@@ -29,6 +29,7 @@ const IndexPage = ({ data }) => {
           <CTAButton path="/services" text="View Our Services" />
         </BannerText>
       </Hero>
+
       {/* <Spacer /> */}
       {/* <About /> */}
 
@@ -38,7 +39,7 @@ const IndexPage = ({ data }) => {
 
       <InvestmentServices />
 
-      <Contact />
+      {/* <Contact /> */}
     </Layout>
   )
 }
