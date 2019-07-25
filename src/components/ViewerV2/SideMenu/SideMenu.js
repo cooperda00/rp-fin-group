@@ -80,8 +80,11 @@ const SideMenu = ({
           let selected = ""
 
           if (item.name === currentCopy.title) {
-            selected = styles.Selected
+            if (item.name === currentCopy.title) {
+              selected = styles.Selected
+            }
           }
+
           return (
             <button key={index} onClick={handleClick} className={selected}>
               {item.name}
