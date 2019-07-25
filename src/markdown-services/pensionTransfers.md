@@ -12,6 +12,4 @@ A well-considered move might be to transfer your DB pension into a SIPP. A SIPP 
 
 A SIPP works in a similar way to a standard UK personal pension, within the strict protections set out by HMRC, but instead of inclusion in a mandatory pooled investment fund, a SIPP owner can choose from a wide range of different asset types. It is common for the owner to employ an authorised Investment Manager for this purpose.
 
-Speak to your IFA about your pensions generally and rest assured that we will have your long-term interests at heart. If a DB pension transfer does not suit you, we here at Holborn Assets will tell you. And if it’s best to stay where you are, then we’ll tell you that too.
-
-In the last 12 months, our advisers have recommended to 47% of our clients that they would be better off remaining with their current scheme. We offer advice and investment expertise as well as products; we are not just salesmen tied to selling a particular product or service.
+Speak to your IFA about your pensions generally and rest assured that we will have your long-term interests at heart. If a DB pension transfer does not suit you, we here at RP Financial will tell you. And if it’s best to stay where you are, then we’ll tell you that too.

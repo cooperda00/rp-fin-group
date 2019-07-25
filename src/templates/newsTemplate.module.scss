@@ -1,0 +1,34 @@
+@import "../vars";
+
+.News {
+  max-width: $contentWidth;
+  padding: $spaceL 0;
+}
+
+.NewsCardContainer {
+  @include flex(row, center, center);
+
+  flex-wrap: wrap;
+}
+
+.PageControls {
+  @include flex(row, center, center);
+
+  flex-wrap: wrap;
+  max-width: $contentWidth;
+  width: 100%;
+  margin: $spaceM auto;
+
+  a {
+    @include font("M");
+  }
+
+  a:not(:last-of-type) {
+    margin-right: $spaceM;
+  }
+}
+
+.Selected {
+  border: 0.2rem solid $primaryD;
+  padding: $spaceS;
+}

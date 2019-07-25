@@ -6,6 +6,7 @@ import styles from "./SideMenu.module.scss"
 import { FaCaretRight } from "react-icons/fa"
 
 const SideMenu = ({
+  currentCopy,
   menu,
   dataCollection,
   disclaimer,
@@ -73,10 +74,17 @@ const SideMenu = ({
     <nav className={styles.SideMenu}>
       <div>
         {menu.map((item, index) => {
+          // if (item.name === currentCopy.title) {
+          //   console.log(item.name)
+          // }
           return (
-            <button key={index} onClick={handleClick}>
-              <FaCaretRight />
+            <button
+              key={index}
+              onClick={handleClick}
+              className={item.name === currentCopy.title && styles.Selected}
+            >
               {item.name}
+              <FaCaretRight />
             </button>
           )
         })}

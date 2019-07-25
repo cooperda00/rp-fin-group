@@ -1,44 +1,42 @@
-// const path = require(`path`)
+const path = require("path")
 
-// exports.createPages = ({ actions, graphql }) => {
-//   const { createPage } = actions
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
-//   const complianceTemplate = path.resolve(`src/templates/ComplianceTemplate.js`)
-//   const serviceTemplate = path.resolve(`src/templates/ServiceTemplate.js`)
+  const { data } = await graphql(`
+    {
+      news: allContentfulRpNewsItem {
+        edges {
+          node {
+            title
+          }
+        }
+      }
+    }
+  `)
 
-//   return graphql(`
-//     {
-//       allMarkdownRemark {
-//         edges {
-//           node {
-//             frontmatter {
-//               path
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-//     if (result.errors) {
-//       return Promise.reject(result.errors)
-//     }
-
-//     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//       if (node.frontmatter.path.includes("/compliance/")) {
-//         createPage({
-//           path: node.frontmatter.path,
-//           component: complianceTemplate,
-//           context: {},
-//         })
-//       }
-
-//       if (node.frontmatter.path.includes("/services/")) {
-//         createPage({
-//           path: node.frontmatter.path,
-//           component: serviceTemplate,
-//           context: {},
-//         })
-//       }
-//     })
-//   })
-// }
+  // amount of posts
+  const news = data.news.edges.length
+  // posts per page
+  const newsPerPage = 3
+  // calculate how many pages needed
+  const numOfPages = Math.ceil(news / newsPerPage)
+  // creates pages based on the number calculated
+  Array.from({ length: numOfPages }).forEach((_, i) => {
+    createPage({
+      //generate correct path
+      path: i === 0 ? `/news` : `/news/${i + 1}`,
+      //Point to template
+      component: path.resolve("./src/templates/newsTemplate.js"),
+      context: {
+        limit: newsPerPage,
+        // calculate how many posts to skip on each new page
+        skip: i * newsPerPage,
+        // pass numOfPages for generating buttons
+        numOfPages,
+        // get current page ( 0 index plus 1) for buttons
+        currentPage: i + 1,
+      },
+    })
+  })
+}

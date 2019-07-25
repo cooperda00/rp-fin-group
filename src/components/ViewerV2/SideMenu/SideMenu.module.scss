@@ -10,24 +10,35 @@
     flex-wrap: wrap;
 
     button {
-      @include flex(row, flex-start, baseline);
-      @include font("M");
+      @include flex(row, space-between, baseline);
+      @include font("S");
 
-      background: none;
+      background: $gray4;
+      padding: $spaceS;
+      width: 30rem;
+      color: white;
       border: none;
       margin-bottom: $spaceS;
       cursor: pointer;
       text-align: left;
+      transition: 0.5s;
 
       &:first-of-type {
         margin-right: $spaceM;
       }
 
       svg {
-        margin-right: $spaceS;
         padding-top: 0.3rem;
-        color: $primary;
+        color: white;
       }
+    }
+
+    button:hover {
+      background: $primary;
+    }
+
+    .Selected {
+      background: $primary;
     }
   }
 
@@ -46,7 +57,4 @@
     width: 50%;
     margin-bottom: auto;
   }
-}
-
-.Link {
 }

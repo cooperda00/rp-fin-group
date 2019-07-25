@@ -64,12 +64,5 @@ module.exports = {
         path: `${__dirname}/src/markdown-services`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown`,
-        path: `${__dirname}/src/markdown`,
-      },
-    },
   ],
 }

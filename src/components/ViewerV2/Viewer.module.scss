@@ -6,10 +6,10 @@
   height: 100%;
   padding: $spaceM;
   min-height: 60vh;
-  margin-top: $spaceL;
 
   @include min-width(768px) {
     @include flex(row, center, center);
     width: 100%;
+    margin-top: $spaceL;
   }
 }

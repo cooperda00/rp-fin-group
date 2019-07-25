@@ -105,6 +105,7 @@ const ServicesPage = ({ data, location }) => {
         <BannerText title="Investment Services" />
       </Hero>
       <Viewer
+        currentCopy={currentCopy}
         menu={servicesMenu}
         html={currentCopy.html}
         title={currentCopy.title}

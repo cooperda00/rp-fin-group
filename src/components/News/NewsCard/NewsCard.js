@@ -11,7 +11,7 @@ const NewsCard = ({ newsItem }) => {
 
   return (
     <div className={styles.NewsCard}>
-      <a href={url}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <div className={styles.ImageContainer}>
           <Image fluid={image.fluid} className={styles.Image} />
         </div>

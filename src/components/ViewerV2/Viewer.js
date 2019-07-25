@@ -8,6 +8,7 @@ import Copy from "./Copy/Copy"
 import SideMenu from "./SideMenu/SideMenu"
 
 const Viewer = ({
+  currentCopy,
   menu,
   html,
   title,
@@ -25,6 +26,7 @@ const Viewer = ({
     <Container>
       <div className={styles.Viewer}>
         <SideMenu
+          currentCopy={currentCopy}
           menu={menu}
           setCurrentCopy={setCurrentCopy}
           dataCollection={dataCollection}
