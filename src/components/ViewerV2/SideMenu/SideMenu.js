@@ -81,7 +81,11 @@ const SideMenu = ({
             <button
               key={index}
               onClick={handleClick}
-              className={item.name === currentCopy.title && styles.Selected}
+              className={
+                item.name && item.name === currentCopy.title
+                  ? styles.Selected
+                  : ""
+              }
             >
               {item.name}
               <FaCaretRight />
