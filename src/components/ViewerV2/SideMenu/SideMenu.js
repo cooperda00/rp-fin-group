@@ -18,6 +18,7 @@ const SideMenu = ({
   statePension,
   pensionTransfers,
 }) => {
+  console.log(currentCopy)
   const handleClick = e => {
     e.preventDefault()
     if (e.target.innerText === "Data Collection") {
@@ -79,14 +80,22 @@ const SideMenu = ({
           // }
           let selected = ""
 
-          if (item.name === currentCopy.title) {
-            if (item.name === currentCopy.title) {
-              selected = styles.Selected
-            }
-          }
+          // if (item.name === currentCopy.title) {
+          //   if (item.name === currentCopy.title) {
+          //     selected = styles.Selected
+          //   }
+          // }
 
           return (
-            <button key={index} onClick={handleClick} className={selected}>
+            <button
+              key={index}
+              onClick={handleClick}
+              className={
+                currentCopy && currentCopy.title === item.name
+                  ? styles.Selected
+                  : undefined
+              }
+            >
               {item.name}
               <FaCaretRight />
             </button>

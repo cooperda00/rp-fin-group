@@ -16,7 +16,8 @@ const Navigation = () => {
     <nav className={styles.Navigation}>
       <div className={styles.Links}>
         {links.map(({ path, text, partiallyActive }) => {
-          const linkStyle = text === "Contact Us" && styles.ContactBtn
+          const linkStyle =
+            text === "Contact Us" ? styles.ContactBtn : undefined
 
           return (
             <Link
