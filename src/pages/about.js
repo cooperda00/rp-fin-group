@@ -25,7 +25,7 @@ const AboutPage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "singapore_skyline_2.jpg" }) {
+    bg: file(relativePath: { eq: "singapore.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64

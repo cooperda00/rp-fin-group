@@ -1,5 +1,5 @@
 //Modules
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
@@ -11,8 +11,14 @@ import CTA from "../components/Utility/CTA/CTA"
 //Constants
 import { complianceMenu } from "../constants/complianceMenu"
 
-const CompliancePage = ({ data }) => {
+const CompliancePage = ({ data, location }) => {
+  console.log(location.state.title)
   const image = data.bg.childImageSharp.fluid
+
+  const [currentCopy, setCurrentCopy] = useState({
+    title: "",
+    html: "",
+  })
 
   const dataCollection = {
     title: data.dataCollection.frontmatter.title,
@@ -24,10 +30,27 @@ const CompliancePage = ({ data }) => {
     html: data.disclaimer.html,
   }
 
-  const [currentCopy, setCurrentCopy] = useState({
-    title: data.dataCollection.frontmatter.title,
-    html: data.dataCollection.html,
-  })
+  // const [currentCopy, setCurrentCopy] = useState({
+  //   title: data.dataCollection.frontmatter.title,
+  //   html: data.dataCollection.html,
+  // })
+
+  useEffect(() => {
+    switch (location.state.title) {
+      case "Disclaimer":
+        setCurrentCopy({
+          title: data.disclaimer.frontmatter.title,
+          html: data.disclaimer.html,
+        })
+        break
+      default:
+        setCurrentCopy({
+          title: data.dataCollection.frontmatter.title,
+          html: data.dataCollection.html,
+        })
+        break
+    }
+  }, [])
 
   return (
     <Layout>
@@ -40,6 +63,7 @@ const CompliancePage = ({ data }) => {
         <BannerText title="Compliance" />
       </Hero>
       <Viewer
+        currentCopy={currentCopy}
         menu={complianceMenu}
         html={currentCopy.html}
         title={currentCopy.title}

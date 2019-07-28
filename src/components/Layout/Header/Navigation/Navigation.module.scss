@@ -11,7 +11,7 @@
   width: 100%;
 
   a {
-    @include font("S");
+    @include font("XS");
 
     position: relative;
     color: white;
@@ -39,6 +39,12 @@
 
   @include min-width(1000px) {
     @include flex(row, space-between, center);
+  }
+
+  @include min-width(1500px) {
+    a {
+      @include font("S");
+    }
   }
 }
 
@@ -69,6 +75,7 @@
   width: 100%;
 
   a {
+    @include font("SM");
     padding: 0 $spaceS;
   }
 
@@ -84,6 +91,6 @@
   transition: 0.8s;
 
   &:hover {
-    background: rgba($gray5, 0.5);
+    background: rgba($primary, 0.5);
   }
 }

@@ -19,8 +19,9 @@ const Viewer = ({
   portfolioManagement,
   retirementPlanning,
   propertyInvestments,
-  statePension,
   pensionTransfers,
+  lifeInsurance,
+  willsTrusts,
 }) => {
   return (
     <Container>
@@ -35,8 +36,9 @@ const Viewer = ({
           portfolioManagement={portfolioManagement}
           retirementPlanning={retirementPlanning}
           propertyInvestments={propertyInvestments}
-          statePension={statePension}
           pensionTransfers={pensionTransfers}
+          lifeInsurance={lifeInsurance}
+          willsTrusts={willsTrusts}
         />
 
         <Copy title={title} html={html} />

@@ -32,9 +32,7 @@
 }
 
 .Right {
-  @include flex(column, flex-start, flex-start);
-
-  margin-left: $spaceM;
+  @include flex(column, flex-start, center);
 
   h3,
   ul li {
@@ -59,5 +57,10 @@
       @include font("S");
       margin-bottom: 0.5rem;
     }
+  }
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, flex-start);
+    margin-left: $spaceM;
   }
 }

@@ -15,10 +15,10 @@ const SideMenu = ({
   portfolioManagement,
   retirementPlanning,
   propertyInvestments,
-  statePension,
   pensionTransfers,
+  lifeInsurance,
+  willsTrusts,
 }) => {
-  console.log(currentCopy)
   const handleClick = e => {
     e.preventDefault()
     if (e.target.innerText === "Data Collection") {
@@ -33,7 +33,7 @@ const SideMenu = ({
         html: disclaimer.html,
       })
     }
-    if (e.target.innerText === "Education Planning") {
+    if (e.target.innerText === "Education Fee Planning") {
       setCurrentCopy({
         title: educationPlanning.title,
         html: educationPlanning.html,
@@ -51,22 +51,28 @@ const SideMenu = ({
         html: retirementPlanning.html,
       })
     }
-    if (e.target.innerText === "Property Investments") {
+    if (e.target.innerText === "Property Investment") {
       setCurrentCopy({
         title: propertyInvestments.title,
         html: propertyInvestments.html,
       })
     }
-    if (e.target.innerText === "UK State Pensions") {
-      setCurrentCopy({
-        title: statePension.title,
-        html: statePension.html,
-      })
-    }
-    if (e.target.innerText === "Pension Transfers") {
+    if (e.target.innerText === "Pension Transfers (QROPS & SIPPs)") {
       setCurrentCopy({
         title: pensionTransfers.title,
         html: pensionTransfers.html,
+      })
+    }
+    if (e.target.innerText === "Life / Critical Illness Insurance") {
+      setCurrentCopy({
+        title: lifeInsurance.title,
+        html: lifeInsurance.html,
+      })
+    }
+    if (e.target.innerText === "Wills / Trusts") {
+      setCurrentCopy({
+        title: willsTrusts.title,
+        html: willsTrusts.html,
       })
     }
   }
@@ -75,17 +81,6 @@ const SideMenu = ({
     <nav className={styles.SideMenu}>
       <div>
         {menu.map((item, index) => {
-          // if (item.name === currentCopy.title) {
-          //   console.log(item.name)
-          // }
-          let selected = ""
-
-          // if (item.name === currentCopy.title) {
-          //   if (item.name === currentCopy.title) {
-          //     selected = styles.Selected
-          //   }
-          // }
-
           return (
             <button
               key={index}

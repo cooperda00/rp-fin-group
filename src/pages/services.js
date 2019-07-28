@@ -12,12 +12,6 @@ import CTA from "../components/Utility/CTA/CTA"
 import { servicesMenu } from "../constants/servicesMenu"
 
 const ServicesPage = ({ data, location }) => {
-  // let locationState = ""
-
-  // if (location.state.title) {
-  //   locationState = location.state.title
-  // }
-  // const locationState = location.state.title ? location.state.title : "other"
   const image = data.bg.childImageSharp.fluid
 
   const [currentCopy, setCurrentCopy] = useState({
@@ -45,27 +39,44 @@ const ServicesPage = ({ data, location }) => {
     html: data.propertyInvestments.html,
   }
 
-  const statePension = {
-    title: data.statePension.frontmatter.title,
-    html: data.statePension.html,
-  }
-
   const pensionTransfers = {
     title: data.pensionTransfers.frontmatter.title,
     html: data.pensionTransfers.html,
   }
 
-  //Sets state based on what was passed from <Link> - instead of individual pages
+  const lifeInsurance = {
+    title: data.lifeInsurance.frontmatter.title,
+    html: data.lifeInsurance.html,
+  }
 
+  const willsTrusts = {
+    title: data.willsTrusts.frontmatter.title,
+    html: data.willsTrusts.html,
+  }
+
+  //Sets state based on what was passed from <Link> - instead of individual pages
   useEffect(() => {
     switch (location.state.title) {
-      case "Pension Transfers":
+      case "Pension Transfers (QROPS & SIPPs)":
         setCurrentCopy({
           title: data.pensionTransfers.frontmatter.title,
           html: data.pensionTransfers.html,
         })
         break
-      case "Property Investments":
+      case "Wills / Trusts":
+        setCurrentCopy({
+          title: data.willsTrusts.frontmatter.title,
+          html: data.willsTrusts.html,
+        })
+        break
+      case "Life / Critical Illness Insurance":
+        setCurrentCopy({
+          title: data.lifeInsurance.frontmatter.title,
+          html: data.lifeInsurance.html,
+        })
+        break
+
+      case "Property Investment":
         setCurrentCopy({
           title: data.propertyInvestments.frontmatter.title,
           html: data.propertyInvestments.html,
@@ -77,16 +88,10 @@ const ServicesPage = ({ data, location }) => {
           html: data.retirementPlanning.html,
         })
         break
-      case "Education Planning":
+      case "Education Fee Planning":
         setCurrentCopy({
           title: data.educationPlanning.frontmatter.title,
           html: data.educationPlanning.html,
-        })
-        break
-      case "UK State Pensions":
-        setCurrentCopy({
-          title: data.statePension.frontmatter.title,
-          html: data.statePension.html,
         })
         break
       default:
@@ -114,8 +119,9 @@ const ServicesPage = ({ data, location }) => {
         portfolioManagement={portfolioManagement}
         retirementPlanning={retirementPlanning}
         propertyInvestments={propertyInvestments}
-        statePension={statePension}
         pensionTransfers={pensionTransfers}
+        lifeInsurance={lifeInsurance}
+        willsTrusts={willsTrusts}
       />
       <CTA />
     </Layout>
@@ -132,7 +138,7 @@ export const query = graphql`
       }
     }
     educationPlanning: markdownRemark(
-      frontmatter: { title: { eq: "Education Planning" } }
+      frontmatter: { title: { eq: "Education Fee Planning" } }
     ) {
       html
       frontmatter {
@@ -156,15 +162,7 @@ export const query = graphql`
       }
     }
     propertyInvestments: markdownRemark(
-      frontmatter: { title: { eq: "Property Investments" } }
-    ) {
-      html
-      frontmatter {
-        title
-      }
-    }
-    statePension: markdownRemark(
-      frontmatter: { title: { eq: "UK State Pensions" } }
+      frontmatter: { title: { eq: "Property Investment" } }
     ) {
       html
       frontmatter {
@@ -172,7 +170,23 @@ export const query = graphql`
       }
     }
     pensionTransfers: markdownRemark(
-      frontmatter: { title: { eq: "Pension Transfers" } }
+      frontmatter: { id: { eq: "pension transfer" } }
+    ) {
+      html
+      frontmatter {
+        title
+      }
+    }
+    lifeInsurance: markdownRemark(
+      frontmatter: { title: { eq: "Life / Critical Illness Insurance" } }
+    ) {
+      html
+      frontmatter {
+        title
+      }
+    }
+    willsTrusts: markdownRemark(
+      frontmatter: { title: { eq: "Wills / Trusts" } }
     ) {
       html
       frontmatter {

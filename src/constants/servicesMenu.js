@@ -5,10 +5,9 @@ export const servicesMenu = [
     copy: "An exciting selection of personalised investment options.",
   },
   {
-    name: "Property Investments",
-    path: "/services/property-investments",
-    copy:
-      "Strategic opportunities around the world to strengthen your property portfolio.",
+    name: "Pension Transfers (QROPS & SIPPs)",
+    path: "/services/pension-transfers",
+    copy: "Get your pension to the forefront of your financial picture.",
   },
   {
     name: "Retirement Planning",
@@ -17,19 +16,29 @@ export const servicesMenu = [
       "Get a retirement plan for peace of mind with your pension, long-term care plans and will & estate affairs.",
   },
   {
-    name: "Education Planning",
+    name: "Discretionary Managed Portfolios",
+    path: "/services/managed-portfolios",
+    copy: "",
+  },
+  {
+    name: "Education Fee Planning",
     path: "/services/education-planning",
     copy: "Plan for schooling now and let your money do the work for you.",
   },
   {
-    name: "UK State Pensions",
-    path: "/services/uk-state-pension",
+    name: "Property Investment",
+    path: "/services/property-investment",
     copy:
-      "We’ve already helped thousands of customers around the world claim their UK State Pension.",
+      "Strategic opportunities around the world to strengthen your property portfolio.",
   },
   {
-    name: "Pension Transfers",
-    path: "/services/pension-transfers",
-    copy: "Get your pension to the forefront of your financial picture.",
+    name: "Life / Critical Illness Insurance",
+    path: "/services/life-insurance",
+    copy: "",
+  },
+  {
+    name: "Wills / Trusts",
+    path: "/services/wills-trusts",
+    copy: "",
   },
 ]

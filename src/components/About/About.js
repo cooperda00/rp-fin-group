@@ -60,7 +60,7 @@ const About = () => {
 
 const query = graphql`
   {
-    image: file(relativePath: { eq: "singapore_skyline.jpg" }) {
+    image: file(relativePath: { eq: "singapore2.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

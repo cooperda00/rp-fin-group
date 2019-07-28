@@ -1,7 +1,7 @@
 @import "../../../vars";
 
 .Footer {
-  background: $gray2;
+  background: $primary;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -12,6 +12,10 @@
   .Navigation {
     @include flex(column, flex-start, flex-start);
     @include font("SSM");
+
+    a {
+      color: white;
+    }
   }
 
   .Social {
@@ -26,6 +30,9 @@
     @include font("XS");
 
     text-align: center;
+    p {
+      color: white;
+    }
   }
 
   @include min-width(1000px) {
@@ -35,6 +42,7 @@
     .Social {
       @include flex(column, center, flex-start);
       margin-top: 0;
+
       a {
         margin-bottom: $spaceS;
       }
@@ -56,8 +64,8 @@
     div {
       background: white;
       position: absolute;
-      width: 85%;
-      height: 85%;
+      width: 80%;
+      height: 80%;
       z-index: 0;
     }
 
