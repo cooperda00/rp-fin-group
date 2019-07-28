@@ -1,5 +1,5 @@
 //Modules
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
@@ -15,8 +15,8 @@ const CompliancePage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
 
   const [currentCopy, setCurrentCopy] = useState({
-    title: "",
-    html: "",
+    title: data.compliance.frontmatter.title,
+    html: data.compliance.html,
   })
 
   const dataCollection = {
@@ -28,23 +28,6 @@ const CompliancePage = ({ data, location }) => {
     title: data.disclaimer.frontmatter.title,
     html: data.disclaimer.html,
   }
-
-  useEffect(() => {
-    switch (location.state.title) {
-      case "Disclaimer":
-        setCurrentCopy({
-          title: data.disclaimer.frontmatter.title,
-          html: data.disclaimer.html,
-        })
-        break
-      default:
-        setCurrentCopy({
-          title: data.dataCollection.frontmatter.title,
-          html: data.dataCollection.html,
-        })
-        break
-    }
-  }, [])
 
   return (
     <Layout location={location}>
@@ -71,8 +54,15 @@ const CompliancePage = ({ data, location }) => {
 }
 
 export const query = graphql`
-  {
-    bg: file(relativePath: { eq: "melbourne_skyline_2.jpg" }) {
+  query($title: String!) {
+    compliance: markdownRemark(frontmatter: { title: { eq: $title } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+
+    bg: file(relativePath: { eq: "sydney_skyline.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64

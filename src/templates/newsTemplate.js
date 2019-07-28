@@ -36,6 +36,7 @@ const NewsTemplate = ({ data, pageContext }) => {
         {Array.from({ length: numOfPages }, (_, i) => {
           return (
             <Link
+              key={i}
               to={i === 0 ? "/news" : `/news/${i + 1}`}
               className={
                 i + 1 === currentPage

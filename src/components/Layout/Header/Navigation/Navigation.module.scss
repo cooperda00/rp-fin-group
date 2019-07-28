@@ -10,24 +10,22 @@
   display: none;
   width: 100%;
 
-  a {
+  .MenuItemLink {
     @include font("XS");
 
-    position: relative;
     color: white;
   }
 
-  a:not(.ContactBtn) {
+  .MenuItemLink:not(.ContactBtn) {
     &::before {
-      background: $primaryLL;
       content: "";
       display: block;
-      height: 0.2rem;
-      margin-top: 2.6rem;
       opacity: 0;
       position: absolute;
       transition: 0.6s;
       width: 100%;
+      border-bottom: 0.2rem solid $primaryLL;
+      margin-top: 1.5em;
     }
 
     &:hover {
@@ -42,7 +40,7 @@
   }
 
   @include min-width(1500px) {
-    a {
+    .MenuItemLink {
       @include font("S");
     }
   }
@@ -92,5 +90,52 @@
 
   &:hover {
     background: rgba($primary, 0.5);
+  }
+}
+
+.MenuItemWrapper {
+  .ServicesSubMenu,
+  .ComplianceSubMenu {
+    @include flex(column, flex-start, flex-start);
+
+    background: rgba($gray5, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+
+    top: $spaceM;
+    padding: $spaceM;
+    transition: 0.5s;
+
+    a {
+      @include font("XS");
+      color: white;
+      margin-bottom: $spaceS;
+      letter-spacing: 0.1rem;
+
+      @include min-width(1500px) {
+        @include font("S");
+      }
+    }
+
+    a:hover {
+      color: $primaryLL;
+    }
+  }
+
+  .ServicesSubMenu {
+    width: 38rem;
+  }
+
+  .ComplianceSubMenu {
+    width: 20rem;
+  }
+
+  &:hover {
+    .ServicesSubMenu,
+    .ComplianceSubMenu {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }

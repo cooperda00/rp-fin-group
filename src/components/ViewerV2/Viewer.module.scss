@@ -4,12 +4,13 @@
   @include flex(column, flex-start, flex-start);
 
   height: 100%;
-  padding: $spaceM;
+  padding: $spaceS;
   min-height: 60vh;
 
   @include min-width(768px) {
     @include flex(row, center, center);
     width: 100%;
+
     margin-top: $spaceL;
   }
 }

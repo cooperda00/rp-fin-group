@@ -2,6 +2,7 @@
 path: "/compliance/disclaimer"
 date: "10/07/19"
 title: "Disclaimer"
+type: "compliance"
 ---
 
 *Please read the following important information before accessing this website:*

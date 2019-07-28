@@ -7,7 +7,7 @@ import Hero from "../components/Utility/Hero/Hero"
 import BannerText from "../components/Utility/BannerText/BannerText"
 import CTAButton from "../components/Utility/CTAButton/CTAButton"
 import Cards from "../components/Index/Cards/Cards"
-import CTA from "../components/Utility/CTA/CTA"
+import CTANews from "../components/Utility/CTANews/CTANews"
 import SEO from "../components/SEO/SEO"
 import InvestmentServices from "../components/InvestmentServices/InvestmentServices"
 import SecondaryButton from "../components/Utility/SecondaryButton/SecondaryButton"
@@ -37,16 +37,16 @@ const IndexPage = ({ data }) => {
 
       <Cards />
 
-      <CTA />
-
       <InvestmentServices />
+
+      <CTANews />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "melbourne_skyline_2.jpg" }) {
+    bg: file(relativePath: { eq: "sydney_skyline.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64

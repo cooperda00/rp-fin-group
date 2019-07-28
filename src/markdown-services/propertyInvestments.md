@@ -2,6 +2,7 @@
 path: "/services/property-investment"
 date: "10/07/19"
 title: "Property Investment"
+type: "service"
 ---
 
 ###Hands-on help with property investment###

@@ -2,6 +2,7 @@
 path: "/services/retirement-planning"
 date: "10/07/19"
 title: "Retirement Planning"
+type: "service"
 ---
 
 ###Start now for a stress-free retirement###

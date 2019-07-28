@@ -6,9 +6,9 @@ import { FaLongArrowAltRight } from "react-icons/fa"
 //Sass
 import styles from "./FlipCard.module.scss"
 
-const FlipCard = ({ title, copy }) => {
+const FlipCard = ({ title, copy, path }) => {
   return (
-    <Link to="/services" state={{ title: title }}>
+    <Link to={path}>
       <div className={styles.Card}>
         <div className={styles.Front}>
           <h3>{title}</h3>

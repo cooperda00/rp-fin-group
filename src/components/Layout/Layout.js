@@ -7,10 +7,10 @@ import "./base.scss"
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <div className={styles.Layout}>
-      <Header />
+      <Header location={location} />
       <main>{children}</main>
       <Footer />
     </div>

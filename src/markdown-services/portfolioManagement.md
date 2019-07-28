@@ -2,6 +2,7 @@
 path: "/services/portfolio-management"
 date: "10/07/19"
 title: "Asset & Portfolio Management"
+type: "service"
 ---
 
 ###Personal investment options###

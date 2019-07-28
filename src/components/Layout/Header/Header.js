@@ -7,13 +7,13 @@ import Logo from "./Logo/Logo"
 import Navigation from "./Navigation/Navigation"
 import Social from "./Social/Social"
 
-const Header = () => {
+const Header = ({ location }) => {
   return (
     <header className={styles.Header}>
       <Logo />
       <div className={styles.Menu}>
         <Social />
-        <Navigation />
+        <Navigation location={location} />
       </div>
     </header>
   )

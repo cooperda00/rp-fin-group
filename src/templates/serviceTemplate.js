@@ -1,5 +1,5 @@
 //Modules
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 //Components
 import Layout from "../components/Layout/Layout"
@@ -15,8 +15,8 @@ const ServicesPage = ({ data, location }) => {
   const image = data.bg.childImageSharp.fluid
 
   const [currentCopy, setCurrentCopy] = useState({
-    title: "",
-    html: "",
+    title: data.service.frontmatter.title,
+    html: data.service.html,
   })
 
   const educationPlanning = {
@@ -54,55 +54,6 @@ const ServicesPage = ({ data, location }) => {
     html: data.willsTrusts.html,
   }
 
-  //Sets state based on what was passed from <Link> - instead of individual pages
-  useEffect(() => {
-    switch (location.state.title) {
-      case "Pension Transfers (QROPS & SIPPs)":
-        setCurrentCopy({
-          title: data.pensionTransfers.frontmatter.title,
-          html: data.pensionTransfers.html,
-        })
-        break
-      case "Wills / Trusts":
-        setCurrentCopy({
-          title: data.willsTrusts.frontmatter.title,
-          html: data.willsTrusts.html,
-        })
-        break
-      case "Life / Critical Illness Insurance":
-        setCurrentCopy({
-          title: data.lifeInsurance.frontmatter.title,
-          html: data.lifeInsurance.html,
-        })
-        break
-
-      case "Property Investment":
-        setCurrentCopy({
-          title: data.propertyInvestments.frontmatter.title,
-          html: data.propertyInvestments.html,
-        })
-        break
-      case "Retirement Planning":
-        setCurrentCopy({
-          title: data.retirementPlanning.frontmatter.title,
-          html: data.retirementPlanning.html,
-        })
-        break
-      case "Education Fee Planning":
-        setCurrentCopy({
-          title: data.educationPlanning.frontmatter.title,
-          html: data.educationPlanning.html,
-        })
-        break
-      default:
-        setCurrentCopy({
-          title: data.portfolioManagement.frontmatter.title,
-          html: data.portfolioManagement.html,
-        })
-        break
-    }
-  }, [])
-
   return (
     <Layout location={location}>
       <SEO titleExtra="Services" keywordsExtra="" descriptionExtra="Services" />
@@ -129,7 +80,13 @@ const ServicesPage = ({ data, location }) => {
 }
 
 export const query = graphql`
-  {
+  query($title: String!) {
+    service: markdownRemark(frontmatter: { title: { eq: $title } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
     bg: file(relativePath: { eq: "hong_kong_skyline_night.jpg" }) {
       childImageSharp {
         fluid {

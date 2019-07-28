@@ -2,6 +2,7 @@
 path: "/services/uk-state-pension"
 date: "10/07/19"
 title: "UK State Pensions"
+type: "service"
 ---
 
 ###Treat your UK State Pension to a review###

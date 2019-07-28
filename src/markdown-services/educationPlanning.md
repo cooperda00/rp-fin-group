@@ -2,6 +2,7 @@
 path: "/services/education-planning"
 date: "10/07/19"
 title: "Education Fee Planning"
+type: "service"
 ---
 ###RP Financial's precision education planning service###
 We are committed to supporting you and yours from cradle to grave. So be reassured: there IS a way to make education fees manageable. Money invested sensibly soon adds up.

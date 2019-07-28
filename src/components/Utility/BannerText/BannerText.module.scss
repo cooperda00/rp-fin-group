@@ -27,7 +27,7 @@
 
   @include min-width(1000px) {
     @include flex(column, center, flex-start);
-
+    margin-left: $spaceXL;
     h1,
     h2 {
       text-align: left;

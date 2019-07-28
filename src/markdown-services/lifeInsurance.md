@@ -2,6 +2,7 @@
 path: "/services/life-insurance"
 date: "28/07/19"
 title: "Life / Critical Illness Insurance"
+type: "service"
 ---
 
 ###We can't predict the future, but we can plan for it.###

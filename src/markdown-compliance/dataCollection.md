@@ -2,6 +2,7 @@
 path: "/compliance/data-collection"
 date: "10/07/19"
 title: "Data Collection"
+type: "compliance"
 ---
 
 ###Scope###

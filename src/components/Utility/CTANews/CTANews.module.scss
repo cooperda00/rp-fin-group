@@ -1,0 +1,104 @@
+@import "../../../vars";
+
+.CTA {
+  @include flex(column, center, center);
+
+  padding: $spaceL $spaceM;
+  min-height: 30vh;
+  width: 100%;
+
+  .Left,
+  .Right {
+    @include flex(column, flex-start, center);
+    width: 100%;
+  }
+
+  .Left {
+    p {
+      @include font("M");
+      width: 100%;
+      letter-spacing: 0.5rem;
+      padding-bottom: $spaceM;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, space-between, center);
+
+    min-height: 40vh;
+
+    .Left {
+      width: 20%;
+    }
+
+    .Right {
+      width: 80%;
+    }
+
+    .Left,
+    .Right {
+      p {
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.Right {
+  h3 {
+    @include font("XL");
+
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: $spaceM;
+    color: $primaryD;
+  }
+
+  .CardContainer {
+    @include flex(row, center, center);
+
+    flex-wrap: wrap;
+  }
+
+  .NewsCard {
+    @include flex(column, flex-start, flex-start);
+
+    width: 30rem;
+    margin: 2rem;
+
+    cursor: pointer;
+
+    .ImageContainer {
+      width: 100%;
+      height: 15rem;
+
+      .Image {
+        height: 100%;
+      }
+    }
+
+    h4 {
+      @include font("SSM");
+      text-transform: capitalize;
+    }
+
+    .Date {
+      @include font("XS");
+    }
+
+    .Excerpt {
+      @include font("S");
+    }
+
+    h3,
+    .Date,
+    .Excerpt {
+      text-align: left;
+    }
+  }
+}

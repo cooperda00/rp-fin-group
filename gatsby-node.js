@@ -12,8 +12,54 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+
+      services: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "service" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+            }
+          }
+        }
+      }
+
+      compliance: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "compliance" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+            }
+          }
+        }
+      }
     }
   `)
+
+  data.services.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: path.resolve("./src/templates/serviceTemplate.js"),
+      context: {
+        title: node.frontmatter.title,
+      },
+    })
+  })
+
+  data.compliance.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: path.resolve("./src/templates/complianceTemplate.js"),
+      context: {
+        title: node.frontmatter.title,
+      },
+    })
+  })
 
   // amount of posts
   const news = data.news.edges.length

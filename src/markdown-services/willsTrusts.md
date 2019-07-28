@@ -2,6 +2,7 @@
 path: "/services/wills-trusts"
 date: "25/07/19"
 title: "Wills / Trusts"
+type: "service"
 ---
 
 ###Wills###

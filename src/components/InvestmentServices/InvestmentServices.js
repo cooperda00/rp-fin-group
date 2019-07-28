@@ -21,7 +21,12 @@ const InvestmentServices = () => {
         <div className={styles.FlipCardContainer}>
           {servicesMenu.map((service, index) => {
             return (
-              <FlipCard title={service.name} copy={service.copy} key={index} />
+              <FlipCard
+                title={service.name}
+                copy={service.copy}
+                key={index}
+                path={service.path}
+              />
             )
           })}
         </div>
