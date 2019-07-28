@@ -1,5 +1,5 @@
 //Modules
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import Slide from "react-reveal/Slide"
 //Sass
@@ -13,6 +13,15 @@ import { FaBars } from "react-icons/fa"
 
 const Navigation = ({ location }) => {
   const [menu, toggleMenu] = useState(false)
+  const [active, setActive] = useState("")
+
+  useEffect(() => {
+    if (location) {
+      setActive(location.state.active)
+    } else {
+      setActive("")
+    }
+  }, [])
 
   return (
     <nav className={styles.Navigation}>
@@ -21,11 +30,7 @@ const Navigation = ({ location }) => {
           const linkStyle =
             text === "Contact Us" ? styles.ContactBtn : undefined
 
-          let active = ""
-
-          if (location) {
-            active = "active-route"
-          }
+          const activeClass = "active-route"
 
           return (
             <div
@@ -40,8 +45,8 @@ const Navigation = ({ location }) => {
                 }
                 partiallyActive={partiallyActive}
                 className={
-                  location && location.state.active === text
-                    ? `${linkStyle} ${active} ${styles.MenuItemLink}`
+                  active === text
+                    ? `${linkStyle} ${activeClass} ${styles.MenuItemLink}`
                     : `${linkStyle} ${styles.MenuItemLink}`
                 }
               >
