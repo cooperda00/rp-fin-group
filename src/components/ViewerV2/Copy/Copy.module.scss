@@ -2,6 +2,7 @@
 
 .Copy {
   margin-bottom: auto;
+  padding: $spaceS;
 
   h2 {
     @include font("L");
@@ -13,6 +14,7 @@
 
   @include min-width(768px) {
     width: 80rem;
+    padding: 0;
 
     h2 {
       @include font("XL");

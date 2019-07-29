@@ -6,7 +6,6 @@ import styles from "./Footer.module.scss"
 //Constants
 import { footerMenuMain } from "../../../constants/footerMenuMain"
 import { footerMenuSub } from "../../../constants/footerMenuSub"
-import { servicesMenu } from "../../../constants/servicesMenu"
 import { social } from "../../../constants/social"
 
 const Footer = () => {

@@ -6,10 +6,22 @@
   background: $gray1;
   margin: $spaceS;
   max-width: 40rem;
-  min-height: 67rem;
+  min-height: 68rem;
   padding: $spaceM;
   width: 90%;
   z-index: 500;
+
+  @include min-width(321px) {
+    min-height: 60rem;
+  }
+
+  @include min-width(400px) {
+    min-height: 56rem;
+  }
+
+  @include min-width(768px) {
+    min-height: 54rem;
+  }
 
   .Title {
     h3 {

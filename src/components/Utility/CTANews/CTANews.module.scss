@@ -22,6 +22,8 @@
       text-align: center;
       text-transform: uppercase;
     }
+
+    margin-bottom: $spaceL;
   }
 
   @include min-width(1000px) {
@@ -31,6 +33,7 @@
 
     .Left {
       width: 20%;
+      margin-bottom: 0;
     }
 
     .Right {
@@ -63,6 +66,7 @@
     @include flex(row, center, center);
 
     flex-wrap: wrap;
+    max-width: 100%;
   }
 
   .NewsCard {

@@ -2,17 +2,17 @@
 
 .Footer {
   background: $primary;
-  width: 100%;
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  padding: $spaceM;
-  justify-items: left;
+  justify-items: center;
+  padding-bottom: $spaceM;
 
   .Navigation {
     @include flex(column, flex-start, flex-start);
     @include font("SSM");
 
-    margin-bottom: $spaceM;
+    padding: $spaceM;
 
     a {
       color: white;
@@ -23,8 +23,6 @@
   .Social {
     @include flex(row, space-around, flex-start);
     @include font("L");
-
-    margin-top: $spaceL;
 
     a {
       margin-right: $spaceS;
@@ -46,6 +44,11 @@
     grid-template-columns: 1fr 3fr 1fr 3fr;
     grid-template-rows: 1fr;
     padding: $spaceL;
+    justify-items: left;
+
+    .Navigation {
+      margin-bottom: $spaceM;
+    }
 
     .Social {
       @include flex(column, flex-start, flex-start);
@@ -97,14 +100,23 @@
 
 .NavigationSub {
   @include flex(row, center, flex-start);
+  padding: $spaceS;
+
+  @include min-width(400px) {
+    padding: $spaceM;
+  }
 
   .SubWrapper {
-    margin-right: $spaceL;
+    margin-right: $spaceS;
 
     .SubTitle {
       a {
         @include font("SSM");
         color: white;
+      }
+
+      @include min-width(1000px) {
+        margin-right: $spaceS;
       }
     }
 
@@ -117,6 +129,7 @@
       a {
         @include font("S");
         color: rgba(white, 0.7);
+        margin-bottom: $spaceS;
       }
     }
   }

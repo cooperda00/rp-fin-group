@@ -36,9 +36,9 @@ const Navigation = ({ location }) => {
             <div
               className={styles.MenuItemWrapper}
               style={{ position: "relative" }}
+              key={text}
             >
               <Link
-                key={text}
                 to={path}
                 activeClassName={
                   text === "Contact Us" ? "active-contact" : "active-route"
