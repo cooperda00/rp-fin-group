@@ -34,12 +34,13 @@ const CTANews = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className={styles.ImageContainer}>
+                  {/* <div className={styles.ImageContainer}>
                     <Image fluid={image.fluid} className={styles.Image} />
-                  </div>
+                  </div> */}
                   <h4>{title}</h4>
-                  <p className={styles.Date}>{date}</p>
-                  <p className={styles.Excerpt}>{excerpt.substr(0, 125)}...</p>
+                  {/* <p className={styles.Date}>{date}</p>
+                  <p className={styles.Excerpt}>{excerpt.substr(0, 125)}...</p> */}
+                  <hr />
                 </a>
               )
             })}

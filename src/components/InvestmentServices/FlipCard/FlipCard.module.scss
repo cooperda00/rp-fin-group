@@ -21,7 +21,7 @@
   .Front {
     @include flex(column, center, center);
 
-    background: rgba($gray6, 0.9);
+    background: rgba($primary, 0.8);
     padding: $spaceM;
 
     h3 {

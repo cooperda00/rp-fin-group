@@ -21,6 +21,7 @@
       padding-bottom: $spaceM;
       text-align: center;
       text-transform: uppercase;
+      max-width: 30rem;
     }
 
     margin-bottom: $spaceL;
@@ -32,12 +33,12 @@
     min-height: 40vh;
 
     .Left {
-      width: 20%;
+      width: 50%;
       margin-bottom: 0;
     }
 
     .Right {
-      width: 80%;
+      width: 50%;
     }
 
     .Left,
@@ -63,7 +64,7 @@
   }
 
   .CardContainer {
-    @include flex(row, center, center);
+    @include flex(column, center, flex-start);
 
     flex-wrap: wrap;
     max-width: 100%;
@@ -72,10 +73,35 @@
   .NewsCard {
     @include flex(column, flex-start, flex-start);
 
-    width: 30rem;
-    margin: 2rem;
-
+    width: 100%;
+    max-width: 50rem;
+    // margin-bottom: 2rem;
     cursor: pointer;
+
+    // hr {
+    //   width: 100%;
+    //   margin: 1rem 0;
+    //   color: $primaryDD;
+    // }
+
+    hr {
+      overflow: visible; /* For IE */
+      padding: 0;
+      border: none;
+      border-top: medium double #333;
+      color: #333;
+      text-align: center;
+      width: 100%;
+    }
+    hr:after {
+      content: "§";
+      display: inline-block;
+      position: relative;
+      top: -0.7em;
+      font-size: 1.5em;
+      padding: 0 0.25em;
+      background: lighten($primaryLL, 35%);
+    }
 
     .ImageContainer {
       width: 100%;
@@ -89,6 +115,13 @@
     h4 {
       @include font("SSM");
       text-transform: capitalize;
+      padding: $spaceS 0.5rem;
+      width: 100%;
+      margin-bottom: $spaceS;
+
+      &:hover {
+        background: rgba($primaryD, 0.2);
+      }
     }
 
     .Date {

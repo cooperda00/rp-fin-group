@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#36723e`,
         display: `standalone`,
-        icon: "src/images/logo.webp",
+        icon: "src/images/logo_cropped.png",
       },
     },
     {
