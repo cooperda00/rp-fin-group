@@ -17,8 +17,6 @@ Naturally, different mortgage rules and conditions apply based on the planned us
 Professional advice is a phone call away with an RP Financial advisor.
 
 
-***
-
 ###Benefits of property investment###
 
 The property market can be more stable than most, particularly where yields are concerned, so investment property generates stable returns to investors.

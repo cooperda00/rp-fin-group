@@ -27,7 +27,7 @@
     @include font("M");
 
     color: $primaryD;
-    margin-bottom: $spaceM;
+    margin: $spaceM 0;
   }
   p {
     @include font("S");
@@ -66,11 +66,11 @@
 
   @include min-width(768px) {
     h3 {
-      @include font("L");
+      @include font("M");
     }
     p,
     ul li {
-      @include font("SM");
+      @include font("SSM");
     }
   }
 }

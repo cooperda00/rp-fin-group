@@ -4,12 +4,6 @@ date: "10/07/19"
 title: "Education Fee Planning"
 type: "service"
 ---
-###RP Financial's precision education planning service###
-We are committed to supporting you and yours from cradle to grave. So be reassured: there IS a way to make education fees manageable. Money invested sensibly soon adds up.
-
-Almost 70% of UAE parents currently try to fund their childrens’ education from day-to-day living expenses; allow us to show you with cash-flow modelling how to avoid this situation before it gets too late.
-
-***
 
 ###Parents agree you've got to start saving now.###
 Investments soon add up. The earlier you can start saving for your kids’ education, the better.
