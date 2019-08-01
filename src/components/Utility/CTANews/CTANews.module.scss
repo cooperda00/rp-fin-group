@@ -22,7 +22,6 @@
       text-align: center;
       text-transform: uppercase;
       max-width: 30rem;
-      color: white;
     }
 
     margin-bottom: $spaceL;
@@ -61,7 +60,6 @@
     text-align: center;
     text-transform: capitalize;
     margin-bottom: $spaceM;
-    color: white;
   }
 
   .CardContainer {
@@ -76,21 +74,14 @@
 
     width: 100%;
     max-width: 50rem;
-    // margin-bottom: 2rem;
     cursor: pointer;
-
-    // hr {
-    //   width: 100%;
-    //   margin: 1rem 0;
-    //   color: $primaryDD;
-    // }
 
     hr {
       overflow: visible; /* For IE */
       padding: 0;
       border: none;
-      border-top: medium double white;
-      color: white;
+      border-top: medium double $gray5;
+      color: $gray5;
       text-align: center;
       width: 100%;
     }
@@ -102,7 +93,7 @@
       top: -1em;
       font-size: 2em;
       padding: 0 0.25em;
-      background: $primary;
+      background: $gray1;
     }
 
     .ImageContainer {
@@ -121,7 +112,6 @@
       padding: $spaceS 0.5rem;
       width: 100%;
       margin-bottom: $spaceM;
-      color: white;
       letter-spacing: 0.2rem;
 
       &:hover {

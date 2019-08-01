@@ -64,18 +64,22 @@
 .MiniMenu {
   @include flex(row, center, center);
 
-  background: transparent;
+  background: rgba($gray5, 0.9);
   flex-wrap: wrap;
   padding: $spaceS;
   position: absolute;
   right: 0;
-  top: 10rem;
+  top: 14rem;
   width: 100%;
 
   a {
     @include font("SM");
     color: white;
     padding: 0 $spaceS;
+  }
+
+  @include min-width(321px) {
+    background: transparent;
   }
 
   @include min-width(1000px) {

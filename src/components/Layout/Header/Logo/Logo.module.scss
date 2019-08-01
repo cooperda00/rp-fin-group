@@ -1,13 +1,13 @@
 @import "../../../../vars";
 
 .LogoContainer {
-  width: 8rem;
+  width: 10rem;
 
   .LogoImage {
     width: 100%;
   }
 
   @include min-width(1000px) {
-    width: 18rem;
+    width: 15rem;
   }
 }

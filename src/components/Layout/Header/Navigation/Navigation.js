@@ -103,6 +103,9 @@ const Navigation = ({ location }) => {
               {menu && text}
             </Link>
           ))}
+          <Link to="/location" tabIndex="-1">
+            Location
+          </Link>
         </div>
       </Slide>
     </nav>

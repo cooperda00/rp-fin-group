@@ -18,7 +18,7 @@ const CTANews = () => {
       <div className={styles.CTA}>
         <div className={styles.Left}>
           <p>Speak with one of our expert advisors today.</p>
-          <CTAButton path="/contact" text="Get in touch" type="2" />
+          <CTAButton path="/contact" text="Get in touch" />
         </div>
 
         <div className={styles.Right}>
@@ -34,12 +34,8 @@ const CTANews = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {/* <div className={styles.ImageContainer}>
-                    <Image fluid={image.fluid} className={styles.Image} />
-                  </div> */}
                   <h4>{title}</h4>
-                  {/* <p className={styles.Date}>{date}</p>
-                  <p className={styles.Excerpt}>{excerpt.substr(0, 125)}...</p> */}
+
                   <hr />
                 </a>
               )

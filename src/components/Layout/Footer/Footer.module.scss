@@ -150,7 +150,7 @@
 
 .NavigationSub {
   @include flex(column, flex-start, flex-start);
-  padding: $spaceS;
+  // padding: $spaceS;
   width: 100%;
 
   @include min-width(400px) {
