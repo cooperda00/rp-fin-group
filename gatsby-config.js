@@ -8,7 +8,7 @@ module.exports = {
     description: `RP Financial Group: A trusted financial consultancy and private brokerage offering investment and financial planning solutions to individuals and businesses throughout Asia Pacific`,
     author: `danielcooper.io`,
     siteUrl: "https://www.rpfingroup.com",
-    image: "/images/logov3.png",
+    image: "/images/twittercard.png",
   },
   plugins: [
     `gatsby-plugin-sass`,
