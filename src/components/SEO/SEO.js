@@ -2,14 +2,14 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import logo from "../../images/singapore_skyline_2.jpg"
+import logo from "../../images/logov2.png"
 
 const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(query)
 
-  const { image, siteUrl, description } = siteMetadata
+  const { siteUrl, description } = siteMetadata
 
   return (
     <Helmet title={`${titleExtra} | RP Financial Group`}>
@@ -21,7 +21,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         name="description"
         content={`${descriptionExtra} | ${description}`}
       />
-      <meta name="image" content={image} />
+      <meta name="image" content={logo} />
       {/* GOOGLE ICON */}
       <link rel="shortcut icon" href="/favicon.ico" />
       {/* TWITTER */}
@@ -60,7 +60,6 @@ const query = graphql`
     site {
       siteMetadata {
         siteUrl
-        image
         description
       }
     }
