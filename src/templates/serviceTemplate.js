@@ -54,6 +54,11 @@ const ServicesPage = ({ data, location }) => {
     html: data.willsTrusts.html,
   }
 
+  const managedPortfolios = {
+    title: data.managedPortfolios.frontmatter.title,
+    html: data.managedPortfolios.html,
+  }
+
   return (
     <Layout location={location}>
       <SEO titleExtra="Services" keywordsExtra="" descriptionExtra="Services" />
@@ -73,6 +78,7 @@ const ServicesPage = ({ data, location }) => {
         pensionTransfers={pensionTransfers}
         lifeInsurance={lifeInsurance}
         willsTrusts={willsTrusts}
+        managedPortfolios={managedPortfolios}
       />
       <CTA />
     </Layout>
@@ -144,6 +150,14 @@ export const query = graphql`
     }
     willsTrusts: markdownRemark(
       frontmatter: { title: { eq: "Wills / Trusts" } }
+    ) {
+      html
+      frontmatter {
+        title
+      }
+    }
+    managedPortfolios: markdownRemark(
+      frontmatter: { title: { eq: "Discretionary Managed Portfolios" } }
     ) {
       html
       frontmatter {

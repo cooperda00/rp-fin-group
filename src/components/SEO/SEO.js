@@ -2,8 +2,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-//Logo
-// import logo from "../../images/logo.webp"
+import logo from "../../images/logov2.png"
 
 const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
   const {
@@ -13,12 +12,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
   const { image, siteUrl, description } = siteMetadata
 
   return (
-    <Helmet
-      title={`${titleExtra} | RP Financial Group`}
-      // link={[
-      //   { rel: "icon", type: "image/webp", sizes: "16x16", href: `${logo}` },
-      // ]}
-    >
+    <Helmet title={`${titleExtra} | RP Financial Group`}>
       <meta
         name="keywords"
         content={`${keywordsExtra} Finance, Financial, Advisor, Asia Pacific, Hong Kong, Bangkok, Retirement, Planning`}
@@ -40,7 +34,8 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         name="twitter:description"
         content={`${descriptionExtra} | ${description}`}
       />
-      <meta name="twitter:image" content={`${siteUrl}${image}`} />
+      <meta name="twitter:image" content={logo} />
+      {/* <meta name="twitter:image" content={`${siteUrl}${image}`} /> */}
       {/* FACEBOOK */}
       <meta property="og:url" content={siteUrl} />
       <meta property="og:type" content="website" />
@@ -52,7 +47,8 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         property="og:description"
         content={`${descriptionExtra} | ${description}`}
       />
-      <meta property="og:image" content={`${siteUrl}${image}`} />
+      {/* <meta property="og:image" content={`${siteUrl}${image}`} /> */}
+      <meta property="og:image" content={logo} />
       <meta property="og:image:width" content="400" />
       <meta property="og:image:height" content="300" />
     </Helmet>

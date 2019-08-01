@@ -27,7 +27,7 @@ const Logo = () => {
 
 const query = graphql`
   {
-    logo: file(relativePath: { eq: "logov3.png" }) {
+    logo: file(relativePath: { eq: "path14.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64
@@ -36,5 +36,13 @@ const query = graphql`
     }
   }
 `
+
+// logo: file(relativePath: { eq: "logov3.png" }) {
+//   childImageSharp {
+//     fluid {
+//       ...GatsbyImageSharpFluid_noBase64
+//     }
+//   }
+// }
 
 export default Logo

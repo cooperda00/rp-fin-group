@@ -54,6 +54,11 @@ const ServicesPage = ({ data, location }) => {
     html: data.willsTrusts.html,
   }
 
+  const managedPortfolios = {
+    title: data.managedPortfolios.frontmatter.title,
+    html: data.managedPortfolios.html,
+  }
+
   //Sets state based on what was passed from <Link> - instead of individual pages
   useEffect(() => {
     switch (location.state.title) {
@@ -94,6 +99,12 @@ const ServicesPage = ({ data, location }) => {
           html: data.educationPlanning.html,
         })
         break
+      case "Discretionary Managed Portfolios":
+        setCurrentCopy({
+          title: data.managedPortfolios.frontmatter.title,
+          html: data.managedPortfolios.html,
+        })
+        break
       default:
         setCurrentCopy({
           title: data.portfolioManagement.frontmatter.title,
@@ -122,6 +133,7 @@ const ServicesPage = ({ data, location }) => {
         pensionTransfers={pensionTransfers}
         lifeInsurance={lifeInsurance}
         willsTrusts={willsTrusts}
+        managedPortfolios={managedPortfolios}
       />
       <CTA />
     </Layout>
@@ -187,6 +199,14 @@ export const query = graphql`
     }
     willsTrusts: markdownRemark(
       frontmatter: { title: { eq: "Wills / Trusts" } }
+    ) {
+      html
+      frontmatter {
+        title
+      }
+    }
+    managedPortfolios: markdownRemark(
+      frontmatter: { title: { eq: "Discretionary Managed Portfolios" } }
     ) {
       html
       frontmatter {

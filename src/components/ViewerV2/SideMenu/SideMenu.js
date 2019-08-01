@@ -18,6 +18,7 @@ const SideMenu = ({
   pensionTransfers,
   lifeInsurance,
   willsTrusts,
+  managedPortfolios,
 }) => {
   const handleClick = e => {
     e.preventDefault()
@@ -73,6 +74,12 @@ const SideMenu = ({
       setCurrentCopy({
         title: willsTrusts.title,
         html: willsTrusts.html,
+      })
+    }
+    if (e.target.innerText === "Discretionary Managed Portfolios") {
+      setCurrentCopy({
+        title: managedPortfolios.title,
+        html: managedPortfolios.html,
       })
     }
   }

@@ -18,7 +18,8 @@ export const servicesMenu = [
   {
     name: "Discretionary Managed Portfolios",
     path: "/services/managed-portfolios",
-    copy: "",
+    copy:
+      "Our “active portfolio management” is the right, individualized solution for you: your personal needs, financial targets and risk tolerance set the baseline in creating your portfolio.",
   },
   {
     name: "Education Fee Planning",
@@ -34,11 +35,13 @@ export const servicesMenu = [
   {
     name: "Life / Critical Illness Insurance",
     path: "/services/life-insurance",
-    copy: "",
+    copy:
+      "For expats in particular, insurance of many kinds is a necessity that can be very cost‑effective if handled professionally.",
   },
   {
     name: "Wills / Trusts",
     path: "/services/wills-trusts",
-    copy: "",
+    copy:
+      "Legacy planning takes the concept of estate planning one step further, allowing you to incorporate your morals, beliefs and ideals into your comprehensive estate plan.",
   },
 ]

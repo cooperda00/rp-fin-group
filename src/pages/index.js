@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="Home" />
 
-      <Hero image={image} type="home">
+      <Hero image={image}>
         <BannerText
           title="RP Financial Group"
           info="Integrity Driven Client Solutions. Expert Bespoke Advice"
