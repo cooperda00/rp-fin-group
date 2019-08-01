@@ -75,6 +75,13 @@ const Navigation = ({ location }) => {
                   })}
                 </div>
               )}
+
+              {text === "About Us" && (
+                <div className={styles.ComplianceSubMenu}>
+                  <Link to="/about">Who we are</Link>
+                  <Link to="/location">Where we are</Link>
+                </div>
+              )}
             </div>
           )
         })}
