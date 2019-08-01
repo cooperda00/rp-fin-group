@@ -33,10 +33,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         name="twitter:description"
         content={`${descriptionExtra} | ${description}`}
       />
-      <meta
-        name="twitter:image"
-        content="https://cdn-images-1.medium.com/max/1200/1*rUv7xG-XqqkU9gJs8-7efw.png"
-      />
+      <meta name="twitter:image" content={`${siteUrl}${image}`} />
       <meta name="twitter:creator" content="@RPFinancialGrp" />
       {/* FACEBOOK */}
       <meta property="og:url" content={siteUrl} />
