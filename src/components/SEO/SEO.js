@@ -20,7 +20,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         name="description"
         content={`${descriptionExtra} | ${description}`}
       />
-      <meta name="image" content={image} />
+      <meta name="image" content={`${siteUrl}${image}`} />
       {/* GOOGLE ICON */}
       <link rel="shortcut icon" href="/favicon.ico" />
       {/* TWITTER */}

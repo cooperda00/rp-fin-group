@@ -78,8 +78,8 @@ const Navigation = ({ location }) => {
 
               {text === "About Us" && (
                 <div className={styles.ComplianceSubMenu}>
-                  <Link to="/about">Who we are</Link>
-                  <Link to="/location">Where we are</Link>
+                  <Link to="/about">Who We Are</Link>
+                  <Link to="/location">Where We Are</Link>
                 </div>
               )}
             </div>
