@@ -60,6 +60,7 @@
     text-align: center;
     text-transform: capitalize;
     margin-bottom: $spaceM;
+    color: $primaryD;
   }
 
   .CardContainer {
@@ -80,8 +81,8 @@
       overflow: visible; /* For IE */
       padding: 0;
       border: none;
-      border-top: medium double $gray5;
-      color: $gray5;
+      border-top: medium double $primaryD;
+      color: $primaryD;
       text-align: center;
       width: 100%;
     }

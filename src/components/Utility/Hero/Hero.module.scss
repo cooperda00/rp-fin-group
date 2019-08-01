@@ -16,15 +16,15 @@
 }
 
 .Home {
-  min-height: 100vh;
+  min-height: 120vh;
 
   @include min-width(1200px) {
-    min-height: 120vh;
+    min-height: 95vh;
   }
 }
 
 .Page {
-  min-height: 120vh;
+  min-height: 90vh;
 
   @include min-width(1000px) {
     min-height: 80vh;
