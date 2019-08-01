@@ -34,6 +34,7 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         content={`${descriptionExtra} | ${description}`}
       />
       <meta name="twitter:image" content={`${siteUrl}${image}`} />
+      <meta name="twitter:creator" content="@RPFinancialGrp" />
       {/* FACEBOOK */}
       <meta property="og:url" content={siteUrl} />
       <meta property="og:type" content="website" />
@@ -45,8 +46,8 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
         property="og:description"
         content={`${descriptionExtra} | ${description}`}
       />
-      {/* <meta property="og:image" content={`${siteUrl}${image}`} /> */}
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={`${siteUrl}${image}`} />
+      {/* <meta property="og:image" content={image} /> */}
       <meta property="og:image:width" content="400" />
       <meta property="og:image:height" content="300" />
     </Helmet>
