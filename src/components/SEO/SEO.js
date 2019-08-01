@@ -2,7 +2,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import logo from "../../images/logov2.png"
+import logo from "../../images/singapore_skyline_2.jpg"
 
 const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
   const {

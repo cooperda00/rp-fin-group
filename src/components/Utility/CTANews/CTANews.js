@@ -14,11 +14,11 @@ const CTANews = () => {
   } = useStaticQuery(query)
 
   return (
-    <Container pattern="0">
+    <Container pattern="3">
       <div className={styles.CTA}>
         <div className={styles.Left}>
           <p>Speak with one of our expert advisors today.</p>
-          <CTAButton path="/contact" text="Get in touch" />
+          <CTAButton path="/contact" text="Get in touch" type="2" />
         </div>
 
         <div className={styles.Right}>

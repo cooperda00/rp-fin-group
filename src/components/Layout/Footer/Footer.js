@@ -44,25 +44,24 @@ const Footer = () => {
         })}
       </div>
 
-      <div className={styles.Social}>
-        {social.map(link => {
-          return (
-            <a
-              href={link.path}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={link.name}
-              style={{ color: link.color }}
-              aria-label={`Link to our ${link.name}`}
-            >
-              <div></div>
-              {link.icon}
-            </a>
-          )
-        })}
-      </div>
-
-      <div className={styles.Legal}>
+      <div className={styles.SocialContainer}>
+        <div className={styles.Social}>
+          {social.map(link => {
+            return (
+              <a
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={link.name}
+                style={{ color: link.color }}
+                aria-label={`Link to our ${link.name}`}
+              >
+                <div></div>
+                {link.icon}
+              </a>
+            )
+          })}
+        </div>
         <p>
           © 2019 RP Financial Group Ltd. All Rights Reserved. All data and
           information provided herein is for informational purposes only.

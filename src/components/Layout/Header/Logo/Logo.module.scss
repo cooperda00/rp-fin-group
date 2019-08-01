@@ -8,10 +8,6 @@
   }
 
   @include min-width(1000px) {
-    width: 13rem;
+    width: 18rem;
   }
-
-  // @include min-width(1500px) {
-  //   height: 100%;
-  // }
 }

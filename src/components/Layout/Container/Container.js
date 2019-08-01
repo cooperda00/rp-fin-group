@@ -16,6 +16,8 @@ const Container = ({ children, pattern }) => {
       return `${styles.Container} ${styles.Pattern1}`
     } else if (pattern === "2") {
       return `${styles.Container} ${styles.Pattern2}`
+    } else if (pattern === "3") {
+      return `${styles.Container} ${styles.Pattern3}`
     }
   }
 

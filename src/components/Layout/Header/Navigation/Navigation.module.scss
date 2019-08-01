@@ -64,7 +64,7 @@
 .MiniMenu {
   @include flex(row, center, center);
 
-  background: $gray1;
+  background: transparent;
   flex-wrap: wrap;
   padding: $spaceS;
   position: absolute;
@@ -74,6 +74,7 @@
 
   a {
     @include font("SM");
+    color: white;
     padding: 0 $spaceS;
   }
 

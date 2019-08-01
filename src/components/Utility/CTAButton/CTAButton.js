@@ -4,9 +4,16 @@ import { Link } from "gatsby"
 //Sass
 import styles from "./CTAButton.module.scss"
 
-const CTAButton = ({ path, text }) => {
+const CTAButton = ({ path, text, type }) => {
   return (
-    <Link to={path} className={styles.CTAButton}>
+    <Link
+      to={path}
+      className={
+        type === "2"
+          ? `${styles.CTAButton} ${styles.AltColor}`
+          : `${styles.CTAButton}`
+      }
+    >
       {text}
     </Link>
   )

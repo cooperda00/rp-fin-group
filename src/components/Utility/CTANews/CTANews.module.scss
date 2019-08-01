@@ -22,6 +22,7 @@
       text-align: center;
       text-transform: uppercase;
       max-width: 30rem;
+      color: white;
     }
 
     margin-bottom: $spaceL;
@@ -60,7 +61,7 @@
     text-align: center;
     text-transform: capitalize;
     margin-bottom: $spaceM;
-    color: $primaryD;
+    color: white;
   }
 
   .CardContainer {
@@ -88,19 +89,20 @@
       overflow: visible; /* For IE */
       padding: 0;
       border: none;
-      border-top: medium double #333;
-      color: #333;
+      border-top: medium double white;
+      color: white;
       text-align: center;
       width: 100%;
     }
+
     hr:after {
-      content: "§";
+      content: ".";
       display: inline-block;
       position: relative;
-      top: -0.7em;
-      font-size: 1.5em;
+      top: -1em;
+      font-size: 2em;
       padding: 0 0.25em;
-      background: lighten($primaryLL, 35%);
+      background: $primary;
     }
 
     .ImageContainer {
@@ -115,12 +117,15 @@
     h4 {
       @include font("SSM");
       text-transform: capitalize;
+      font-weight: 400;
       padding: $spaceS 0.5rem;
       width: 100%;
-      margin-bottom: $spaceS;
+      margin-bottom: $spaceM;
+      color: white;
+      letter-spacing: 0.2rem;
 
       &:hover {
-        background: rgba($primaryD, 0.2);
+        background: rgba($primaryDD, 0.3);
       }
     }
 

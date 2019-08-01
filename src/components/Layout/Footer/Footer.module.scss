@@ -1,13 +1,14 @@
 @import "../../../vars";
 
 .Footer {
-  background: $primaryD;
+  background: linear-gradient(rgba($gray6, 0.5), rgba($gray5, 0.6)),
+    linear-gradient($primaryD, $primaryD);
   max-width: 100%;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  padding-bottom: $spaceM;
+  padding: $spaceS !important;
 
   .Navigation {
     @include flex(column, flex-start, flex-start);
@@ -20,6 +21,7 @@
       color: white;
       margin-bottom: $spaceS;
       position: relative;
+      white-space: nowrap;
     }
 
     a::before {
@@ -48,11 +50,30 @@
     }
   }
 
-  .Social {
-    @include flex(row, space-around, flex-start);
-    @include font("L");
+  .SocialContainer {
+    @include flex(column, space-between, flex-start);
 
     padding: $spaceM;
+
+    p {
+      @include font("XS");
+      color: white;
+      margin-top: $spaceS;
+      text-align: center;
+    }
+
+    @include min-width(768px) {
+      @include flex(column, space-between, center);
+    }
+
+    @include min-width(1000px) {
+      @include flex(column, space-between, flex-start);
+    }
+  }
+
+  .Social {
+    @include flex(row, flex-start, flex-start);
+    @include font("L");
 
     a {
       margin-right: $spaceS;
@@ -71,7 +92,7 @@
   }
 
   @include min-width(1000px) {
-    grid-template-columns: 1fr 3fr 1fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
     padding: $spaceL;
     justify-items: left;
@@ -81,8 +102,6 @@
     }
 
     .Social {
-      // @include flex(column, flex-start, flex-start);
-
       margin-top: 0;
 
       a {
@@ -96,14 +115,6 @@
       @include flex(column, flex-end, flex-start);
       text-align: left;
     }
-  }
-
-  @include min-width(1000px) {
-    grid-template-columns: 0.8fr 2fr 1fr 1fr;
-  }
-
-  @include min-width(1500px) {
-    grid-template-columns: 1fr 2fr 1fr 2fr;
   }
 }
 
@@ -151,7 +162,7 @@
   }
 
   @include min-width(1000px) {
-    @include flex(column, flex-start, flex-start);
+    @include flex(row, flex-start, flex-start);
   }
 
   .SubWrapper {
