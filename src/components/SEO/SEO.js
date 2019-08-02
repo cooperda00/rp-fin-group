@@ -37,19 +37,41 @@ const SEO = ({ titleExtra, keywordsExtra, descriptionExtra }) => {
       <meta name="twitter:image" content="https://i.imgur.com/lt5q5cj.jpg" />
       <meta name="twitter:creator" content="@RPFinancialGrp" />
       {/* FACEBOOK */}
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:type" content="website" />
+      <meta
+        property="og:url"
+        content={siteUrl}
+        prefix="og: http://ogp.me/ns#"
+      />
+      <meta
+        property="og:type"
+        content="website"
+        prefix="og: http://ogp.me/ns#"
+      />
       <meta
         property="og:title"
         content={`${titleExtra} | RP Financial Group`}
+        prefix="og: http://ogp.me/ns#"
       />
       <meta
         property="og:description"
         content={`${descriptionExtra} | ${description}`}
+        prefix="og: http://ogp.me/ns#"
       />
-      <meta property="og:image" content="https://i.imgur.com/lt5q5cj.jpg" />
-      <meta property="og:image:width" content="500" />
-      <meta property="og:image:height" content="500" />
+      <meta
+        property="og:image"
+        content="https://i.imgur.com/JKgEqlr.jpg"
+        prefix="og: http://ogp.me/ns#"
+      />
+      <meta
+        property="og:image:width"
+        content="1200"
+        prefix="og: http://ogp.me/ns#"
+      />
+      <meta
+        property="og:image:height"
+        content="627"
+        prefix="og: http://ogp.me/ns#"
+      />
     </Helmet>
   )
 }
