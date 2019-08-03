@@ -6,8 +6,48 @@
   .LogoImage {
     width: 100%;
   }
+}
 
-  @include min-width(1000px) {
+//Scales logo based on window height - to help resolve overlap issue when using small window size on retina
+
+@media (min-height: 100px) and (min-width: 1000px) {
+  .LogoContainer {
+    width: 3rem;
+  }
+}
+
+@media (min-height: 300px) and (min-width: 1000px) {
+  .LogoContainer {
+    width: 6rem;
+  }
+}
+
+@media (min-height: 400px) and (min-width: 1000px) {
+  .LogoContainer {
+    width: 8rem;
+  }
+}
+
+@media (min-height: 500px) and (min-width: 1000px) {
+  .LogoContainer {
+    width: 10rem;
+  }
+}
+
+@media (min-height: 600px) and (min-width: 1000px) {
+  .LogoContainer {
+    width: 12rem;
+  }
+}
+
+@media (min-height: 700px) and (min-width: 1000px) {
+  .LogoContainer {
+    width: 13rem;
+  }
+}
+
+@media (min-height: 800px) and (min-width: 1000px) {
+  .LogoContainer {
     width: 14rem;
   }
 }

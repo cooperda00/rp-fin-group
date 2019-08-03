@@ -6,6 +6,23 @@
   perspective: 150rem;
   position: relative;
   width: 30rem;
+  flex-basis: 90%;
+
+  @include min-width(500px) {
+    flex-basis: 75%;
+  }
+
+  @include min-width(750px) {
+    flex-basis: 40%;
+  }
+
+  @include min-width(1000px) {
+    flex-basis: 38%;
+  }
+
+  @include min-width(1200px) {
+    flex-basis: 21%;
+  }
 
   .Front,
   .Back {

@@ -8,8 +8,8 @@ import styles from "./FlipCard.module.scss"
 
 const FlipCard = ({ title, copy, path }) => {
   return (
-    <Link to={path}>
-      <div className={styles.Card}>
+    <div className={styles.Card}>
+      <Link to={path}>
         <div className={styles.Front}>
           <h3>{title}</h3>
         </div>
@@ -19,8 +19,8 @@ const FlipCard = ({ title, copy, path }) => {
           <p>{copy}</p>
           <FaLongArrowAltRight className={styles.Icon} />
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 
