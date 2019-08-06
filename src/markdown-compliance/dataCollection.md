@@ -7,7 +7,7 @@ type: "compliance"
 
 ###Scope###
 
-This privacy notice aim to provide our clients on how RP Financial (“RP”) collect and process client’s data. The notice also serve to comply with the updated General Data Protection Regulation (GDPR) as well as the Hong Kong Personal Data (Privacy) Ordinance.
+This privacy notice aims to provide our clients on how RP Financial (“RP”) collects and processes our clients' information. The notice also serves to comply with the updated General Data Protection Regulation (GDPR) as well as the Hong Kong Personal Data (Privacy) Ordinance.
 
 It is important that all clients and employees of RP read the privacy notice together with any other privacy notice that RP provide on any specific occasion, when collecting and processing client’s data, in order to understand the purpose and use of such data. This privacy notice is supplemented with other notices and is not intended to override them.
 

@@ -11,12 +11,15 @@ import { social } from "../../../constants/social"
 
 const Footer = () => {
   const data = useStaticQuery(query)
-  const logo = data.logo.childImageSharp.fixed
+  const logo = data.logo.childImageSharp.fluid
 
   return (
     <footer className={styles.Footer}>
       <div className={styles.Navigation}>
-        <Image fixed={logo} className={styles.Logo} />
+        <div className={styles.LogoContainer}>
+          <Image fluid={logo} className={styles.Logo} />
+        </div>
+
         {footerMenuMain.map((link, index) => {
           return (
             <Link to={link.path} key={index}>
@@ -80,8 +83,8 @@ const query = graphql`
   {
     logo: file(relativePath: { eq: "logo_transparent.png" }) {
       childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
