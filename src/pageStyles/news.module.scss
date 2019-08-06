@@ -1,0 +1,17 @@
+@import "../vars";
+
+.PageControls {
+  @include flex(row, center, center);
+
+  flex-wrap: wrap;
+  max-width: $contentWidth;
+  width: 100%;
+  margin: $spaceM auto;
+
+  a {
+    @include font("S");
+    @include cta-button;
+    text-align: center;
+    font-weight: 300;
+  }
+}
