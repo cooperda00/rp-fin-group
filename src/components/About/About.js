@@ -28,7 +28,7 @@ const About = () => {
           <p>
             RP Financial Group is a trusted financial consultancy and private
             brokerage offering investment and financial planning solutions to
-            individuals and businesses throughout Asia Pacific.
+            individuals and businesses throughout the Asia Pacific region.
           </p>
 
           <p>

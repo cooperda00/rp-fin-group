@@ -18,7 +18,7 @@ Financial markets offer investors the great potential for capital growth. Howeve
 
 * Portfolio management including analysis of risk, return requirements, diversification and cash flow forecasting.
 
-* A dedicated qualified adviser appointed to your account.
+* A dedicated qualified advisor appointed to your account.
 
 * Full discretionary management options.
 

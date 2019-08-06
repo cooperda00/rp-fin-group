@@ -22,7 +22,7 @@ const Logo = () => {
 
 const query = graphql`
   {
-    logo: file(relativePath: { eq: "path14.png" }) {
+    logo: file(relativePath: { eq: "logo_transparent.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64

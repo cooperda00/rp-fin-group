@@ -19,4 +19,4 @@ The UK’s Basic State Pension has undergone a few changes of late and if you ha
 
 * How it is paid in retirement depends on where you are living. Find out how this fits in with your future plans.
 
-Speak with one of our knowledgeable advisers to find out what you will receive at retirement and how to maximise your benefits.
+Speak with one of our knowledgeable advisors to find out what you will receive at retirement and how to maximise your benefits.

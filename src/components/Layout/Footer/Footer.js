@@ -1,6 +1,7 @@
 //Modules
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
 //Sass
 import styles from "./Footer.module.scss"
 //Constants
@@ -9,9 +10,13 @@ import { footerMenuSub } from "../../../constants/footerMenuSub"
 import { social } from "../../../constants/social"
 
 const Footer = () => {
+  const data = useStaticQuery(query)
+  const logo = data.logo.childImageSharp.fixed
+
   return (
     <footer className={styles.Footer}>
       <div className={styles.Navigation}>
+        <Image fixed={logo} className={styles.Logo} />
         {footerMenuMain.map((link, index) => {
           return (
             <Link to={link.path} key={index}>
@@ -70,5 +75,17 @@ const Footer = () => {
     </footer>
   )
 }
+
+const query = graphql`
+  {
+    logo: file(relativePath: { eq: "logo_transparent.png" }) {
+      childImageSharp {
+        fixed(width: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 export default Footer

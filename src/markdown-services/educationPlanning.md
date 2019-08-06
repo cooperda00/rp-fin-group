@@ -6,7 +6,7 @@ type: "service"
 ---
 
 ###Parents agree you've got to start saving now.###
-Investments soon add up. The earlier you can start saving for your kids’ education, the better.
+Investments soon add up. The earlier you can start saving for your children's education, the better.
 
 All parents would like their children to receive the best possible education, and of course this is no different for expats living abroad. 
 

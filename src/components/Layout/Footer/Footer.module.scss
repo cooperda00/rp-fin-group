@@ -50,6 +50,10 @@
     }
   }
 
+  .Logo {
+    margin-bottom: $spaceM;
+  }
+
   .SocialContainer {
     @include flex(column, space-between, flex-start);
 
@@ -141,9 +145,13 @@
     transform: translateY(-0.5rem);
   }
 
+  a:not(:last-child) {
+    margin-right: $spaceM;
+  }
+
   @include min-width(1000px) {
     a:hover {
-      transform: translateX(0.5rem);
+      transform: translateY(-0.5rem);
     }
   }
 }

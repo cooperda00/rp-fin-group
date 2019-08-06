@@ -13,7 +13,7 @@ Probate law varies greatly from country to country. It is likely that your asset
  
 After all, you work for a lifetime to amass your estate, so it makes sense to take the time to ensure as much of your legacy as possible is passed on to the people you wish to benefit from it.
  
-We have the relevant expertise as well as experience of the issues to consider when making a will and particularly those relevant to expats caught between residency and domicile in more than one jurisdiction. Wherever you are in Asia, our UK certified adviser and partners can help you make the most of the tools available to you to minimize your IHT liability and leave a lasting legacy for your loved ones. 
+We have the relevant expertise as well as experience of the issues to consider when making a will and particularly those relevant to expats caught between residency and domicile in more than one jurisdiction. Wherever you are in Asia, our UK certified advisor and partners can help you make the most of the tools available to you to minimize your IHT liability and leave a lasting legacy for your loved ones. 
 
 
 ###Trusts###

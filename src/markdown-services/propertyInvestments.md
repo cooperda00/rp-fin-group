@@ -7,7 +7,7 @@ type: "service"
 
 ###Hands-on help with property investment###
 
-We can help private investors with property investment through the significant contacts we have forged in over 10 years of business. Our advisers are well-placed to provide you with a range of investment opportunities, as well as being highly-experienced and happy to walk you through negotiating a contract from start to finish.
+We can help private investors with property investment through the significant contacts we have forged in over 10 years of business. Our advisors are well-placed to provide you with a range of investment opportunities, as well as being highly-experienced and happy to walk you through negotiating a contract from start to finish.
 
 Property investment can vary from your first, or next, house to an empty plot of land to commercial property. Investment can be exclusive to you, or as part of a wider scheme.
 If you are investing alone, then the usual vehicle employed is that of a mortgage.
