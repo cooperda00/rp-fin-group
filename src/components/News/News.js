@@ -13,8 +13,10 @@ const News = ({ news }) => {
       <section className={styles.News}>
         <Title title={"RP News Wire"} greenText={true} />
         <div className={styles.NewsCardContainer}>
-          {news.map(item => {
-            return <NewsCard key={item.node.id} newsItem={item.node} />
+          {news.map((item, index) => {
+            if (index <= 2) {
+              return <NewsCard key={item.node.id} newsItem={item.node} />
+            }
           })}
         </div>
       </section>

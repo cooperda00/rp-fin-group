@@ -10,25 +10,31 @@ import BannerText from "../components/Utility/BannerText/BannerText"
 import SEO from "../components/SEO/SEO"
 import CTA from "../components/Utility/CTA/CTA"
 import News from "../components/News/News"
+//Lodash
+import { cloneDeep } from "lodash"
 
 const NewsPage = ({ data }) => {
   const news = data.news.edges
   const image = data.bg.childImageSharp.fluid
 
   const [newsItems, setNewsItems] = useState([])
-  const [noToShow, setNoToShow] = useState(2)
-
-  console.log(noToShow)
 
   //On Mount
   useEffect(() => {
-    const firstThreeItems = news.filter((item, index) => index <= noToShow)
-    setNewsItems(firstThreeItems)
+    setNewsItems(news)
   }, [])
 
   const handleShowMore = () => {
-    setNewsItems(news.filter((item, index) => index <= noToShow + 3))
-    setNoToShow(noToShow + 3)
+    //Copy Array
+    const clonedNews = cloneDeep(newsItems)
+    //Filter array 1 - save first 3 items
+    const first3 = clonedNews.filter((x, i) => i <= 2)
+    //Filter array 2 - remove first 3 items
+    const shiftedArray = clonedNews.filter((x, i) => i > 2)
+    //Spread - ...array2, ...array1
+    const updatedArray = [...shiftedArray, ...first3]
+    //Update state
+    setNewsItems(updatedArray)
   }
 
   return (
@@ -42,7 +48,7 @@ const NewsPage = ({ data }) => {
       <News news={newsItems} />
 
       <div className={styles.PageControls}>
-        <a onClick={handleShowMore}>More</a>
+        <a onClick={handleShowMore}>More Articles</a>
       </div>
 
       <CTA />

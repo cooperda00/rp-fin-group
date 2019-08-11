@@ -17,7 +17,10 @@ const Footer = () => {
     <footer className={styles.Footer}>
       <div className={styles.Navigation}>
         <div className={styles.LogoContainer}>
-          <Image fluid={logo} className={styles.Logo} />
+          <Link to="/">
+            {" "}
+            <Image fluid={logo} className={styles.Logo} />
+          </Link>
         </div>
 
         {footerMenuMain.map((link, index) => {
