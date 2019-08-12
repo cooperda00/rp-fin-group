@@ -99,7 +99,7 @@ const SideMenu = ({
               }
             >
               {item.name}
-              <FaCaretRight />
+              {/* <FaCaretRight /> */}
             </button>
           )
         })}
