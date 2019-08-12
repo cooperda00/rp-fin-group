@@ -50,11 +50,13 @@
     li:before {
       display: inline-block;
       content: "";
-      height: 0.8em;
-      width: 0.8em;
+      height: 0.4em;
+      width: 0.4em;
       background: $primary;
       margin-right: $spaceS;
-      clip-path: polygon(50% 50%, 0 0, 0 100%);
+      border-radius: 50%;
+      // clip-path: polygon(50% 50%, 0 0, 0 100%);
+      margin-bottom: 0.3rem;
     }
   }
 

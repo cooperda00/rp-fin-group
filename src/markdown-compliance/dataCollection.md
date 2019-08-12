@@ -21,10 +21,10 @@ Personal data will be collected according to different client type, investment p
 
 <br>
 
-* i. Personal Data as defined by the Hong Kong Personal Data
+* Personal Data as defined by the Hong Kong Personal Data
     (Privacy) Ordinance;
-* ii. Relating directly or indirectly to a living individual;
-* iii. From which it is practicable for the identity of the individual to be directly or indirectly ascertained; and in a form in which access to or processing of the data is practicable;
+*  Relating directly or indirectly to a living individual;
+*  From which it is practicable for the identity of the individual to be directly or indirectly ascertained; and in a form in which access to or processing of the data is practicable;
 
 <br>
 
@@ -46,10 +46,10 @@ Common Use of collected personal data:
 
 <br>
 
-* i. Perform the contract;
-* ii. When RP need to comply with a legal or regulatory obligation;
-* iii. Internal record keeping;
-* iv. Managing events and keep data subject informed all updates of the subscribed products and services;
+*  Perform the contract;
+*  When RP need to comply with a legal or regulatory obligation;
+*  Internal record keeping;
+*  Managing events and keep data subject informed all updates of the subscribed products and services;
 
 <br>
 
@@ -63,14 +63,14 @@ Under certain circumstances, data subject has the below rights, under Personal D
 
 <br>
 
-* i. Request access to his/her personal data;
-* ii. Request correction of his/her personal data;
-* iii. Request erasure of his/her personal data;
-* iv. Object to process of his/her personal data;
-* v. Request restriction of processing his/her personal data;
-* vi. Request transfer of his/her personal data;
-* vii. Right to withdraw consent;
-* viii. Right to lodge compliant to the supervisory authority;
+* Request access to his/her personal data;
+*  Request correction of his/her personal data;
+*  Request erasure of his/her personal data;
+*  Object to process of his/her personal data;
+*  Request restriction of processing his/her personal data;
+*  Request transfer of his/her personal data;
+*  Right to withdraw consent;
+*  Right to lodge compliant to the supervisory authority;
 
 <br>
 

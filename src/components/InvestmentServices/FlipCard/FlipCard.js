@@ -17,7 +17,7 @@ const FlipCard = ({ title, copy, path }) => {
           <h3>{title}</h3>
           <div className={styles.Rule} />
           <p>{copy}</p>
-          <FaLongArrowAltRight className={styles.Icon} />
+          {/* <FaLongArrowAltRight className={styles.Icon} /> */}
         </div>
       </Link>
     </div>
