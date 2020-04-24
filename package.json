@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rp-fin-group",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Landing page for RP Financial Group",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Daniel Cooper",
   "dependencies": {
     "dotenv": "^8.0.0",
     "gatsby": "^2.10.0",
@@ -48,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/cooperda00/rp-fin-group"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cooperda00/rp-fin-group/issues"
   }
 }
