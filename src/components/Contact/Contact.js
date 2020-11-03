@@ -21,7 +21,7 @@ const Contact = () => {
       "87/118, 15F Modern Town Tower,",
       "Ekkamai Soi 3, Sukhumvit Soi 63",
       "Bangkok, 10110, Thailand",
-      "Tel: +66 62 537 3272",
+      "Tel: +66 (0) 2 0014 144",
       "info@rpfingroup.com",
     ],
   }
