@@ -14,6 +14,7 @@ import {
   Social,
   Logo,
   SubTitle,
+  TextLink,
 } from "./Footer.module.scss"
 //Constants
 import { footerMenuMain } from "../../../constants/footerMenuMain"
@@ -29,7 +30,6 @@ const Footer = () => {
       <div className={Navigation}>
         <div className={LogoContainer}>
           <Link to="/">
-            {" "}
             <GatsbyImage
               image={image}
               alt="RP Fin Group Logo"
@@ -40,7 +40,7 @@ const Footer = () => {
 
         {footerMenuMain.map((link, index) => {
           return (
-            <Link to={link.path} key={index}>
+            <Link to={link.path} key={index} className={TextLink}>
               {link.text}
             </Link>
           )
