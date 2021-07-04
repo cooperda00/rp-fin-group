@@ -12,18 +12,23 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        trackingId: "UA-144929354-1",
-        head: true,
+        googleAnalytics: {
+          trackingId: "UA-144929354-1",
+          cookieName: "gatsby-gdpr-google-analytics",
+          anonymize: true,
+        },
+        environments: ["production", "development"],
       },
     },
-    {    
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("node-sass"),
-      }
+      },
     },
+    "gatsby-plugin-image",
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
