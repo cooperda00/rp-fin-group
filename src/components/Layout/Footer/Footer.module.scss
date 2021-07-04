@@ -17,14 +17,14 @@
     padding: $spaceM $spaceM 0 $spaceM;
     width: 100%;
 
-    a {
+    .TextLink {
       color: white;
       margin-bottom: $spaceS;
       position: relative;
       white-space: nowrap;
     }
 
-    a::before {
+    .TextLink::before {
       content: "";
       display: block;
       opacity: 0;
@@ -35,7 +35,7 @@
       margin-top: 1.5em;
     }
 
-    a:hover {
+    .TextLink:hover {
       &::before {
         opacity: 1;
       }
