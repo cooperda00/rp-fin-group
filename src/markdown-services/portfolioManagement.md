@@ -5,7 +5,7 @@ title: "Asset & Portfolio Management"
 type: "service"
 ---
 
-###Personal investment options###
+### Personal investment options ###
 
  At RP Financial, managing our client’s money is a privilege we take seriously, and we understand each and every client has their own individual goals and objectives.
 

@@ -1,16 +1,5 @@
 @import "../vars";
 
-.News {
-  max-width: $contentWidth;
-  padding: $spaceL 0;
-}
-
-.NewsCardContainer {
-  @include flex(row, center, center);
-
-  flex-wrap: wrap;
-}
-
 .PageControls {
   @include flex(row, center, center);
 

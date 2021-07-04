@@ -5,7 +5,7 @@ title: "Data Collection"
 type: "compliance"
 ---
 
-###Scope###
+### Scope ###
 
 This privacy notice aims to provide our clients on how RP Financial (“RP”) collects and processes our clients' information. The notice also serves to comply with the updated General Data Protection Regulation (GDPR) as well as the Hong Kong Personal Data (Privacy) Ordinance.
 
@@ -13,7 +13,7 @@ It is important that all clients and employees of RP read the privacy notice tog
 
 <br>
 
-###Collection of Data###
+### Collection of Data ###
 
 RP collects client’s personal data for various purposes, these include account opening, KYC requirements, and the processing of client due diligence etc.
 
@@ -34,7 +34,7 @@ Data Subject in relation to personal data, means the individual who is the subje
 
 
 
-###Control and Use of Collected Data###
+### Control and Use of Collected Data ###
 
 Personal Data collected will only be used for businesses purpose, and will only be in relation to our services. All data will be used when the law allows us to. Licensed Representative is required to explain RP’s control and use of the collected data, at the time of data collection.
 
@@ -57,7 +57,7 @@ Whenever there is a change of the above controls, notification will be sent to t
 
 <br>
 
-###Data Subject's Rights###
+### Data Subject's Rights ###
 
 Under certain circumstances, data subject has the below rights, under Personal Data (Privacy) Ordinance, in relation to his/her personal data
 
@@ -78,24 +78,24 @@ If the data subject wish to exercise any of the above rights, he/she should cont
 
 <br>
 
-###Retention###
+### Retention ###
 
 RP will retain all data collected for as long as necessary to fulfill the purposes of collecting it, these purposes include but not limited to, satisfying any legal, accounting, or reporting requirements.
 
 <br>
 
-###Data Security###
+### Data Security ###
 
 RP has in place proper security measures in relation to data collected from data subject to prevent data, including personal data, from being altered, disclosed, lost, and unauthorized use or access. In case of data breach, the related data subject and applicable regulator will be notified as soon as practicable. All data subjects should be aware that the transmitting of information over the internet may not entirely secure and could expose to certain risk. RP cannot ensure the security of data transmitted via internet.
 
 <br>
 
-###General Terms###
+### General Terms ###
 
 If any court or competent authority finds any provision or part-provision of this privacy policy is invalid, illegal or unenforceable, other provisions of this privacy policy will not be affected. The privacy policy is governed by and interpreted according to both the Hong Kong Personal Data (Privacy) Ordinance and the GDPR. All disputes arising under this privacy policy are subject to the exclusive jurisdictions.
 
 <br>
 
-###Changes to this Privacy Policy###
+### Changes to this Privacy Policy ###
 
 RP reserves the right to change this privacy policy as necessary from time to time as may be required by law. Any changes will be effective and the updated policy will be posted on the Website immediately. All data subjects are deemed to have accepted the terms of the privacy policy at the time he/she subscribed to RP’s products and services. For further information, please contact RP Financial via email at info@rpfingroup.com.

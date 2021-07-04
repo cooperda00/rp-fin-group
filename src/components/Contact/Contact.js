@@ -2,7 +2,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 //Sass
-import styles from "./Contact.module.scss"
+import { ContactContainer, Left } from "./Contact.module.scss"
 //Component
 import Container from "../Layout/Container/Container"
 import ContactForm from "./ContactForm/ContactForm"
@@ -10,10 +10,10 @@ import Title from "../Utility/Title/Title"
 import Address from "./Address/Address"
 
 const Contact = () => {
-  const data = useStaticQuery(query)
+  const { bangkok, hongkong } = useStaticQuery(query)
 
-  const bangkok = {
-    fluid: data.bangkok.childImageSharp.fluid,
+  const bangkokDetails = {
+    image: bangkok,
     city: "Bangkok",
     address: [
       "RP Group Corporation Thailand Co. Ltd",
@@ -26,8 +26,8 @@ const Contact = () => {
     ],
   }
 
-  const hongkong = {
-    fluid: data.hongkong.childImageSharp.fluid,
+  const hongkongDetails = {
+    image: hongkong,
     city: "Hong Kong",
     address: [
       "RP Financial Group,",
@@ -42,11 +42,11 @@ const Contact = () => {
 
   return (
     <Container>
-      <div className={styles.Contact}>
-        <div className={styles.Left}>
+      <div className={ContactContainer}>
+        <div className={Left}>
           <Title title="Get in touch with us" greenText />
-          <Address details={hongkong} />
-          <Address details={bangkok} />
+          <Address details={hongkongDetails} />
+          <Address details={bangkokDetails} />
         </div>
 
         <ContactForm />
@@ -59,16 +59,20 @@ const query = graphql`
   {
     bangkok: file(relativePath: { eq: "bhiraj_tower_bkk.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
+        gatsbyImageData(
+          width: 400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
     hongkong: file(relativePath: { eq: "cosco_tower_hk.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
+        gatsbyImageData(
+          width: 400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

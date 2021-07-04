@@ -1,6 +1,8 @@
 //Modules
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
@@ -12,7 +14,9 @@ import CTA from "../components/Utility/CTA/CTA"
 import { complianceMenu } from "../constants/complianceMenu"
 
 const CompliancePage = ({ data, location }) => {
-  const image = data.bg.childImageSharp.fluid
+  const imageFromQuery = data.bg
+  const image = getImage(imageFromQuery)
+  const bgImage = convertToBgImage(image)
 
   const [currentCopy, setCurrentCopy] = useState({
     title: "",
@@ -53,7 +57,7 @@ const CompliancePage = ({ data, location }) => {
         keywordsExtra=""
         descriptionExtra="Compliance"
       />
-      <Hero image={image}>
+      <Hero image={bgImage}>
         <BannerText title="Compliance" />
       </Hero>
       <Viewer
@@ -74,9 +78,11 @@ export const query = graphql`
   {
     bg: file(relativePath: { eq: "melbourne_skyline_2.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
     dataCollection: markdownRemark(

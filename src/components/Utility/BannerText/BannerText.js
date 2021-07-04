@@ -1,11 +1,11 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./BannerText.module.scss"
+import { BannerTextContainer } from "./BannerText.module.scss"
 
 const BannerText = ({ title, info, children }) => {
   return (
-    <section className={styles.BannerText}>
+    <section className={BannerTextContainer}>
       <h1>{title}</h1>
       {info && <h2>{info}</h2>}
       {children}

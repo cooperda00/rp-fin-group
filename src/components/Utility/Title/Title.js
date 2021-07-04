@@ -1,14 +1,14 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Title.module.scss"
+import { TitleContainer, GreenText } from "./Title.module.scss"
 
 const Title = ({ title, whiteText, greenText }) => {
-  const addGreenText = greenText === true && styles.GreenText
+  const addGreenText = greenText === true && GreenText
 
   return (
     <h3
-      className={`${styles.Title} ${addGreenText}`}
+      className={`${TitleContainer} ${addGreenText}`}
       style={whiteText && { color: "white", background: "transparent" }}
     >
       {title}

@@ -1,6 +1,6 @@
 @import "../../vars";
 
-.NotFound {
+.NotFoundContainer {
   @include flex(column, center, center);
 
   background: $secondaryDD;

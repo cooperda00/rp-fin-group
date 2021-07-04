@@ -1,9 +1,14 @@
 //Modules
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
 //Sass
-import styles from "./CTANews.module.scss"
+import {
+  CTAContainer,
+  Left,
+  Right,
+  CardContainer,
+  NewsCard,
+} from "./CTANews.module.scss"
 //Components
 import Container from "../../Layout/Container/Container"
 import CTAButton from "../CTAButton/CTAButton"
@@ -15,22 +20,22 @@ const CTANews = () => {
 
   return (
     <Container pattern="3">
-      <div className={styles.CTA}>
-        <div className={styles.Left}>
+      <div className={CTAContainer}>
+        <div className={Left}>
           <p>Speak with one of our expert advisors today.</p>
           <CTAButton path="/contact" text="Get in touch" />
         </div>
 
-        <div className={styles.Right}>
+        <div className={Right}>
           <h3>Latest News</h3>
 
-          <div className={styles.CardContainer}>
+          <div className={CardContainer}>
             {edges.map(({ node }) => {
               const { title, excerpt, date, image, url } = node
               return (
                 <a
                   href={url}
-                  className={styles.NewsCard}
+                  className={NewsCard}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

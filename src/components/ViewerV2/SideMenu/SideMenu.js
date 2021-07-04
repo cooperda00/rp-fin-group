@@ -1,9 +1,7 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./SideMenu.module.scss"
-//Icons
-import { FaCaretRight } from "react-icons/fa"
+import { SideMenuContainer, Selected } from "./SideMenu.module.scss"
 
 const SideMenu = ({
   currentCopy,
@@ -20,7 +18,7 @@ const SideMenu = ({
   willsTrusts,
   managedPortfolios,
 }) => {
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.preventDefault()
     if (e.target.innerText === "Data Collection") {
       setCurrentCopy({
@@ -85,7 +83,7 @@ const SideMenu = ({
   }
 
   return (
-    <nav className={styles.SideMenu}>
+    <nav className={SideMenuContainer}>
       <div>
         {menu.map((item, index) => {
           return (
@@ -94,12 +92,11 @@ const SideMenu = ({
               onClick={handleClick}
               className={
                 currentCopy && currentCopy.title === item.name
-                  ? styles.Selected
+                  ? Selected
                   : undefined
               }
             >
               {item.name}
-              {/* <FaCaretRight /> */}
             </button>
           )
         })}

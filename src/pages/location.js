@@ -1,6 +1,8 @@
 //Modules
 import React from "react"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
@@ -9,11 +11,14 @@ import Contact from "../components/Contact/Contact"
 import SEO from "../components/SEO/SEO"
 
 const LocationPage = ({ data }) => {
-  const image = data.bg.childImageSharp.fluid
+  const imageFromQuery = data.bg
+  const image = getImage(imageFromQuery)
+  const bgImage = convertToBgImage(image)
+
   return (
     <Layout>
       <SEO titleExtra="Location" keywordsExtra="" descriptionExtra="Location" />
-      <Hero image={image}>
+      <Hero image={bgImage}>
         <BannerText title="Our Locations" />
       </Hero>
       <Contact />
@@ -25,9 +30,11 @@ export const query = graphql`
   {
     bg: file(relativePath: { eq: "auckland_skyline.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

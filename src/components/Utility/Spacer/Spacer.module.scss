@@ -1,18 +1,10 @@
 @import "../../../vars";
 
-.Spacer {
+.SpacerContainer {
   width: 100%;
 
   div {
     height: 1vh;
     background: $primary;
   }
-
-  //   div:first-of-type {
-  //     background: $primary;
-  //   }
-
-  //   div:last-of-type {
-  //     background: white;
-  //   }
 }

@@ -1,25 +1,40 @@
 //Modules
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 //Sass
-import styles from "./Footer.module.scss"
+import {
+  FooterContainer,
+  Navigation,
+  LogoContainer,
+  NavigationSub,
+  SubWrapper,
+  SubSub,
+  SocialContainer,
+  Social,
+  Logo,
+  SubTitle,
+} from "./Footer.module.scss"
 //Constants
 import { footerMenuMain } from "../../../constants/footerMenuMain"
 import { footerMenuSub } from "../../../constants/footerMenuSub"
 import { social } from "../../../constants/social"
 
 const Footer = () => {
-  const data = useStaticQuery(query)
-  const logo = data.logo.childImageSharp.fluid
+  const { logo } = useStaticQuery(query)
+  const image = getImage(logo)
 
   return (
-    <footer className={styles.Footer}>
-      <div className={styles.Navigation}>
-        <div className={styles.LogoContainer}>
+    <footer className={FooterContainer}>
+      <div className={Navigation}>
+        <div className={LogoContainer}>
           <Link to="/">
             {" "}
-            <Image fluid={logo} className={styles.Logo} />
+            <GatsbyImage
+              image={image}
+              alt="RP Fin Group Logo"
+              className={Logo}
+            />
           </Link>
         </div>
 
@@ -32,16 +47,16 @@ const Footer = () => {
         })}
       </div>
 
-      <div className={styles.NavigationSub}>
+      <div className={NavigationSub}>
         {footerMenuSub.map((link, index) => {
           return (
-            <div key={index} className={styles.SubWrapper}>
-              <div className={styles.SubTitle}>
+            <div key={index} className={SubWrapper}>
+              <div className={SubTitle}>
                 <Link to={link.path} state={{ active: link.text }}>
                   {link.text}
                 </Link>
               </div>
-              <div className={styles.SubSub}>
+              <div className={SubSub}>
                 {link.subMenu.map(({ title, path }, index) => {
                   return (
                     <Link to={path} key={index}>
@@ -55,9 +70,9 @@ const Footer = () => {
         })}
       </div>
 
-      <div className={styles.SocialContainer}>
-        <div className={styles.Social}>
-          {social.map(link => {
+      <div className={SocialContainer}>
+        <div className={Social}>
+          {social.map((link) => {
             return (
               <a
                 href={link.path}
@@ -86,9 +101,11 @@ const query = graphql`
   {
     logo: file(relativePath: { eq: "logo_transparent.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 200
+          placeholder: NONE
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

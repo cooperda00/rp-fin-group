@@ -2,7 +2,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 //Sass
-import styles from "./InvestmentServices.module.scss"
+import {
+  InvestmentServicesContainer,
+  FlipCardContainer,
+} from "./InvestmentServices.module.scss"
 //Component
 import Hero from "../Utility/Hero/Hero"
 import Title from "../Utility/Title/Title"
@@ -16,9 +19,9 @@ const InvestmentServices = () => {
 
   return (
     <Hero image={image} type="home">
-      <div className={styles.InvestmentServices}>
+      <div className={InvestmentServicesContainer}>
         <Title title="investment services" whiteText={true} />
-        <div className={styles.FlipCardContainer}>
+        <div className={FlipCardContainer}>
           {servicesMenu.map((service, index) => {
             return (
               <FlipCard

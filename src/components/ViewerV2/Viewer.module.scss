@@ -1,6 +1,6 @@
 @import "../../vars";
 
-.Viewer {
+.ViewerContainer {
   @include flex(column, flex-start, flex-start);
 
   height: 100%;

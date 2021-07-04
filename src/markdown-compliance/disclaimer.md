@@ -5,7 +5,7 @@ title: "Disclaimer"
 type: "compliance"
 ---
 
-*Please read the following important information before accessing this website:*
+_Please read the following important information before accessing this website:_
 
 This Website is owned and operated by RP Financial and the use thereof indicate that you accept RP Financials’ Terms and Conditions of Use. If you do not agree to the Terms and Conditions of Use, you should not use the Website. RP Financial may, at its entire discretion, at any time and without notice, modify or update such Terms and Conditions of Use. 
 
@@ -13,7 +13,7 @@ Such changes shall be effective immediately and you shall be deemed to have acce
 
 RP Financial does not accept any liability for any errors or omissions of whatsoever nature as regards information, materials, functions and applications contained in its Website or as to any third-party Websites linked to or from its Website.
 
-###Terms & Conditions of Use:###
+### Terms & Conditions of Use: ###
 
 Information available on the Website are allowed to be printed and / or downloaded for personal use only and not for commercial purposes.
 
@@ -29,7 +29,7 @@ No information contained on the Website shall constitute or is intended to const
 
 ​RP Financial does not assume responsibility for any malfunctioning in communication facilities not under its control that may affect the accuracy or timeliness of messages you send. RP Financial will not be responsible for any losses or delays in transmission of instructions arising or caused by any browser software. It will, furthermore, not be accountable should you provide incorrect instructions.
 
-###Termination of Use:###
+### Termination of Use: ###
 
 ​We reserve the right, at any time in our sole discretion without notice or explanation:
 

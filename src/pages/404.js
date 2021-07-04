@@ -12,6 +12,7 @@ const NotFoundPage = () => (
       keywordsExtra=""
       descriptionExtra="Page Not Found"
     />
+
     <NotFound />
   </Layout>
 )

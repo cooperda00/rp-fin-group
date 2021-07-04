@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.NewsCard {
+.NewsCardContainer {
   width: 32rem;
   height: 50rem;
   margin: $spaceM;
@@ -21,7 +21,7 @@
     margin-top: 0.5rem;
   }
 
-  .Date {
+  .DateDisplay {
     @include font("XS");
   }
 
@@ -31,15 +31,6 @@
     margin-top: 0.5rem;
     line-height: 1.3;
   }
-
-  // .Icon {
-  //   @include font("SM");
-
-  //   color: $primary;
-  //   position: absolute;
-  //   bottom: 1rem;
-  //   right: 1rem;
-  // }
 }
 
 .ArticleBtn {

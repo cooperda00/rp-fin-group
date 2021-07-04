@@ -1,9 +1,9 @@
 //Modules
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import Slide from "react-reveal/Slide"
+import Slide from "@stahl.luke/react-reveal"
 //Sass
-import styles from "./Navigation.module.scss"
+import {NavigationContainer, ContactBtn, Links, MenuItemWrapper, MenuItemLink, ServicesSubMenu, ComplianceSubMenu, HamburgerMenu,MiniMenu } from "./Navigation.module.scss"
 //Constants
 import { links } from "../../../../constants/links"
 import { servicesMenu } from "../../../../constants/servicesMenu"
@@ -24,17 +24,17 @@ const Navigation = ({ location }) => {
   }, [])
 
   return (
-    <nav className={styles.Navigation}>
-      <div className={styles.Links}>
+    <nav className={NavigationContainer}>
+      <div className={Links}>
         {links.map(({ path, text, partiallyActive }) => {
           const linkStyle =
-            text === "Contact Us" ? styles.ContactBtn : undefined
+            text === "Contact Us" ? ContactBtn : undefined
 
           const activeClass = "active-route"
 
           return (
             <div
-              className={styles.MenuItemWrapper}
+              className={MenuItemWrapper}
               style={{ position: "relative" }}
               key={text}
             >
@@ -46,14 +46,14 @@ const Navigation = ({ location }) => {
                 partiallyActive={partiallyActive}
                 className={
                   active === text
-                    ? `${linkStyle} ${activeClass} ${styles.MenuItemLink}`
-                    : `${linkStyle} ${styles.MenuItemLink}`
+                    ? `${linkStyle} ${activeClass} ${MenuItemLink}`
+                    : `${linkStyle} ${MenuItemLink}`
                 }
               >
                 {text}
               </Link>
               {text === "Services" && (
-                <div className={styles.ServicesSubMenu}>
+                <div className={ServicesSubMenu}>
                   {servicesMenu.map(({ name, path }, index) => {
                     return (
                       <Link key={index} to={path}>
@@ -65,7 +65,7 @@ const Navigation = ({ location }) => {
               )}
 
               {text === "Compliance" && (
-                <div className={styles.ComplianceSubMenu}>
+                <div className={ComplianceSubMenu}>
                   {complianceMenu.map(({ name, path }, index) => {
                     return (
                       <Link key={index} to={path}>
@@ -77,7 +77,7 @@ const Navigation = ({ location }) => {
               )}
 
               {text === "About Us" && (
-                <div className={styles.ComplianceSubMenu}>
+                <div className={ComplianceSubMenu}>
                   <Link to="/about">Who We Are</Link>
                   <Link to="/location">Where We Are</Link>
                 </div>
@@ -88,7 +88,7 @@ const Navigation = ({ location }) => {
       </div>
 
       <button
-        className={styles.HamburgerMenu}
+        className={HamburgerMenu}
         onClick={() => {
           toggleMenu(!menu)
         }}
@@ -97,7 +97,7 @@ const Navigation = ({ location }) => {
       </button>
 
       <Slide right when={menu}>
-        <div className={styles.MiniMenu}>
+        <div className={MiniMenu}>
           {links.map(({ path, text }) => (
             <Link to={path} key={text} tabIndex="-1">
               {menu && text}

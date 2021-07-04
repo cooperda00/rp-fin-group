@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.Copy {
+.CopyContainer {
   margin-bottom: auto;
   padding: $spaceS;
 
@@ -45,11 +45,17 @@
 
       margin-left: $spaceM;
       margin-bottom: $spaceS;
+
+      p {
+        display: inline;
+      }
     }
 
     li:before {
       display: inline-block;
       content: "";
+      min-height: 0.4em;
+      min-width: 0.4em;
       height: 0.4em;
       width: 0.4em;
       background: $primary;

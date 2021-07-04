@@ -1,14 +1,14 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Cards.module.scss"
+import { CardsParent, CardsContainer } from "./Cards.module.scss"
 //Components
 import Card from "./Card/Card"
 
 const Cards = () => {
   return (
-    <section className={styles.Cards}>
-      <div className={styles.CardsContainer}>
+    <section className={CardsParent}>
+      <div className={CardsContainer}>
         {data.map((card, index) => {
           return <Card key={index} card={card} />
         })}

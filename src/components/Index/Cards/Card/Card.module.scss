@@ -1,6 +1,6 @@
 @import "../../../../vars";
 
-.Card {
+.CardContainer {
   @include flex(column, flex-start, flex-start);
 
   background: $gray1;

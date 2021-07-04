@@ -1,21 +1,27 @@
 //Modules
 import React from "react"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 //Sass
-import styles from "./Address.module.scss"
+import {
+  AddressContainer,
+  Left,
+  ImageContainer,
+  Right,
+} from "./Address.module.scss"
 
 const Address = ({ details }) => {
-  const { city, fluid, address } = details
+  const { city, image, address } = details
+  const imageDetails = getImage(image)
 
   return (
-    <address className={styles.Address}>
-      <div className={styles.Left}>
-        <div className={styles.ImageContainer}>
-          <Image fluid={fluid} alt={city} />
+    <address className={AddressContainer}>
+      <div className={Left}>
+        <div className={ImageContainer}>
+          <GatsbyImage image={imageDetails} className={Image} alt={city} />
         </div>
       </div>
 
-      <div className={styles.Right}>
+      <div className={Right}>
         <h3>{city}</h3>
         <ul>
           {address.map((line, index) => {

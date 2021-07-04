@@ -1,6 +1,6 @@
 @import "../../vars";
 
-.Success {
+.SuccessContainer {
   @include flex(column, center, center);
 
   background: $secondaryDD;
