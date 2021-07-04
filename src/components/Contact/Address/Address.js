@@ -17,7 +17,7 @@ const Address = ({ details }) => {
     <address className={AddressContainer}>
       <div className={Left}>
         <div className={ImageContainer}>
-          <GatsbyImage image={imageDetails} className={Image} alt={city} />
+          <GatsbyImage image={imageDetails} alt={city} />
         </div>
       </div>
 
