@@ -1,14 +1,14 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Social.module.scss"
+import { SocialContainer } from "./Social.module.scss"
 //Constants
 import { social } from "../../../../constants/social"
 
 const Social = () => {
   return (
-    <div className={styles.Social}>
-      {social.map(link => {
+    <div className={SocialContainer}>
+      {social.map((link) => {
         return (
           <a
             href={link.path}
@@ -18,7 +18,7 @@ const Social = () => {
             style={{ color: "white" }}
             aria-label={`Link to our ${link.name}`}
           >
-            <div className={styles.White} />
+            {/* <div className={styles.White} /> */}
             {link.icon}
           </a>
         )

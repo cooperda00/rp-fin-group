@@ -6,7 +6,7 @@ id: "pension transfer"
 type: "service"
 ---
 
-###Have you got a UK Defined Benefit pension with your employer?###
+### Have you got a UK Defined Benefit pension with your employer? ###
 
 With three out of four UK Defined Benefit (DB) schemes in deficit (as of June 2017) and transfer values at an all-time high, now is a good time to consider your options if you have one, or more, company pension plans.
 

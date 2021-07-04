@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.CTA {
+.CTAContainer {
   @include flex(column, center, center);
 
   padding: $spaceL $spaceM;

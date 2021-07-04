@@ -1,7 +1,7 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Viewer.module.scss"
+import { ViewerContainer } from "./Viewer.module.scss"
 //Components
 import Container from "../Layout/Container/Container"
 import Copy from "./Copy/Copy"
@@ -26,7 +26,7 @@ const Viewer = ({
 }) => {
   return (
     <Container>
-      <div className={styles.Viewer}>
+      <div className={ViewerContainer}>
         <SideMenu
           currentCopy={currentCopy}
           menu={menu}

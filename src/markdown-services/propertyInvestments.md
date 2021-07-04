@@ -5,7 +5,7 @@ title: "Property Investment"
 type: "service"
 ---
 
-###Hands-on help with property investment###
+### Hands-on help with property investment ###
 
 We can help private investors with property investment through the significant contacts we have forged in over 10 years of business. Our advisors are well-placed to provide you with a range of investment opportunities, as well as being highly-experienced and happy to walk you through negotiating a contract from start to finish.
 
@@ -17,7 +17,7 @@ Naturally, different mortgage rules and conditions apply based on the planned us
 Professional advice is a phone call away with an RP Financial advisor.
 
 
-###Benefits of property investment###
+### Benefits of property investment ###
 
 The property market can be more stable than most, particularly where yields are concerned, so investment property generates stable returns to investors.
 

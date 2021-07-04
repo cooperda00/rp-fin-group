@@ -1,6 +1,8 @@
 //Modules
 import React from "react"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
@@ -13,13 +15,15 @@ import InvestmentServices from "../components/InvestmentServices/InvestmentServi
 import SecondaryButton from "../components/Utility/SecondaryButton/SecondaryButton"
 
 const IndexPage = ({ data }) => {
-  const image = data.bg.childImageSharp.fluid
+  const imageFromQuery = data.bg
+  const image = getImage(imageFromQuery)
+  const bgImage = convertToBgImage(image)
 
   return (
     <Layout>
       <SEO titleExtra="Home" keywordsExtra="" descriptionExtra="Home" />
 
-      <Hero image={image} type="home">
+      <Hero image={bgImage} type="home">
         <BannerText
           title="RP Financial Group"
           info="Integrity Driven Client Solutions. Expert Bespoke Advice"
@@ -48,9 +52,11 @@ export const query = graphql`
   {
     bg: file(relativePath: { eq: "sydney_skyline.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

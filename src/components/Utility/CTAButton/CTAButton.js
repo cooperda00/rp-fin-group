@@ -2,7 +2,7 @@
 import React from "react"
 import { Link } from "gatsby"
 //Sass
-import styles from "./CTAButton.module.scss"
+import { CTAButtonContainer, AltColor } from "./CTAButton.module.scss"
 
 const CTAButton = ({ path, text, type }) => {
   return (
@@ -10,8 +10,8 @@ const CTAButton = ({ path, text, type }) => {
       to={path}
       className={
         type === "2"
-          ? `${styles.CTAButton} ${styles.AltColor}`
-          : `${styles.CTAButton}`
+          ? `${CTAButtonContainer} ${AltColor}`
+          : `${CTAButtonContainer}`
       }
     >
       {text}

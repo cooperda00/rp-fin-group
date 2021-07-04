@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.Address {
+.AddressContainer {
   @include flex(column, flex-start, center);
 
   margin-bottom: $spaceL;

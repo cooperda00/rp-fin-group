@@ -1,20 +1,20 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Card.module.scss"
+import { CardContainer, Title, Copy } from "./Card.module.scss"
 //Components
 import CTAButton from "../../../Utility/CTAButton/CTAButton"
 
 const Card = ({ card }) => {
   const { title, subtitle, paragraphs } = card
   return (
-    <div className={styles.Card}>
-      <div className={styles.Title}>
+    <div className={CardContainer}>
+      <div className={Title}>
         <h3>{title}</h3>
         <h3>{subtitle}</h3>
       </div>
 
-      <div className={styles.Copy}>
+      <div className={Copy}>
         {paragraphs.map((p, index) => {
           return <p key={index}>{p}</p>
         })}

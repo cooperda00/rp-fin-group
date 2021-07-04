@@ -1,8 +1,10 @@
 //Modules
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 //Sass
-import styles from "../pageStyles/news.module.scss"
+import { PageControls } from "../pageStyles/news.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
@@ -15,7 +17,10 @@ import { cloneDeep } from "lodash"
 
 const NewsPage = ({ data }) => {
   const news = data.news.edges
-  const image = data.bg.childImageSharp.fluid
+
+  const imageFromQuery = data.bg
+  const image = getImage(imageFromQuery)
+  const bgImage = convertToBgImage(image)
 
   const [newsItems, setNewsItems] = useState([])
 
@@ -41,13 +46,13 @@ const NewsPage = ({ data }) => {
     <Layout>
       <SEO titleExtra="News" keywordsExtra="" descriptionExtra="News" />
 
-      <Hero image={image}>
+      <Hero image={bgImage}>
         <BannerText title="News" />
       </Hero>
 
       <News news={newsItems} />
 
-      <div className={styles.PageControls}>
+      <div className={PageControls}>
         <a onClick={handleShowMore}>More Articles</a>
       </div>
 
@@ -66,9 +71,7 @@ export const query = graphql`
           excerpt
           date(formatString: "DD/MM/YYYY")
           image {
-            fluid {
-              ...GatsbyContentfulFluid_noBase64
-            }
+            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
           }
           url
         }
@@ -76,9 +79,11 @@ export const query = graphql`
     }
     bg: file(relativePath: { eq: "london_skyline.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

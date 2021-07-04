@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.CTAButton {
+.CTAButtonContainer {
   @include cta-button();
   @include font("S");
 

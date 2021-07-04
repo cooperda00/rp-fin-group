@@ -1,8 +1,10 @@
 //Modules
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 //Sass
-import styles from "./newsTemplate.module.scss"
+import { PageControls, Selected } from "./newsTemplate.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
@@ -13,17 +15,24 @@ import News from "../components/News/News"
 
 const NewsTemplate = ({ data, pageContext }) => {
   const news = data.news.edges
-  const image = data.bg.childImageSharp.fluid
+
+  const imageFromQuery = data.bg
+  const image = getImage(imageFromQuery)
+  const bgImage = convertToBgImage(image)
+
   const { numOfPages, currentPage } = pageContext
 
   return (
     <Layout>
       <SEO titleExtra="News" keywordsExtra="" descriptionExtra="News" />
-      <Hero image={image}>
+
+      <Hero image={bgImage}>
         <BannerText title="News" />
       </Hero>
+
       <News news={news} />
-      <div className={styles.PageControls}>
+
+      <div className={PageControls}>
         {currentPage !== 1 && (
           <Link
             className="btn-primary"
@@ -40,7 +49,7 @@ const NewsTemplate = ({ data, pageContext }) => {
               to={i === 0 ? "/news" : `/news/${i + 1}`}
               className={
                 i + 1 === currentPage
-                  ? `${styles.Selected} btn-primary`
+                  ? `${Selected} btn-primary`
                   : `btn-primary`
               }
             >
@@ -84,9 +93,11 @@ export const query = graphql`
     }
     bg: file(relativePath: { eq: "london_skyline.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

@@ -1,6 +1,8 @@
 //Modules
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 //Components
 import Layout from "../components/Layout/Layout"
 import Hero from "../components/Utility/Hero/Hero"
@@ -12,7 +14,9 @@ import CTA from "../components/Utility/CTA/CTA"
 import { servicesMenu } from "../constants/servicesMenu"
 
 const ServicesPage = ({ data, location }) => {
-  const image = data.bg.childImageSharp.fluid
+  const imageFromQuery = data.bg
+  const image = getImage(imageFromQuery)
+  const bgImage = convertToBgImage(image)
 
   const [currentCopy, setCurrentCopy] = useState({
     title: "",
@@ -117,7 +121,7 @@ const ServicesPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO titleExtra="Services" keywordsExtra="" descriptionExtra="Services" />
-      <Hero image={image}>
+      <Hero image={bgImage}>
         <BannerText title="Investment Services" />
       </Hero>
       <Viewer
@@ -144,9 +148,11 @@ export const query = graphql`
   {
     bg: file(relativePath: { eq: "hong_kong_skyline_night.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
     educationPlanning: markdownRemark(

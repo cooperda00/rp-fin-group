@@ -5,7 +5,7 @@ title: "Wills / Trusts"
 type: "service"
 ---
 
-###Wills###
+### Wills ###
 
 There is no one-size-fits-all answer to the problem of international estates and expat wills, as each individual’s circumstances are unique and will require bespoke solutions.
  
@@ -16,7 +16,7 @@ After all, you work for a lifetime to amass your estate, so it makes sense to ta
 We have the relevant expertise as well as experience of the issues to consider when making a will and particularly those relevant to expats caught between residency and domicile in more than one jurisdiction. Wherever you are in Asia, our UK certified advisor and partners can help you make the most of the tools available to you to minimize your IHT liability and leave a lasting legacy for your loved ones. 
 
 
-###Trusts###
+### Trusts ###
 
 Trusts are becoming increasingly popular in recent years because it can override inheritance tax, gift tax, etc which would be incurred by the beneficiaries in certain jurisdiction’s if it is transferred through a Will. For this reason, the wealthy often choose to pass on the assets to their children and future generations through this vehicle. Although it involves recurring cost in the form of service fees to the trustee, it is still highly recommended as a long-term solution as it provides additional benefits such as tax savings and confidentiality.
 

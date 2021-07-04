@@ -1,17 +1,14 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Copy.module.scss"
+import { CopyContainer, Markdown } from "./Copy.module.scss"
 
 const Copy = ({ title, html }) => {
   return (
-    <div className={styles.Copy}>
+    <div className={CopyContainer}>
       <h2>{title}</h2>
 
-      <div
-        dangerouslySetInnerHTML={{ __html: html }}
-        className={styles.Markdown}
-      />
+      <div dangerouslySetInnerHTML={{ __html: html }} className={Markdown} />
     </div>
   )
 }

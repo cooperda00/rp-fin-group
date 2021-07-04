@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.Header {
+.HeaderContainer {
   @include flex(row, space-between, flex-start);
 
   background: transparent;

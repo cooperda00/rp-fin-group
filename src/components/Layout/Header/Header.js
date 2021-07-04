@@ -1,7 +1,7 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Header.module.scss"
+import { HeaderContainer, Menu } from "./Header.module.scss"
 //Components
 import Logo from "./Logo/Logo"
 import Navigation from "./Navigation/Navigation"
@@ -9,9 +9,9 @@ import Social from "./Social/Social"
 
 const Header = ({ location }) => {
   return (
-    <header className={styles.Header}>
+    <header className={HeaderContainer}>
       <Logo />
-      <div className={styles.Menu}>
+      <div className={Menu}>
         <Social />
         <Navigation location={location} />
       </div>

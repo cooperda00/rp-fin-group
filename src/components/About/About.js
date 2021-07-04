@@ -1,29 +1,37 @@
 //Modules
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 //Sass
-import styles from "./About.module.scss"
+import {
+  AboutContainer,
+  Left,
+  ImageContainer,
+  Image,
+  Right,
+} from "./About.module.scss"
 //Component
 import Container from "../Layout/Container/Container"
 import Title from "../Utility/Title/Title"
 
 const About = () => {
-  const data = useStaticQuery(query)
+  const { singapore } = useStaticQuery(query)
+  const image = getImage(singapore)
 
   return (
     <Container>
-      <div className={styles.About}>
-        <div className={styles.Left}>
-          <div className={styles.ImageContainer}>
-            <Image
-              fluid={data.image.childImageSharp.fluid}
-              className={styles.Image}
+      <div className={AboutContainer}>
+        <div className={Left}>
+          <div className={ImageContainer}>
+            <GatsbyImage
+              image={image}
+              className={Image}
+              alt="Singapore skyline"
             />
           </div>
         </div>
 
-        <div className={styles.Right}>
+        <div className={Right}>
           <Title title="about us" greenText />
           <p>
             RP Financial Group is a trusted financial consultancy and private
@@ -60,11 +68,13 @@ const About = () => {
 
 const query = graphql`
   {
-    image: file(relativePath: { eq: "singapore2.jpg" }) {
+    singapore: file(relativePath: { eq: "singapore2.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
+        gatsbyImageData(
+          width: 500
+          placeholder: NONE
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

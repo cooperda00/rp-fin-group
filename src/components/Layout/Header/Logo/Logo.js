@@ -3,18 +3,15 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 //Sass
-import styles from "./Logo.module.scss"
+import { LogoContainer, LogoImage } from "./Logo.module.scss"
 
 const Logo = () => {
   const data = useStaticQuery(query)
 
   return (
     <Link to="/">
-      <div className={styles.LogoContainer}>
-        <Image
-          fluid={data.logo.childImageSharp.fluid}
-          className={styles.LogoImage}
-        />
+      <div className={LogoContainer}>
+        <Image fluid={data.logo.childImageSharp.fluid} className={LogoImage} />
       </div>
     </Link>
   )

@@ -1,29 +1,31 @@
 //Modules
 import React from "react"
 //Sass
-import styles from "./Container.module.scss"
+import {
+  ContainerStyles,
+  ContentContainer,
+  Pattern0,
+  Pattern1,
+  Pattern2,
+  Pattern3,
+} from "./Container.module.scss"
 
 const Container = ({ children, pattern }) => {
-  // const style =
-  //   pattern === "1"
-  //     ? `${styles.Container} ${styles.Pattern1}`
-  //     : `${styles.Container} ${styles.Pattern2}`
-
   const getStyle = () => {
     if (pattern === "0") {
-      return `${styles.Container} ${styles.Pattern0}`
+      return `${ContainerStyles} ${Pattern0}`
     } else if (pattern === "1") {
-      return `${styles.Container} ${styles.Pattern1}`
+      return `${ContainerStyles} ${Pattern1}`
     } else if (pattern === "2") {
-      return `${styles.Container} ${styles.Pattern2}`
+      return `${ContainerStyles} ${Pattern2}`
     } else if (pattern === "3") {
-      return `${styles.Container} ${styles.Pattern3}`
+      return `${ContainerStyles} ${Pattern3}`
     }
   }
 
   return (
     <section className={getStyle()}>
-      <div className={styles.ContentContainer}>{children}</div>
+      <div className={ContentContainer}>{children}</div>
     </section>
   )
 }

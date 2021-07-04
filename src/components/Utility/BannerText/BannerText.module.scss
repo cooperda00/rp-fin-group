@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.BannerText {
+.BannerTextContainer {
   @include flex(column, center, center);
 
   padding: $spaceS;

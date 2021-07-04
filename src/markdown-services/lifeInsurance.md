@@ -5,7 +5,7 @@ title: "Life / Critical Illness Insurance"
 type: "service"
 ---
 
-###We can't predict the future, but we can plan for it.###
+### We can't predict the future, but we can plan for it. ###
 
 Life insurance provides cash to help your beneficiaries replace your income when you die. This money goes to your beneficiaries and can be used for anything — funeral expenses, living expenses, education fees, mortgage payments, or donations to charity. Whatever they want. The skies (and the amount of your death benefit) are the limit.
 

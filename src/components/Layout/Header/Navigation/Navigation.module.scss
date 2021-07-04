@@ -1,6 +1,6 @@
 @import "../../../../vars";
 
-.Navigation {
+.NavigationContainer {
   @include flex(row, flex-end, center);
 
   width: 120%;

@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.SecondaryButton {
+.SecondaryButtonContainer {
   @include font("S");
 
   background: rgba($gray5, 0.4);

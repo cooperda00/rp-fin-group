@@ -18,7 +18,12 @@ module.exports = {
         head: true,
       },
     },
-    `gatsby-plugin-sass`,
+    {    
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("node-sass"),
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

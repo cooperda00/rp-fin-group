@@ -1,23 +1,20 @@
 //Modules
 import React from "react"
 import { Link } from "gatsby"
-//Icons
-import { FaLongArrowAltRight } from "react-icons/fa"
 //Sass
-import styles from "./FlipCard.module.scss"
+import { CardContainer, Front, Back, Rule } from "./FlipCard.module.scss"
 
 const FlipCard = ({ title, copy, path }) => {
   return (
-    <div className={styles.Card}>
+    <div className={CardContainer}>
       <Link to={path}>
-        <div className={styles.Front}>
+        <div className={Front}>
           <h3>{title}</h3>
         </div>
-        <div className={styles.Back}>
+        <div className={Back}>
           <h3>{title}</h3>
-          <div className={styles.Rule} />
+          <div className={Rule} />
           <p>{copy}</p>
-          {/* <FaLongArrowAltRight className={styles.Icon} /> */}
         </div>
       </Link>
     </div>

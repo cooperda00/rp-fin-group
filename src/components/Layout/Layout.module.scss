@@ -1,6 +1,6 @@
 @import "../../vars";
 
-.Layout {
+.LayoutContainer {
   @include flex(column, space-between, center);
 
   min-width: 100%;

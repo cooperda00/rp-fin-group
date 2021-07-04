@@ -1,6 +1,6 @@
 @import "../../../vars";
 
-.Hero {
+.HeroContainer {
   @include flex(column, center, center);
 
   background: linear-gradient(

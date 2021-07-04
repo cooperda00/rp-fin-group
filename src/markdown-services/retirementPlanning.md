@@ -5,7 +5,7 @@ title: "Retirement Planning"
 type: "service"
 ---
 
-###Start now for a stress-free retirement###
+### Start now for a stress-free retirement ###
 
 Retirement planning might sound premature to many but here at RP Financial, we have plenty of experience in helping clients to secure their retirement, no matter how far away it might seem right now without significantly changing their current lifestyles. 
 
