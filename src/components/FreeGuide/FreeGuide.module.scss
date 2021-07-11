@@ -91,6 +91,7 @@
     letter-spacing: 0.6rem;
     text-align: center;
     margin-bottom: $spaceM;
+    padding: 0 $spaceL;
 
     @include min-width(1000px) {
       @include font("L");
@@ -133,6 +134,128 @@
         @include flex(row, center, baseline);
         text-align: center;
       }
+    }
+  }
+}
+
+.PensionReviewContainer {
+  @include flex(column, center, center);
+
+  width: 100%;
+  padding: $spaceM 0;
+
+  @include min-width(1000px) {
+    padding: $spaceL 0;
+  }
+
+  h3 {
+    @include font("M");
+    width: 100%;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    margin-bottom: $spaceM;
+    color: $primary;
+    padding: 0 $spaceL;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+
+  .Paragraphs {
+    @include flex(column, flex-start, flex-start);
+    margin-bottom: $spaceM;
+
+    > p {
+      @include font("S");
+      padding: 0 $spaceL;
+      margin-bottom: $spaceS;
+      max-width: 150rem;
+      text-align: left;
+
+      @include min-width(600px) {
+        @include font("M");
+      }
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $spaceM;
+    width: 100%;
+    padding: 0 $spaceL;
+    margin-bottom: $spaceL;
+
+    li {
+      @include flex(row, center, flex-start);
+      @include font("S");
+      width: 100%;
+      list-style: none;
+      text-align: left;
+
+      p {
+        .Icon {
+          margin-right: $spaceS;
+          color: $primary;
+        }
+      }
+    }
+
+    @include min-width(600px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0;
+
+      li {
+        @include font("M");
+      }
+    }
+  }
+}
+
+.OptionsContainer {
+  @include flex(row, center, center);
+  background: lighten($primaryLL, 35%);
+  padding: $spaceS;
+
+  @include min-width(600px) {
+    padding: $spaceL;
+  }
+
+  .OptionsCard {
+    @include flex(column, flex-start, center);
+    background: white;
+    width: 50rem;
+    padding: $spaceM;
+
+    > h3 {
+      @include font("M");
+      font-weight: 400;
+      letter-spacing: 0.6rem;
+      color: $primary;
+    }
+
+    > p:not(:last-of-type),
+    h3,
+    ol {
+      margin-bottom: $spaceS;
+      text-align: left;
+      width: 100%;
+    }
+
+    > p:last-of-type {
+      margin-bottom: $spaceM;
+    }
+
+    > p,
+    li,
+    li p {
+      @include font("S");
+    }
+
+    li {
+      margin-left: $spaceM;
     }
   }
 }

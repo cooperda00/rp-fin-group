@@ -72,7 +72,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} id="form">
       <div className="form-control">
         <label htmlFor="firstName">First Name:</label>
         <input
