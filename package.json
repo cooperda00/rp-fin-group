@@ -5,7 +5,9 @@
   "version": "0.1.0",
   "author": "Daniel Cooper",
   "dependencies": {
+    "@netlify/functions": "^0.7.2",
     "@stahl.luke/react-reveal": "^1.2.3",
+    "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "gatsby": "^3.8.1",
     "gatsby-background-image": "^1.5.3",
