@@ -1,0 +1,67 @@
+@import "../../vars";
+
+.CTAContainer {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  height: 100vh;
+  margin-bottom: $spaceL;
+
+  .ImageContainer {
+    @include flex(column, flex-start, center);
+    width: 100%;
+
+    .Image {
+      max-height: 35rem;
+    }
+  }
+
+  .Copy {
+    @include flex(column, center, center);
+
+    width: 100%;
+    text-align: center;
+
+    h2 {
+      @include font("L");
+      font-weight: 400;
+      letter-spacing: 0.6rem;
+      color: $primaryD;
+      text-transform: capitalize;
+    }
+
+    p {
+      @include font("M");
+      margin-top: $spaceS;
+      margin-bottom: $spaceS;
+    }
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+    height: 60vh;
+
+    .ImageContainer {
+      width: 40%;
+
+      .Image {
+        max-height: 45rem;
+      }
+    }
+
+    .Copy {
+      @include flex(column, center, flex-start);
+      text-align: left;
+
+      h2 {
+        @include font("XL");
+      }
+
+      p {
+        @include font("M");
+      }
+
+      width: 60%;
+    }
+  }
+}

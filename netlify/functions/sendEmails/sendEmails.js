@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {
     
     Thanks for expressing interest in our pension services.
 
-    Please find attached a copy your free guide, free of charge.
+    Please find attached a copy of your free guide, free of charge.
 
 
 

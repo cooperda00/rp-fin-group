@@ -1,5 +1,7 @@
 //React
 import React, { useState } from "react"
+//Gatsby
+import { navigate } from "gatsby"
 //Helpers
 import { validateForm } from "./helpers"
 import axios from "axios"
@@ -23,6 +25,8 @@ const Form = () => {
     message: "",
   })
 
+  const [isLoading, setIsLoading] = useState(false)
+
   const handleChange = (e) => {
     const field = e.target.name
     const value = e.target.value
@@ -38,6 +42,8 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    setIsLoading(true)
+
     //FE validation of data / show errors to user
     const [error, message] = validateForm(formData)
 
@@ -47,22 +53,22 @@ const Form = () => {
         message,
       })
 
+      setIsLoading(false)
+
       return
     }
 
-    //axios post to endpoint
-    const response = await axios.post(
-      "/.netlify/functions/sendEmails",
-      formData
-    )
+    try {
+      await axios.post("/.netlify/functions/sendEmails", formData)
+      setIsLoading(false)
+      navigate("/success")
+    } catch (err) {
+      console.error(err)
 
-    console.log(response.data)
+      //If not successful, show error to user - provide contact email
 
-    //send email with download to user
-    //send email with form details to James
-    //Show loading spinner to user
-    //If successful, redirect to a success page
-    //If not successful, show error to user - provide contact email
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -198,7 +204,11 @@ const Form = () => {
         {error.error === "pensionSize" && <p>{error.message}</p>}
       </div>
 
-      <button>Please send me my free guide</button>
+      {!isLoading ? (
+        <button>Please send me my free guide</button>
+      ) : (
+        <p>Loading...</p>
+      )}
     </form>
   )
 }
