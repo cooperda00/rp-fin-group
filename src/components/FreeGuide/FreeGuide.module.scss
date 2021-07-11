@@ -33,7 +33,7 @@
     p {
       @include font("M");
       margin-top: $spaceS;
-      margin-bottom: $spaceS;
+      margin-bottom: $spaceM;
     }
   }
 
@@ -62,6 +62,77 @@
       }
 
       width: 60%;
+    }
+  }
+}
+
+.BenefitsContainer {
+  @include flex(column, center, center);
+
+  width: 100%;
+  background: linear-gradient(rgba($gray6, 0.5), rgba($gray5, 0.6)),
+    linear-gradient($primaryD, $primaryD);
+  padding: $spaceM 0;
+
+  @include min-width(1000px) {
+    padding: $spaceL 0;
+  }
+
+  h3,
+  li,
+  p {
+    color: white;
+  }
+
+  h3 {
+    @include font("M");
+    width: 100%;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    margin-bottom: $spaceM;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $spaceM;
+    width: 100%;
+    padding: 0 $spaceL;
+
+    li {
+      @include flex(row, flex-start, baseline);
+      @include font("S");
+      width: 100%;
+      list-style: none;
+      text-align: left;
+
+      p {
+        .Icon {
+          margin-right: $spaceS;
+        }
+      }
+    }
+
+    @include min-width(600px) {
+      grid-template-columns: 1fr 1fr;
+
+      li {
+        @include font("M");
+      }
+    }
+
+    @include min-width(1000px) {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      li {
+        @include flex(row, center, baseline);
+        text-align: center;
+      }
     }
   }
 }

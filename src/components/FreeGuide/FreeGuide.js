@@ -6,15 +6,18 @@ import {
   ImageContainer,
   Image,
   Copy,
+  BenefitsContainer,
+  Icon,
 } from "./FreeGuide.module.scss"
 //Component
-import Container from "../Layout/Container/Container"
 import CTAButton from "../Utility/CTAButton/CTAButton"
 import Form from "./Form"
+//Icons
+import { GiCheckMark } from "react-icons/gi"
 
 const FreeGuide = () => {
   return (
-    <Container>
+    <section>
       <div className={CTAContainer}>
         <div className={ImageContainer}>
           <img
@@ -36,8 +39,63 @@ const FreeGuide = () => {
         </div>
       </div>
 
+      <div className={BenefitsContainer}>
+        <h3>Benefits Of Transferring My UK Pension</h3>
+
+        <ul>
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              UK income tax mitigation
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              Pass 100% of your pension onto beneficiaries tax-free
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              Flexibility of income
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              Full control of investments
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              Choose to receive your pension in any currency
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              Early access to your pension
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <GiCheckMark className={Icon} />
+              High transfer valuations
+            </p>
+          </li>
+        </ul>
+      </div>
+
       <Form />
-    </Container>
+    </section>
   )
 }
 
