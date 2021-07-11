@@ -6,6 +6,7 @@
   "author": "Daniel Cooper",
   "dependencies": {
     "@netlify/functions": "^0.7.2",
+    "@sendgrid/mail": "^7.4.5",
     "@stahl.luke/react-reveal": "^1.2.3",
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",

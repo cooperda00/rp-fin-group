@@ -56,7 +56,7 @@ const Form = () => {
       formData
     )
 
-    console.log(response)
+    console.log(response.data)
 
     //send email with download to user
     //send email with form details to James
