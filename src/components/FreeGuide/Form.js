@@ -7,6 +7,8 @@ import { validateForm } from "./helpers"
 import axios from "axios"
 //Constants
 import { countries } from "../../constants/countries"
+//Sass
+import { FormStyles, FormControl, ErrorMessage } from "./Form.module.scss"
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -72,8 +74,8 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} id="form">
-      <div className="form-control">
+    <form onSubmit={handleSubmit} id="form" className={FormStyles}>
+      <div className={FormControl}>
         <label htmlFor="firstName">First Name:</label>
         <input
           type="text"
@@ -83,10 +85,12 @@ const Form = () => {
           onChange={handleChange}
         />
 
-        {error.error === "firstName" && <p>{error.message}</p>}
+        {error.error === "firstName" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="lastName">Last Name:</label>
         <input
           type="text"
@@ -96,10 +100,12 @@ const Form = () => {
           onChange={handleChange}
         />
 
-        {error.error === "lastName" && <p>{error.message}</p>}
+        {error.error === "lastName" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="email">Email Address:</label>
         <input
           type="email"
@@ -109,10 +115,12 @@ const Form = () => {
           onChange={handleChange}
         />
 
-        {error.error === "email" && <p>{error.message}</p>}
+        {error.error === "email" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="phone">Phone Number:</label>
         <input
           type="text"
@@ -122,10 +130,12 @@ const Form = () => {
           onChange={handleChange}
         />
 
-        {error.error === "phone" && <p>{error.message}</p>}
+        {error.error === "phone" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="country">Country</label>
 
         <select
@@ -142,10 +152,12 @@ const Form = () => {
           ))}
         </select>
 
-        {error.error === "country" && <p>{error.message}</p>}
+        {error.error === "country" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="pensionType">Type of Pension</label>
         <select
           name="pensionType"
@@ -158,10 +170,12 @@ const Form = () => {
           <option value="Company Pension">Company Pension</option>
         </select>
 
-        {error.error === "pensionType" && <p>{error.message}</p>}
+        {error.error === "pensionType" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="schemeType">Type of Scheme</label>
         <select
           name="schemeType"
@@ -182,10 +196,12 @@ const Form = () => {
           <option value="Not Sure">Not Sure</option>
         </select>
 
-        {error.error === "schemeType" && <p>{error.message}</p>}
+        {error.error === "schemeType" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
-      <div className="form-control">
+      <div className={FormControl}>
         <label htmlFor="pensionSize">Size of Pension</label>
         <select
           name="pensionSize"
@@ -201,7 +217,9 @@ const Form = () => {
           <option value="More than £500k">More than £500k</option>
         </select>
 
-        {error.error === "pensionSize" && <p>{error.message}</p>}
+        {error.error === "pensionSize" && (
+          <p className={ErrorMessage}>{error.message}</p>
+        )}
       </div>
 
       {!isLoading ? (

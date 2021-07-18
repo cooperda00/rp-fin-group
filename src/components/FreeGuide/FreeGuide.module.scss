@@ -259,3 +259,114 @@
     }
   }
 }
+
+.FormSection {
+  @include flex(column, flex-start, center);
+  padding: $spaceS;
+
+  @include min-width(500px) {
+    padding: $spaceM;
+  }
+
+  @include min-width(1000px) {
+    padding: $spaceL;
+  }
+
+  h3 {
+    @include font("L");
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 0.6rem;
+    margin-bottom: $spaceL;
+    color: $primary;
+    padding: 0 $spaceS;
+
+    @include min-width(1000px) {
+      @include font("XL");
+    }
+  }
+
+  .ContentContainer {
+    @include flex(column, flex-start, center);
+
+    .CopyContainer,
+    .FormContainer {
+      width: 100%;
+    }
+
+    @include min-width(1000px) {
+      @include flex(row, flex-start, flex-start);
+
+      .CopyContainer,
+      .FormContainer {
+        width: 50%;
+      }
+
+      .CopyContainer {
+        margin-bottom: 0;
+      }
+    }
+
+    .CopyContainer {
+      padding: 0 $spaceM;
+      margin-bottom: $spaceL;
+
+      h4 {
+        @include font("M");
+        letter-spacing: 0.6rem;
+        margin-bottom: $spaceM;
+        color: $primary;
+        font-weight: 400;
+      }
+
+      ul {
+        margin-bottom: $spaceM;
+
+        li {
+          @include flex(row, flex-start, flex-start);
+          width: 100%;
+          list-style: none;
+          text-align: left;
+          margin-bottom: $spaceS;
+
+          p {
+            @include font("S");
+
+            .Icon {
+              margin-right: $spaceS;
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      > p {
+        @include font("S");
+        margin-bottom: $spaceS;
+
+        em {
+          @include font("XS");
+        }
+      }
+
+      @include min-width(1000px) {
+        h4 {
+          @include font("L");
+        }
+
+        ul li p {
+          @include font("M");
+        }
+
+        > p {
+          @include font("M");
+        }
+      }
+    }
+
+    .FormContainer {
+      @include flex(column, center, center);
+    }
+  }
+}

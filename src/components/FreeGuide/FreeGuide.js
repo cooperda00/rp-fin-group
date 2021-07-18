@@ -12,6 +12,10 @@ import {
   Paragraphs,
   OptionsContainer,
   OptionsCard,
+  FormSection,
+  ContentContainer,
+  CopyContainer,
+  FormContainer,
 } from "./FreeGuide.module.scss"
 //Components
 import CTAButton from "../Utility/CTAButton/CTAButton"
@@ -199,7 +203,84 @@ const FreeGuide = () => {
         </div>
       </div>
 
-      <Form />
+      <div className={FormSection}>
+        <h3>Take Back Control Of Your Pension Today.</h3>
+
+        <div className={ContentContainer}>
+          <div className={CopyContainer}>
+            <h4>
+              Enter your details to receive our free introductory guide to
+              pension transfers and find out how you can maximize your pension
+              as an expatriate.
+            </h4>
+
+            <ul>
+              <li>
+                <p>
+                  <GiCheckMark className={Icon} />
+                  What are the benefits?
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <GiCheckMark className={Icon} />
+                  What is the Process?
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <GiCheckMark className={Icon} />
+                  Do I qualify?
+                </p>
+              </li>
+            </ul>
+
+            <p>
+              Switching to an International SIPP or QROPS can offer substantial
+              tax savings, whilst taking full control of your Pension. Speak to
+              one of our experts at RP Financial to find out what options are
+              available to you as an expatriate.
+            </p>
+
+            <p>
+              The complimentary advice report will offer a comparative review on
+              your current UK Pension arrangements with full breakdown your
+              options to make sure you are best positioned for retirement.
+            </p>
+
+            <p>
+              Download your free guide and find out if you qualify to receive a
+              free customized advice report.
+            </p>
+
+            <p>
+              <em>
+                Note: Suitable for pension funds of £50,000 or over. This does
+                not apply to the state pension or any Public Sector Pensions.
+                Please note you will need to be based/or soon to be relocating
+                outside the UK in order to use our services. If you are UK
+                based, and require help/advice regarding your pension then we
+                suggest you contact a local UK regulated adviser. To help you
+                find one please either go to the FCA register at{" "}
+                <a href="https://register.fca.org.uk">
+                  https://register.fca.org.uk
+                </a>{" "}
+                or unbiased at{" "}
+                <a href="https://www.unbiased.co.uk">
+                  https://www.unbiased.co.uk
+                </a>
+                .
+              </em>
+            </p>
+          </div>
+
+          <div className={FormContainer}>
+            <Form />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
