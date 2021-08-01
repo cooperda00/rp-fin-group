@@ -8,7 +8,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 //Change who the email comes from in environment variables
 const fromEmail = process.env.SENDGRID_FROM_EMAIL
 
-exports.handler = async function (event, context) {
+exports.handler = async function (event) {
   //Extract Formm Data
   const {
     firstName,
@@ -31,34 +31,28 @@ exports.handler = async function (event, context) {
   const message = {
     to: fromEmail,
     from: fromEmail,
-    subject: "You have a new pension guide form submission",
-    text: `
-    ${firstName} ${lastName} has expressed interest by ordering a guide.
-
-    Email: ${email}
-    Contact Number: ${phone}
-    Country: ${country}
-    Pension Type: ${pensionType}
-    Scheme Type: ${schemeType}
-    Pension Size: ${pensionSize}
-
-    This is an automated message, please do not reply`,
+    templateId: "d-b32eb037961a40a8acf0eea95f2d5b84",
+    dynamicTemplateData: {
+      firstName,
+      lastName,
+      email,
+      phone,
+      country,
+      pensionType,
+      schemeType,
+      pensionSize,
+    },
   }
 
   //Message To User
   const messageToClient = {
     to: email,
     from: fromEmail,
-    subject: "Your free pension guide",
-    text: `
-    Dear ${firstName} ${lastName},
-    
-    Thanks for expressing interest in our pension services.
-
-    Please find attached a copy of your free guide, free of charge.
-
-    This is an automated message, please do not reply.
-    `,
+    templateId: "d-44d8408fc26c4e27af8a295e4644be4f",
+    dynamicTemplateData: {
+      firstName,
+      lastName,
+    },
     attachments: [
       {
         content: pdf,
