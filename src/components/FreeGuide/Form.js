@@ -74,7 +74,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} id="form" className={FormStyles}>
+    <form onSubmit={handleSubmit} className={FormStyles}>
       <div className={FormControl}>
         <label htmlFor="firstName">First Name:</label>
         <input
