@@ -1,11 +1,15 @@
+//Imports
 const sgMail = require("@sendgrid/mail")
 const fs = require("fs")
 
+//Setup Sendgrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
+//Change who the email comes from in environment variables
 const fromEmail = process.env.SENDGRID_FROM_EMAIL
 
 exports.handler = async function (event, context) {
+  //Extract Formm Data
   const {
     firstName,
     lastName,
@@ -17,14 +21,17 @@ exports.handler = async function (event, context) {
     pensionSize,
   } = JSON.parse(event.body)
 
+  //TO DO : Validate form data
+
   const pdf = fs
     .readFileSync(require.resolve("./sample.pdf"))
     .toString("base64")
 
+  //Internal Message
   const message = {
     to: fromEmail,
     from: fromEmail,
-    subject: "Test subject",
+    subject: "You have a new pension guide form submission",
     text: `
     ${firstName} ${lastName} has expressed interest by ordering a guide.
 
@@ -38,6 +45,7 @@ exports.handler = async function (event, context) {
     This is an automated message, please do not reply`,
   }
 
+  //Message To User
   const messageToClient = {
     to: email,
     from: fromEmail,
@@ -49,9 +57,8 @@ exports.handler = async function (event, context) {
 
     Please find attached a copy of your free guide, free of charge.
 
-
-
-    This is an automated message, please do not reply`,
+    This is an automated message, please do not reply.
+    `,
     attachments: [
       {
         content: pdf,
