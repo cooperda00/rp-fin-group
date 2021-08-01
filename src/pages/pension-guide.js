@@ -34,7 +34,7 @@ const GuidePage = ({ data }) => {
 
 export const query = graphql`
   {
-    bg: file(relativePath: { eq: "hong_kong_skyline_night.jpg" }) {
+    bg: file(relativePath: { eq: "bangkok_skyline_day.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 1400
