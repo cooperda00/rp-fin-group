@@ -8,7 +8,14 @@ import axios from "axios"
 //Constants
 import { countries } from "../../constants/countries"
 //Sass
-import { FormStyles, FormControl, ErrorMessage } from "./Form.module.scss"
+import {
+  FormStyles,
+  FormControl,
+  ErrorMessage,
+  SpinnerContainer,
+} from "./Form.module.scss"
+//Spinner
+import Loader from "react-loader-spinner"
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -225,7 +232,9 @@ const Form = () => {
       {!isLoading ? (
         <button>Please send me my free guide</button>
       ) : (
-        <p>Loading...</p>
+        <div className={SpinnerContainer}>
+          <Loader type="ThreeDots" color="#36723e" height={50} width={50} />
+        </div>
       )}
     </form>
   )

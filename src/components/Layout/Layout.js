@@ -3,6 +3,7 @@ import React from "react"
 //Sass
 import { LayoutContainer } from "./Layout.module.scss"
 import "./base.scss"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 //Components
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"

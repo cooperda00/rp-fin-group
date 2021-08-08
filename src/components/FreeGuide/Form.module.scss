@@ -44,4 +44,9 @@
     font-weight: 300;
     margin-top: $spaceM;
   }
+
+  .SpinnerContainer {
+    @include flex(row, center, center);
+    width: 100%;
+  }
 }

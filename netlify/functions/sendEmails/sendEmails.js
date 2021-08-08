@@ -9,7 +9,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const fromEmail = process.env.SENDGRID_FROM_EMAIL
 
 exports.handler = async function (event) {
-  //Extract Formm Data
+  //Extract Form Data
   const {
     firstName,
     lastName,
@@ -24,7 +24,7 @@ exports.handler = async function (event) {
   //TO DO : Validate form data
 
   const pdf = fs
-    .readFileSync(require.resolve("./sample.pdf"))
+    .readFileSync(require.resolve("./pension-guide.pdf"))
     .toString("base64")
 
   //Internal Message
