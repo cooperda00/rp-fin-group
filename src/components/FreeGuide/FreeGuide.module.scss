@@ -1,0 +1,409 @@
+@import "../../vars";
+
+.Section {
+  @include flex(column, flex-start, center);
+  width: 100%;
+}
+
+.CTAContainer {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  max-width: $contentWidthS;
+  height: 120vh;
+  margin-bottom: $spaceL;
+
+  @include min-width(375px) {
+    height: 100vh;
+  }
+
+  @include min-width(700px) {
+    height: 90vh;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+    height: 60vh;
+  }
+
+  .ImageContainer {
+    @include flex(column, center, center);
+    width: 100%;
+    height: 40%;
+
+    .Image {
+      max-height: 35rem;
+      padding: $spaceL;
+    }
+
+    @include min-width(700px) {
+      height: 50%;
+
+      .Image {
+        max-height: 45rem;
+      }
+    }
+
+    @include min-width(1000px) {
+      width: 40%;
+      height: 100%;
+    }
+  }
+
+  .Copy {
+    @include flex(column, center, center);
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    padding: $spaceM;
+
+    h2 {
+      @include font("SSM");
+      font-weight: 400;
+      letter-spacing: 0.6rem;
+      color: $primaryD;
+      text-transform: capitalize;
+    }
+
+    p {
+      @include font("S");
+      margin-top: $spaceS;
+      margin-bottom: $spaceM;
+    }
+
+    @include min-width(321px) {
+      h2 {
+        @include font("SM");
+      }
+    }
+
+    @include min-width(768px) {
+      height: 50%;
+
+      h2 {
+        @include font("L");
+      }
+    }
+
+    @include min-width(1000px) {
+      @include flex(column, center, flex-start);
+      text-align: left;
+      height: 100%;
+      width: 60%;
+
+      h2 {
+        @include font("L");
+      }
+
+      p {
+        @include font("M");
+      }
+    }
+  }
+}
+
+.BenefitsContainer {
+  @include flex(column, center, center);
+  width: 100%;
+  background: linear-gradient(rgba($gray6, 0.5), rgba($gray5, 0.6)),
+    linear-gradient($primaryD, $primaryD);
+
+  .MaxWidthContainer {
+    @include flex(column, center, center);
+    width: 100%;
+    max-width: $contentWidthS;
+
+    padding: $spaceM 0;
+
+    @include min-width(1000px) {
+      padding: $spaceL 0;
+    }
+  }
+
+  h3,
+  li,
+  p {
+    color: white;
+  }
+
+  h3 {
+    @include font("M");
+    width: 100%;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    margin-bottom: $spaceM;
+    padding: 0 $spaceL;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $spaceM;
+    width: 100%;
+    padding: 0 $spaceL;
+
+    li {
+      @include flex(row, flex-start, baseline);
+      @include font("S");
+      width: 100%;
+      list-style: none;
+      text-align: left;
+
+      p {
+        .Icon {
+          margin-right: $spaceS;
+        }
+      }
+    }
+
+    @include min-width(600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include min-width(1000px) {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      li {
+        @include flex(row, center, baseline);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.PensionReviewContainer {
+  @include flex(column, center, center);
+
+  width: 100%;
+
+  .MaxWidthContainer {
+    @include flex(column, center, center);
+    width: 100%;
+    max-width: $contentWidthS;
+
+    padding: $spaceM 0;
+
+    @include min-width(1000px) {
+      padding: $spaceL 0;
+    }
+  }
+
+  h3 {
+    @include font("M");
+    width: 100%;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    margin-bottom: $spaceM;
+    color: $primary;
+    padding: 0 $spaceL;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+
+  .Paragraphs {
+    @include flex(column, flex-start, flex-start);
+    margin-bottom: $spaceM;
+
+    > p {
+      @include font("S");
+      padding: 0 $spaceL;
+      margin-bottom: $spaceS;
+      max-width: 150rem;
+      text-align: left;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $spaceM;
+    width: 100%;
+    padding: 0 $spaceL;
+    margin-bottom: $spaceL;
+
+    li {
+      @include flex(row, center, flex-start);
+      @include font("S");
+      width: 100%;
+      list-style: none;
+      text-align: left;
+
+      p {
+        .Icon {
+          margin-right: $spaceS;
+          color: $primary;
+        }
+      }
+    }
+
+    @include min-width(600px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $spaceM;
+    }
+  }
+}
+
+.OptionsContainer {
+  @include flex(row, center, center);
+  background: lighten($primaryLL, 35%);
+  padding: $spaceS;
+  width: 100%;
+
+  @include min-width(600px) {
+    padding: $spaceL;
+  }
+
+  .OptionsCard {
+    @include flex(column, flex-start, center);
+    background: white;
+    width: 50rem;
+    padding: $spaceM;
+
+    > h3 {
+      @include font("M");
+      font-weight: 400;
+      letter-spacing: 0.6rem;
+      color: $primary;
+    }
+
+    > p:not(:last-of-type),
+    h3,
+    ol {
+      margin-bottom: $spaceS;
+      text-align: left;
+      width: 100%;
+    }
+
+    > p:last-of-type {
+      margin-bottom: $spaceM;
+    }
+
+    > p,
+    li,
+    li p {
+      @include font("S");
+    }
+
+    li {
+      margin-left: $spaceM;
+    }
+  }
+}
+
+.FormSection {
+  @include flex(column, center, center);
+  // padding: $spaceS;
+
+  // @include min-width(500px) {
+  //   padding: $spaceM;
+  // }
+
+  // @include min-width(1000px) {
+  //   padding: $spaceL;
+  // }
+
+  .MaxWidthContainer {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    max-width: $contentWidthS;
+
+    padding: $spaceM 0;
+
+    @include min-width(1000px) {
+      padding: $spaceL 0;
+    }
+  }
+
+  h3 {
+    @include font("L");
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 0.6rem;
+    margin-bottom: $spaceM;
+    color: $primary;
+    padding: 0 $spaceS;
+
+    @include min-width(1000px) {
+      @include font("XL");
+      margin-bottom: $spaceL;
+    }
+  }
+
+  .ContentContainer {
+    @include flex(column, flex-start, center);
+
+    .CopyContainer,
+    .FormContainer {
+      width: 100%;
+    }
+
+    @include min-width(1000px) {
+      @include flex(row, flex-start, flex-start);
+
+      .CopyContainer,
+      .FormContainer {
+        width: 50%;
+      }
+
+      .CopyContainer {
+        margin-bottom: 0;
+      }
+    }
+
+    .CopyContainer {
+      padding: 0 $spaceM;
+      margin-bottom: $spaceL;
+
+      h4 {
+        @include font("M");
+        letter-spacing: 0.2rem;
+        margin-bottom: $spaceM;
+        color: $primary;
+        font-weight: 300;
+      }
+
+      ul {
+        margin-bottom: $spaceM;
+
+        li {
+          @include flex(row, flex-start, flex-start);
+          width: 100%;
+          list-style: none;
+          text-align: left;
+          margin-bottom: $spaceS;
+
+          p {
+            @include font("S");
+
+            .Icon {
+              margin-right: $spaceS;
+              color: $primary;
+            }
+          }
+        }
+      }
+
+      > p {
+        @include font("S");
+        margin-bottom: $spaceS;
+
+        em {
+          @include font("XS");
+        }
+      }
+    }
+
+    .FormContainer {
+      @include flex(column, center, center);
+    }
+  }
+}

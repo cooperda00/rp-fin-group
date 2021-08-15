@@ -5,7 +5,10 @@
   "version": "0.1.0",
   "author": "Daniel Cooper",
   "dependencies": {
+    "@netlify/functions": "^0.7.2",
+    "@sendgrid/mail": "^7.4.5",
     "@stahl.luke/react-reveal": "^1.2.3",
+    "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "gatsby": "^3.8.1",
     "gatsby-background-image": "^1.5.3",
@@ -33,6 +36,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-loader-spinner": "^4.0.0",
     "sass": "^1.35.1"
   },
   "devDependencies": {

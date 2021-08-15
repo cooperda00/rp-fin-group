@@ -1,0 +1,52 @@
+@import "../../vars";
+
+.FormStyles {
+  @include flex(column, flex-start, center);
+  background: lighten($primaryLL, 35%);
+  padding: $spaceS;
+
+  @include min-width(500px) {
+    padding: $spaceM;
+  }
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, flex-start);
+  }
+
+  .FormControl {
+    @include flex(column, flex-start, flex-start);
+    width: 100%;
+    margin-bottom: $spaceS;
+
+    label {
+      @include font("S");
+      margin-bottom: 0.2rem;
+    }
+
+    input,
+    select {
+      @include font("S");
+      padding: 0.8rem 1rem;
+      width: 100%;
+      margin-bottom: 0.4rem;
+    }
+
+    .ErrorMessage {
+      @include font("XS");
+      color: red;
+    }
+  }
+
+  button {
+    @include cta-button();
+    @include font("S");
+
+    font-weight: 300;
+    margin-top: $spaceM;
+  }
+
+  .SpinnerContainer {
+    @include flex(row, center, center);
+    width: 100%;
+  }
+}

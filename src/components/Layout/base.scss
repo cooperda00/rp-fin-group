@@ -13,7 +13,8 @@ html {
 html,
 body,
 textarea,
-input {
+input,
+button {
   min-height: 100%;
   font-family: $fontStackBody;
 }
