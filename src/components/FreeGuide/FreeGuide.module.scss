@@ -10,29 +10,55 @@
 
   width: 100%;
   max-width: $contentWidthS;
-  height: 90vh;
+  height: 120vh;
   margin-bottom: $spaceL;
 
+  @include min-width(375px) {
+    height: 100vh;
+  }
+
+  @include min-width(700px) {
+    height: 90vh;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, center);
+    height: 60vh;
+  }
+
   .ImageContainer {
-    @include flex(column, flex-start, center);
+    @include flex(column, center, center);
     width: 100%;
     height: 40%;
 
     .Image {
       max-height: 35rem;
+      padding: $spaceL;
+    }
+
+    @include min-width(700px) {
+      height: 50%;
+
+      .Image {
+        max-height: 45rem;
+      }
+    }
+
+    @include min-width(1000px) {
+      width: 40%;
+      height: 100%;
     }
   }
 
   .Copy {
     @include flex(column, center, center);
-
     height: 60%;
     width: 100%;
     text-align: center;
     padding: $spaceM;
 
     h2 {
-      @include font("L");
+      @include font("SSM");
       font-weight: 400;
       letter-spacing: 0.6rem;
       color: $primaryD;
@@ -40,39 +66,38 @@
     }
 
     p {
-      @include font("M");
+      @include font("S");
       margin-top: $spaceS;
       margin-bottom: $spaceM;
     }
-  }
 
-  @include min-width(1000px) {
-    @include flex(row, center, center);
-    height: 60vh;
-
-    .ImageContainer {
-      width: 40%;
-      height: 100%;
-
-      .Image {
-        max-height: 45rem;
+    @include min-width(321px) {
+      h2 {
+        @include font("SM");
       }
     }
 
-    .Copy {
+    @include min-width(768px) {
+      height: 50%;
+
+      h2 {
+        @include font("L");
+      }
+    }
+
+    @include min-width(1000px) {
       @include flex(column, center, flex-start);
       text-align: left;
       height: 100%;
+      width: 60%;
 
       h2 {
-        @include font("XL");
+        @include font("L");
       }
 
       p {
         @include font("M");
       }
-
-      width: 60%;
     }
   }
 }
