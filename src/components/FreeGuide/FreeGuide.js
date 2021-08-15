@@ -24,17 +24,15 @@ import CTAButton from "../Utility/CTAButton/CTAButton"
 import Form from "./Form"
 //Icons
 import { GiCheckMark } from "react-icons/gi"
+//Images
+import guideMockup from "../../images/guide_mockup.jpeg"
 
 const FreeGuide = () => {
   return (
     <section className={Section}>
       <div className={CTAContainer}>
         <div className={ImageContainer}>
-          <img
-            src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-ipad-mini-wifi-spacegray-gallery-2019?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1581026442388"
-            alt="ipad mock"
-            className={Image}
-          />
+          <img src={guideMockup} alt="ipad mock" className={Image} />
         </div>
 
         <div className={Copy}>
