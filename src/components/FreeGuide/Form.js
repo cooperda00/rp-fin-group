@@ -194,11 +194,9 @@ const Form = () => {
           <option value="Final Salary / Defined Benefit">
             Final Salary / Defined Benefit
           </option>
-          <option value="Money Purchase / Defined">
-            Money Purchase / Defined
-          </option>
-          <option value="Contribution / Personal Pension">
-            Contribution / Personal Pension
+          <option value="Money Purchase">Money Purchase</option>
+          <option value="Defined Contribution / Personal Pension">
+            Defined Contribution / Personal Pension
           </option>
           <option value="Not Sure">Not Sure</option>
         </select>
