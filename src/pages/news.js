@@ -1,5 +1,5 @@
 //Modules
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
@@ -12,8 +12,6 @@ import BannerText from "../components/Utility/BannerText/BannerText"
 import SEO from "../components/SEO/SEO"
 import CTA from "../components/Utility/CTA/CTA"
 import News from "../components/News/News"
-//Lodash
-import { cloneDeep } from "lodash"
 
 const NewsPage = ({ data }) => {
   const news = data.news.edges
@@ -22,23 +20,12 @@ const NewsPage = ({ data }) => {
   const image = getImage(imageFromQuery)
   const bgImage = convertToBgImage(image)
 
-  const [newsItems, setNewsItems] = useState([])
-
-  //On Mount
-  useEffect(() => {
-    setNewsItems(news)
-  }, [])
+  const [newsItems, setNewsItems] = useState(news)
 
   const handleShowMore = () => {
-    //Copy Array
-    const clonedNews = cloneDeep(newsItems)
-    //Filter array 1 - save first 3 items
-    const first3 = clonedNews.filter((x, i) => i <= 2)
-    //Filter array 2 - remove first 3 items
-    const shiftedArray = clonedNews.filter((x, i) => i > 2)
-    //Spread - ...array2, ...array1
+    const first3 = newsItems.filter((x, i) => i <= 2)
+    const shiftedArray = newsItems.filter((x, i) => i > 2)
     const updatedArray = [...shiftedArray, ...first3]
-    //Update state
     setNewsItems(updatedArray)
   }
 
