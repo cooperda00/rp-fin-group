@@ -19,7 +19,17 @@ module.exports = {
           cookieName: "gatsby-gdpr-google-analytics",
           anonymize: true,
         },
+        facebookPixel: {
+          pixelId: "1227130054456195",
+          cookieName: "gatsby-gdpr-facebook-pixel",
+        },
         environments: ["production", "development"],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "1227130054456195",
       },
     },
     {

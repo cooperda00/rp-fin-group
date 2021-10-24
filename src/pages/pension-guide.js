@@ -1,5 +1,5 @@
 //Modules
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
@@ -14,6 +14,15 @@ const GuidePage = ({ data }) => {
   const imageFromQuery = data.bg
   const image = getImage(imageFromQuery)
   const bgImage = convertToBgImage(image)
+
+  useEffect(() => {
+    //Fire pixel event
+    if (typeof window !== "undefined") {
+      if (window.fbq != null) {
+        window.fbq("track", "ViewContent")
+      }
+    }
+  }, [])
 
   return (
     <Layout>

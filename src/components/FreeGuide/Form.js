@@ -70,6 +70,14 @@ const Form = () => {
     try {
       await axios.post("/.netlify/functions/sendEmails", formData)
       setIsLoading(false)
+
+      //Fire pixel event
+      if (typeof window !== "undefined") {
+        if (window.fbq != null) {
+          window.fbq("track", "CompleteRegistration")
+        }
+      }
+
       navigate("/success")
     } catch (err) {
       console.error(err)
