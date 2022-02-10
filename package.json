@@ -30,7 +30,7 @@
     "gatsby-transformer-sharp": "^3.8.0",
     "gbimage-bridge": "^0.1.4",
     "lodash": "^4.17.21",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-cookie-consent": "^6.2.4",
